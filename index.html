@@ -685,6 +685,212 @@
   /* Home screen bottom padding for nav */
   .screen { padding-bottom: 88px; }
 
+  /* ===== RECORDS SCREEN ===== */
+  .rec-header {
+    padding: 52px 28px 0;
+  }
+
+  .rec-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+  }
+
+  .rec-sub {
+    font-size: 13px;
+    color: var(--text-mid);
+    margin-top: 4px;
+  }
+
+  .rec-stats-row {
+    display: flex; gap: 10px;
+    padding: 20px 28px 0;
+  }
+
+  .rec-stat-card {
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    padding: 16px 10px;
+    text-align: center;
+    box-shadow: 0 2px 14px rgba(61,50,80,0.06);
+    border: 1.5px solid transparent;
+  }
+
+  .accent-mint { border-color: rgba(168,218,220,0.4); }
+  .accent-lavender { border-color: rgba(212,184,224,0.4); }
+  .accent-pink { border-color: rgba(244,194,194,0.4); }
+
+  .rec-stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+    line-height: 1;
+  }
+
+  .rec-stat-label {
+    font-size: 11px;
+    color: var(--text-mid);
+    font-weight: 700;
+    margin-top: 5px;
+  }
+
+  .rec-section {
+    padding: 20px 28px 0;
+  }
+
+  .rec-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  /* Week calendar */
+  .week-calendar {
+    display: flex; gap: 8px;
+    background: white;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 2px 14px rgba(61,50,80,0.06);
+  }
+
+  .day-cell {
+    flex: 1; text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 6px;
+  }
+
+  .day-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-light);
+  }
+
+  .day-dot {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #F0EDF5;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    transition: all 0.3s;
+  }
+
+  .day-dot.done {
+    background: linear-gradient(135deg, var(--mint), var(--lavender));
+    box-shadow: 0 3px 10px rgba(168,218,220,0.5);
+  }
+
+  .day-dot.today {
+    border: 2px solid var(--lavender);
+  }
+
+  .day-questions {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-light);
+  }
+
+  /* Unit accuracy */
+  .unit-acc-row {
+    background: white;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 10px rgba(61,50,80,0.05);
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .unit-acc-icon { font-size: 18px; flex-shrink: 0; }
+
+  .unit-acc-info { flex: 1; }
+
+  .unit-acc-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+  }
+
+  .unit-acc-bar-bg {
+    height: 6px;
+    background: #F0EDF5;
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .unit-acc-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--mint), var(--lavender));
+    transition: width 1s ease;
+  }
+
+  .unit-acc-pct {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-dark);
+    min-width: 40px;
+    text-align: right;
+  }
+
+  .unit-acc-empty {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* History list */
+  .history-item {
+    background: white;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 2px 10px rgba(61,50,80,0.05);
+  }
+
+  .history-icon { font-size: 22px; flex-shrink: 0; }
+
+  .history-info { flex: 1; }
+
+  .history-unit {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .history-date {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .history-score {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--text-dark);
+    text-align: right;
+  }
+
+  .history-score span {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 700;
+    display: block;
+  }
+
+  .history-empty {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 13px;
+    padding: 28px 0;
+    line-height: 2;
+  }
+
 </style>
 </head>
 <body>
@@ -887,30 +1093,101 @@
     </div>
   </div>
 
-</div>
+  <!-- ====== RECORDS ====== -->
+  <div class="screen" id="records-screen">
+    <div class="rec-header">
+      <div class="rec-title">きろく <span>📊</span></div>
+      <div class="rec-sub">今週の学習まとめ</div>
+    </div>
+
+    <div class="rec-stats-row">
+      <div class="rec-stat-card accent-mint">
+        <div class="rec-stat-num" id="rec-streak">0</div>
+        <div class="rec-stat-label">🔥 連続日数</div>
+      </div>
+      <div class="rec-stat-card accent-lavender">
+        <div class="rec-stat-num" id="rec-total-q">0</div>
+        <div class="rec-stat-label">✏️ 総問題数</div>
+      </div>
+      <div class="rec-stat-card accent-pink">
+        <div class="rec-stat-num" id="rec-accuracy">-%</div>
+        <div class="rec-stat-label">⭐ 正答率</div>
+      </div>
+    </div>
+
+    <div class="rec-section">
+      <div class="rec-section-title">今週の学習</div>
+      <div class="week-calendar" id="week-calendar"></div>
+    </div>
+
+    <div class="rec-section">
+      <div class="rec-section-title">単元別 正答率</div>
+      <div class="unit-accuracy-list" id="unit-accuracy-list"></div>
+    </div>
+
+    <div class="rec-section">
+      <div class="rec-section-title">最近の挑戦</div>
+      <div class="history-list" id="history-list">
+        <div class="history-empty">まだ記録がありません<br>クイズに挑戦してみよう！</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.app -->
 
 <!-- Bottom Nav -->
 <nav class="bottom-nav">
-  <div class="nav-item active" onclick="showScreen('home-screen')">
+  <div class="nav-item active" id="nav-home" onclick="navTo('home-screen', this)">
     <div class="nav-icon">📚</div>
     <span>まなぶ</span>
   </div>
-  <div class="nav-item">
+  <div class="nav-item" id="nav-badge" onclick="navTo('home-screen', this)">
     <div class="nav-icon">🏆</div>
     <span>バッジ</span>
   </div>
-  <div class="nav-item">
+  <div class="nav-item" id="nav-records" onclick="navTo('records-screen', this)">
     <div class="nav-icon">📊</div>
     <span>きろく</span>
   </div>
-  <div class="nav-item">
+  <div class="nav-item" id="nav-profile" onclick="navTo('home-screen', this)">
     <div class="nav-icon">👤</div>
     <span>プロフ</span>
   </div>
 </nav>
 
 <script>
-// Quiz data
+// ===== DATA PERSISTENCE (localStorage) =====
+const STORAGE_KEY = 'grammly_data';
+
+function loadData() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || initData();
+  } catch { return initData(); }
+}
+
+function initData() {
+  return { streak: 0, lastDate: null, history: [], unitStats: {}, weekLog: {} };
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function updateStreak(data) {
+  const today = todayStr();
+  if (data.lastDate === today) return;
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yStr = yesterday.toISOString().slice(0, 10);
+  data.streak = (data.lastDate === yStr) ? data.streak + 1 : 1;
+  data.lastDate = today;
+}
+
+// ===== Quiz data =====
 const quizData = {
   'be動詞': [
     { q: 'She ___ a student at this school.', hint: '主語 She に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 1, explain: 'She は三人称単数なので is を使います。' },
@@ -933,6 +1210,16 @@ const quizData = {
   ]
 };
 
+const unitMeta = {
+  'be動詞':    { emoji: '💙' },
+  '一般動詞':  { emoji: '🌸' },
+  '現在進行形':{ emoji: '🪄' },
+  '過去形':    { emoji: '🌷' },
+  '未来形':    { emoji: '🌿' },
+  'There is/are':{ emoji: '🌼' },
+  '助動詞can': { emoji: '🫧' },
+};
+
 let currentUnit = 'be動詞';
 let currentEmoji = '💙';
 let questions = [];
@@ -940,11 +1227,20 @@ let currentQ = 0;
 let correctCount = 0;
 let answered = false;
 
+// ===== NAVIGATION =====
+function navTo(screenId, navEl) {
+  showScreen(screenId);
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  navEl.classList.add('active');
+  if (screenId === 'records-screen') renderRecords();
+}
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
 
+// ===== QUIZ =====
 function startQuiz(unit, emoji) {
   currentUnit = unit;
   currentEmoji = emoji;
@@ -954,6 +1250,9 @@ function startQuiz(unit, emoji) {
   correctCount = 0;
   loadQuestion();
   showScreen('quiz-screen');
+  // reset nav highlight
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('nav-home').classList.add('active');
 }
 
 function loadQuestion() {
@@ -1022,6 +1321,33 @@ function showResult() {
   document.getElementById('res-total').textContent = questions.length;
   document.getElementById('res-pct').textContent = pct + '%';
 
+  // Save to localStorage
+  const appData = loadData();
+  updateStreak(appData);
+
+  // Unit stats
+  if (!appData.unitStats[currentUnit]) appData.unitStats[currentUnit] = { total: 0, correct: 0 };
+  appData.unitStats[currentUnit].total += questions.length;
+  appData.unitStats[currentUnit].correct += correctCount;
+
+  // Week log
+  const today = todayStr();
+  appData.weekLog[today] = (appData.weekLog[today] || 0) + questions.length;
+
+  // History (keep last 20)
+  appData.history.unshift({
+    unit: currentUnit,
+    emoji: currentEmoji,
+    score: correctCount,
+    total: questions.length,
+    pct,
+    date: today
+  });
+  if (appData.history.length > 20) appData.history = appData.history.slice(0, 20);
+
+  saveData(appData);
+  updateStreakPill(appData.streak);
+
   let illus, comment, sub;
   if (pct === 100) { illus = '🌸'; comment = 'Perfect! 満点だよ！'; sub = currentUnit + '、完全マスターした✨'; }
   else if (pct >= 70) { illus = '⭐'; comment = 'すごい！よくできたね'; sub = '次はもっと上を目指そう！'; }
@@ -1032,6 +1358,11 @@ function showResult() {
   document.getElementById('result-comment').textContent = comment;
   document.getElementById('result-sub').textContent = sub;
   showScreen('result-screen');
+}
+
+function updateStreakPill(streak) {
+  document.querySelector('.streak-pill').innerHTML =
+    `<span class="streak-flame">🔥</span><span>${streak}日連続</span>`;
 }
 
 function spawnParticles() {
@@ -1049,6 +1380,100 @@ function spawnParticles() {
     }, i * 80);
   }
 }
+
+// ===== RECORDS SCREEN =====
+function renderRecords() {
+  const data = loadData();
+  const today = todayStr();
+
+  // Stats
+  document.getElementById('rec-streak').textContent = data.streak;
+
+  let totalQ = 0, totalC = 0;
+  Object.values(data.unitStats).forEach(s => { totalQ += s.total; totalC += s.correct; });
+  document.getElementById('rec-total-q').textContent = totalQ;
+  document.getElementById('rec-accuracy').textContent = totalQ > 0 ? Math.round(totalC / totalQ * 100) + '%' : '-%';
+
+  // Week calendar (Mon-Sun of current week)
+  const dayNames = ['月','火','水','木','金','土','日'];
+  const cal = document.getElementById('week-calendar');
+  cal.innerHTML = '';
+  const now = new Date();
+  // Get Monday of this week
+  const dow = now.getDay(); // 0=Sun
+  const mondayOffset = dow === 0 ? -6 : 1 - dow;
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(now);
+    d.setDate(now.getDate() + mondayOffset + i);
+    const dStr = d.toISOString().slice(0, 10);
+    const count = data.weekLog[dStr] || 0;
+    const isToday = dStr === today;
+    const isDone = count > 0;
+    const cell = document.createElement('div');
+    cell.className = 'day-cell';
+    cell.innerHTML = `
+      <div class="day-label">${dayNames[i]}</div>
+      <div class="day-dot${isDone ? ' done' : ''}${isToday ? ' today' : ''}">${isDone ? '✓' : ''}</div>
+      <div class="day-questions">${count > 0 ? count + '問' : ''}</div>
+    `;
+    cal.appendChild(cell);
+  }
+
+  // Unit accuracy
+  const accList = document.getElementById('unit-accuracy-list');
+  accList.innerHTML = '';
+  const unitEntries = Object.entries(data.unitStats);
+  if (unitEntries.length === 0) {
+    accList.innerHTML = '<div class="history-empty">まだデータがありません</div>';
+  } else {
+    unitEntries.forEach(([unit, stat]) => {
+      const pct = Math.round(stat.correct / stat.total * 100);
+      const emoji = (unitMeta[unit] || {}).emoji || '📝';
+      const row = document.createElement('div');
+      row.className = 'unit-acc-row';
+      row.innerHTML = `
+        <div class="unit-acc-icon">${emoji}</div>
+        <div class="unit-acc-info">
+          <div class="unit-acc-name">${unit}</div>
+          <div class="unit-acc-bar-bg">
+            <div class="unit-acc-bar-fill" style="width:${pct}%"></div>
+          </div>
+        </div>
+        <div class="unit-acc-pct">${pct}%</div>
+      `;
+      accList.appendChild(row);
+    });
+  }
+
+  // History
+  const histList = document.getElementById('history-list');
+  histList.innerHTML = '';
+  if (data.history.length === 0) {
+    histList.innerHTML = '<div class="history-empty">まだ記録がありません<br>クイズに挑戦してみよう！</div>';
+  } else {
+    data.history.slice(0, 10).forEach(h => {
+      const d = new Date(h.date);
+      const dateStr = `${d.getMonth()+1}/${d.getDate()}`;
+      const item = document.createElement('div');
+      item.className = 'history-item';
+      item.innerHTML = `
+        <div class="history-icon">${h.emoji}</div>
+        <div class="history-info">
+          <div class="history-unit">${h.unit}</div>
+          <div class="history-date">${dateStr}</div>
+        </div>
+        <div class="history-score">${h.score}/${h.total}<span>${h.pct}%</span></div>
+      `;
+      histList.appendChild(item);
+    });
+  }
+}
+
+// ===== INIT =====
+window.addEventListener('DOMContentLoaded', () => {
+  const data = loadData();
+  if (data.streak > 0) updateStreakPill(data.streak);
+});
 </script>
 
 <!-- Service Worker 登録 -->
