@@ -124,6 +124,7 @@
   }
 
   .ring-wrap svg { transform: rotate(-90deg); }
+  .ring-wrap svg circle#ring-circle { transition: stroke-dashoffset 1s cubic-bezier(.4,0,.2,1), stroke 0.6s ease; }
 
   .ring-center {
     position: absolute; inset: 0;
@@ -194,15 +195,48 @@
     border-radius: 4px 0 0 4px;
   }
 
-  .unit-card:nth-child(1)::before { background: var(--mint); }
-  .unit-card:nth-child(2)::before { background: var(--pink); }
-  .unit-card:nth-child(3)::before { background: var(--lavender); }
-  .unit-card:nth-child(4)::before { background: var(--sakura); }
-  .unit-card:nth-child(5)::before { background: #B5E8B0; }
-  .unit-card:nth-child(6)::before { background: #FDD9A0; }
-  .unit-card:nth-child(7)::before { background: #A0C4FF; }
+  /* Unit accent colors by data-unit */
+  [data-unit="be動詞"]::before       { background: var(--mint); }
+  [data-unit="一般動詞"]::before     { background: var(--pink); }
+  [data-unit="現在進行形"]::before   { background: var(--lavender); }
+  [data-unit="過去形"]::before       { background: var(--sakura); }
+  [data-unit="未来形"]::before       { background: #B5E8B0; }
+  [data-unit="There is/are"]::before { background: #FDD9A0; }
+  [data-unit="助動詞can"]::before    { background: #A0C4FF; }
 
-  .unit-card:hover {
+  [data-unit="be動詞"] .unit-icon       { background: rgba(168,218,220,0.2); }
+  [data-unit="一般動詞"] .unit-icon     { background: rgba(244,194,194,0.2); }
+  [data-unit="現在進行形"] .unit-icon   { background: rgba(212,184,224,0.2); }
+  [data-unit="過去形"] .unit-icon       { background: rgba(255,211,224,0.2); }
+  [data-unit="未来形"] .unit-icon       { background: rgba(181,232,176,0.2); }
+  [data-unit="There is/are"] .unit-icon { background: rgba(253,217,160,0.2); }
+  [data-unit="助動詞can"] .unit-icon    { background: rgba(160,196,255,0.2); }
+
+  [data-unit="be動詞"] .unit-bar-fill       { background: var(--mint); }
+  [data-unit="一般動詞"] .unit-bar-fill     { background: var(--pink); }
+  [data-unit="現在進行形"] .unit-bar-fill   { background: var(--lavender); }
+  [data-unit="過去形"] .unit-bar-fill       { background: var(--sakura); }
+  [data-unit="未来形"] .unit-bar-fill       { background: #B5E8B0; }
+  [data-unit="There is/are"] .unit-bar-fill { background: #FDD9A0; }
+  [data-unit="助動詞can"] .unit-bar-fill    { background: #A0C4FF; }
+
+  .unit-card-weak {
+    background: linear-gradient(135deg, #fff8f0 0%, #fff3e8 100%);
+    border: 2px solid #FFCBA4;
+  }
+  .unit-card-weak::before { background: #FF9A6C !important; }
+  .unit-card-weak .unit-icon { background: rgba(255,154,108,0.15) !important; }
+
+  .question-ja {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: #9B8FAE;
+    margin: -4px 0 10px;
+    padding: 8px 12px;
+    background: rgba(212,184,224,0.12);
+    border-radius: 8px;
+    line-height: 1.5;
+  }
     transform: translateY(-2px);
     box-shadow: 0 6px 24px rgba(61,50,80,0.1);
   }
@@ -216,15 +250,6 @@
     font-size: 20px;
     flex-shrink: 0;
   }
-
-  .unit-card:nth-child(1) .unit-icon { background: rgba(168,218,220,0.2); }
-  .unit-card:nth-child(2) .unit-icon { background: rgba(244,194,194,0.2); }
-  .unit-card:nth-child(3) .unit-icon { background: rgba(212,184,224,0.2); }
-  .unit-card:nth-child(4) .unit-icon { background: rgba(255,211,224,0.2); }
-  .unit-card:nth-child(5) .unit-icon { background: rgba(181,232,176,0.2); }
-  .unit-card:nth-child(6) .unit-icon { background: rgba(253,217,160,0.2); }
-  .unit-card:nth-child(7) .unit-icon { background: rgba(160,196,255,0.2); }
-
   .unit-info { flex: 1; }
 
   .unit-name {
@@ -256,15 +281,6 @@
     border-radius: 99px;
     transition: width 1s ease;
   }
-
-  .unit-card:nth-child(1) .unit-bar-fill { background: var(--mint); }
-  .unit-card:nth-child(2) .unit-bar-fill { background: var(--pink); }
-  .unit-card:nth-child(3) .unit-bar-fill { background: var(--lavender); }
-  .unit-card:nth-child(4) .unit-bar-fill { background: var(--sakura); }
-  .unit-card:nth-child(5) .unit-bar-fill { background: #B5E8B0; }
-  .unit-card:nth-child(6) .unit-bar-fill { background: #FDD9A0; }
-  .unit-card:nth-child(7) .unit-bar-fill { background: #A0C4FF; }
-
   .unit-pct-text {
     font-size: 11px;
     font-weight: 700;
@@ -281,6 +297,203 @@
     font-size: 14px;
     flex-shrink: 0;
   }
+
+  /* Unit clear/master badges */
+  .unit-badge-row {
+    display: flex; gap: 4px; flex-shrink: 0; flex-direction: column; align-items: flex-end;
+  }
+  .unit-badge-pill {
+    font-size: 10px; font-weight: 800;
+    padding: 2px 7px; border-radius: 8px;
+    letter-spacing: 0.3px; white-space: nowrap;
+  }
+  .unit-badge-clear {
+    background: rgba(168,218,220,0.25);
+    color: #4a9fa2;
+    border: 1px solid rgba(168,218,220,0.5);
+  }
+  .unit-badge-master {
+    background: rgba(245,200,66,0.2);
+    color: #b8900a;
+    border: 1px solid rgba(245,200,66,0.4);
+  }
+  /* ===== UNIT CARD ROW (card + point button) ===== */
+  .unit-card-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .unit-card-row .unit-card {
+    flex: 1;
+    min-width: 0; /* prevent overflow */
+  }
+  .unit-point-btn {
+    flex-shrink: 0;
+    width: 52px;
+    background: white;
+    border: 1.5px solid #EDE8F5;
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-mid);
+    box-shadow: 0 2px 12px rgba(61,50,80,0.06);
+    transition: all 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .unit-point-btn span {
+    font-family: 'Nunito', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+  }
+  .unit-point-btn:active {
+    transform: scale(0.94);
+    background: #F5F0FF;
+    border-color: #D4B8E0;
+  }
+
+  /* ===== POINT SCREEN ===== */
+  .point-header {
+    padding: 52px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .point-back-btn {
+    width: 38px; height: 38px;
+    background: white;
+    border: 1.5px solid #EDE8F5;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(61,50,80,0.07);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .point-header-info { flex: 1; }
+  .point-header-unit {
+    font-size: 12px;
+    color: var(--text-light);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .point-header-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--text-dark);
+    line-height: 1.1;
+  }
+  .point-header-title span { font-style: italic; }
+  .point-start-btn {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--lavender), var(--mint));
+    border: none;
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(168,218,220,0.4);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .point-content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 20px 32px;
+  }
+  .point-section {
+    margin-bottom: 20px;
+  }
+  .point-section:last-child { margin-bottom: 0; }
+  .point-section-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .point-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #F0EBF8;
+  }
+  .point-rule {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 14px;
+    background: white;
+    border-radius: 14px;
+    margin-bottom: 8px;
+    border-left: 3px solid #D4B8E0;
+    box-shadow: 0 2px 10px rgba(61,50,80,0.05);
+  }
+  .point-rule-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .point-rule-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-dark);
+  }
+  .point-rule-text strong { color: #7A4FA0; }
+  .point-rule-text em {
+    display: block;
+    font-style: normal;
+    font-size: 11.5px;
+    color: var(--text-mid);
+    margin-top: 3px;
+  }
+  /* テーブル */
+  .point-table-wrap {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(61,50,80,0.05);
+    margin-bottom: 8px;
+  }
+  .point-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  .point-table th {
+    background: #F0EBF8;
+    color: var(--text-mid);
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 7px 12px;
+    text-align: left;
+  }
+  .point-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #F5F0FC;
+    color: var(--text-dark);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .point-table tr:last-child td { border-bottom: none; }
+  .point-table tr:nth-child(even) td { background: #FDFAFF; }
+  .point-table .en { font-weight: 700; color: #5A3A80; }
+  .point-table .ja { color: var(--text-mid); font-size: 11px; }
 
   /* ===== QUIZ SCREEN ===== */
   .quiz-header {
@@ -619,6 +832,64 @@
     to { opacity: 1; transform: scale(1); }
   }
 
+  /* ===== BADGE SCREEN ===== */
+  .badge-screen-header {
+    padding: 52px 28px 0;
+  }
+  .badge-screen-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+  }
+  .badge-screen-title span { font-style: italic; background: linear-gradient(135deg, #F5C842, #F4A261); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .badge-overall-progress {
+    margin: 18px 28px 0;
+    background: white;
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 16px rgba(61,50,80,0.07);
+    border: 1.5px solid #F0EBF8;
+  }
+  .badge-progress-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .badge-progress-label { font-size: 13px; font-weight: 700; color: var(--text-mid); }
+  .badge-progress-count { font-size: 24px; font-weight: 800; color: var(--text-dark); }
+  .badge-progress-count span { font-size: 13px; color: var(--text-light); font-weight: 600; }
+  .badge-progress-bar-bg { height: 10px; background: #F0EBF8; border-radius: 99px; overflow: hidden; }
+  .badge-progress-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #F5C842, #F4A261); transition: width 1s cubic-bezier(.4,0,.2,1); }
+  .badge-next-hint { margin-top: 10px; font-size: 12px; color: var(--text-light); font-weight: 600; }
+  .badge-next-hint strong { color: #F4A261; }
+  .badge-category-section { margin: 20px 28px 0; }
+  .badge-category-section:last-child { margin-bottom: 32px; }
+  .badge-category-title {
+    font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--text-light); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .badge-category-title::after { content: ''; flex: 1; height: 1px; background: #F0EBF8; }
+  .badge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .badge-card {
+    background: white; border-radius: 16px; padding: 14px 10px 12px;
+    text-align: center; border: 1.5px solid #F0EBF8;
+    box-shadow: 0 2px 10px rgba(61,50,80,0.05); position: relative; overflow: hidden;
+  }
+  .badge-card.unlocked { border-color: #F5C842; background: linear-gradient(145deg, #FFFEF5, #FFF8E7); box-shadow: 0 4px 16px rgba(245,200,66,0.2); }
+  .badge-card.unlocked::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #F5C842, #F4A261); }
+  .badge-card.locked { opacity: 0.5; }
+  .badge-card.next-up { opacity: 1; border-color: #D4B8E0; background: linear-gradient(145deg, #FDFAFF, #F5EEFF); box-shadow: 0 4px 16px rgba(196,160,212,0.2); }
+  .badge-card.next-up::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #D4B8E0, #A8DADC); }
+  .badge-card.secret { opacity: 1; background: linear-gradient(145deg, #F8F5FF, #F0EBF8); border-color: #DDD5EE; }
+  .badge-card.secret .badge-emoji { filter: grayscale(1) opacity(0.35); }
+  .badge-emoji { font-size: 30px; line-height: 1; margin-bottom: 6px; }
+  .badge-card.locked .badge-emoji { filter: grayscale(1); }
+  .badge-name { font-size: 11px; font-weight: 700; color: var(--text-dark); line-height: 1.3; margin-bottom: 3px; }
+  .badge-card.locked .badge-name { color: var(--text-light); }
+  .badge-desc { font-size: 10px; color: var(--text-light); line-height: 1.4; }
+  .badge-card.unlocked .badge-desc { color: #B8924A; }
+  .badge-progress-mini { margin-top: 6px; height: 4px; background: #F0EBF8; border-radius: 99px; overflow: hidden; }
+  .badge-progress-mini-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #D4B8E0, #A8DADC); transition: width 0.8s ease; }
+  .badge-unlocked-date { font-size: 9px; color: #C8A84A; margin-top: 4px; font-weight: 600; }
+  .badge-new-tag { position: absolute; top: 6px; right: 6px; background: #F4A261; color: white; font-size: 8px; font-weight: 800; padding: 2px 5px; border-radius: 6px; }
+
   .result-actions {
     padding: 24px 28px 0;
     display: flex; flex-direction: column; gap: 12px;
@@ -900,6 +1171,12 @@
 <div class="blob blob-2"></div>
 <div class="blob blob-3"></div>
 
+<!-- Loading overlay -->
+<div id="loading-overlay" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(255,248,245,0.9);backdrop-filter:blur(8px);flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+  <div style="font-size:36px;animation:floatIllus 1.5s ease-in-out infinite">🌸</div>
+  <div style="font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;color:#7A6E8A;">問題を読み込み中...</div>
+</div>
+
 <div class="app">
 
   <!-- ====== HOME ====== -->
@@ -917,100 +1194,131 @@
         <svg width="100" height="100" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="42" fill="none" stroke="#EDE8F5" stroke-width="8"/>
           <circle cx="50" cy="50" r="42" fill="none"
+            id="ring-circle"
             stroke="url(#ringGrad)" stroke-width="8"
-            stroke-dasharray="263.9" stroke-dashoffset="105.6"
+            stroke-dasharray="263.9" stroke-dashoffset="263.9"
             stroke-linecap="round"/>
           <defs>
             <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#A8DADC"/>
-              <stop offset="100%" stop-color="#D4B8E0"/>
+              <stop offset="0%" id="ring-grad-start" stop-color="#A8DADC"/>
+              <stop offset="100%" id="ring-grad-end" stop-color="#D4B8E0"/>
             </linearGradient>
           </defs>
         </svg>
         <div class="ring-center">
-          <div class="ring-pct">60%</div>
-          <div class="ring-label">達成率</div>
+          <div class="ring-pct" id="ring-pct">0%</div>
+          <div class="ring-label" id="ring-label">初級達成率</div>
         </div>
       </div>
       <div class="progress-text">
-        <h2>調子いいね！<br>このまま続けよう ✨</h2>
-        <p>あと4単元で全クリア</p>
+        <h2 id="progress-msg">がんばろう！<br>今日も一問解こう ✨</h2>
+        <p id="progress-sub">さあ、はじめよう！</p>
       </div>
     </div>
 
     <div class="units-label">単元を選ぶ</div>
 
     <div class="units-scroll">
-      <div class="unit-card" onclick="startQuiz('be動詞', '💙')">
-        <div class="unit-icon">💙</div>
-        <div class="unit-info">
-          <div class="unit-name">be動詞 (am/is/are)</div>
-          <div class="unit-sub">10問 · 初級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="be動詞" onclick="startQuiz('be動詞', '💙')">
+          <div class="unit-icon">💙</div>
+          <div class="unit-info">
+            <div class="unit-name">be動詞 (am/is/are)</div>
+            <div class="unit-sub">10問 · 初級</div>
+          </div>
+          <div class="unit-done">✓</div>
         </div>
-        <div class="unit-done">✓</div>
+        <button class="unit-point-btn" onclick="showPointScreen('be動詞', '💙')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('一般動詞', '🌸')">
-        <div class="unit-icon">🌸</div>
-        <div class="unit-info">
-          <div class="unit-name">一般動詞・現在形</div>
-          <div class="unit-sub">10問 · 初級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="一般動詞" onclick="startQuiz('一般動詞', '🌸')">
+          <div class="unit-icon">🌸</div>
+          <div class="unit-info">
+            <div class="unit-name">一般動詞・現在形</div>
+            <div class="unit-sub">10問 · 初級</div>
+          </div>
+          <div class="unit-done">✓</div>
         </div>
-        <div class="unit-done">✓</div>
+        <button class="unit-point-btn" onclick="showPointScreen('一般動詞', '🌸')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('現在進行形', '🪄')">
-        <div class="unit-icon">🪄</div>
-        <div class="unit-info">
-          <div class="unit-name">現在進行形</div>
-          <div class="unit-sub">10問 · 中級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="現在進行形" onclick="startQuiz('現在進行形', '🪄')">
+          <div class="unit-icon">🪄</div>
+          <div class="unit-info">
+            <div class="unit-name">現在進行形</div>
+            <div class="unit-sub">10問 · 中級</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
-        <div class="unit-progress">
-          <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:60%"></div></div>
-          <div class="unit-pct-text">6/10</div>
-        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('現在進行形', '🪄')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('過去形', '🌷')">
-        <div class="unit-icon">🌷</div>
-        <div class="unit-info">
-          <div class="unit-name">過去形</div>
-          <div class="unit-sub">10問 · 中級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="過去形" onclick="startQuiz('過去形', '🌷')">
+          <div class="unit-icon">🌷</div>
+          <div class="unit-info">
+            <div class="unit-name">過去形</div>
+            <div class="unit-sub">10問 · 中級</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
-        <div class="unit-progress">
-          <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:30%"></div></div>
-          <div class="unit-pct-text">3/10</div>
-        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('過去形', '🌷')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('未来形', '🌿')">
-        <div class="unit-icon">🌿</div>
-        <div class="unit-info">
-          <div class="unit-name">未来 (will / be going to)</div>
-          <div class="unit-sub">10問 · 中級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="未来形" onclick="startQuiz('未来形', '🌿')">
+          <div class="unit-icon">🌿</div>
+          <div class="unit-info">
+            <div class="unit-name">未来 (will / be going to)</div>
+            <div class="unit-sub">10問 · 中級</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
-        <div class="unit-progress">
-          <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
-          <div class="unit-pct-text">未挑戦</div>
-        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('未来形', '🌿')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('There is/are', '🌼')">
-        <div class="unit-icon">🌼</div>
-        <div class="unit-info">
-          <div class="unit-name">There is / There are</div>
-          <div class="unit-sub">10問 · 中級</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="There is/are" onclick="startQuiz('There is/are', '🌼')">
+          <div class="unit-icon">🌼</div>
+          <div class="unit-info">
+            <div class="unit-name">There is / There are</div>
+            <div class="unit-sub">10問 · 中級</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
-        <div class="unit-progress">
-          <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
-          <div class="unit-pct-text">未挑戦</div>
-        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('There is/are', '🌼')">📌<br><span>Point</span></button>
       </div>
-      <div class="unit-card" onclick="startQuiz('助動詞can', '🫧')">
-        <div class="unit-icon">🫧</div>
+      <div class="unit-card-row">
+        <div class="unit-card" data-unit="助動詞can" onclick="startQuiz('助動詞can', '🫧')">
+          <div class="unit-icon">🫧</div>
+          <div class="unit-info">
+            <div class="unit-name">助動詞 can</div>
+            <div class="unit-sub">全15問</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
+        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('助動詞can', '🫧')">📌<br><span>Point</span></button>
+      </div>
+
+      <div class="unit-card unit-card-weak" onclick="startWeakMode()">
+        <div class="unit-icon">🎯</div>
         <div class="unit-info">
-          <div class="unit-name">助動詞 can</div>
-          <div class="unit-sub">10問 · 初級</div>
+          <div class="unit-name">苦手問題チャレンジ</div>
+          <div class="unit-sub">全単元から正答率が低い問題</div>
         </div>
-        <div class="unit-progress">
-          <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
-          <div class="unit-pct-text">未挑戦</div>
-        </div>
+        <div class="unit-done" id="weak-arrow">→</div>
       </div>
     </div>
   </div>
@@ -1028,6 +1336,7 @@
 
     <div class="question-area">
       <div class="question-text" id="question-text">She ___ a student at this school.</div>
+      <div class="question-ja" id="question-ja">彼女はこの学校の生徒です。</div>
       <div class="question-hint" id="question-hint">空欄に入る be動詞 を選ぼう</div>
       <div class="choices" id="choices">
         <button class="choice-btn" onclick="selectAnswer(this, 0)">
@@ -1079,11 +1388,10 @@
       </div>
     </div>
 
-    <div class="badges-section">
+    <div class="badges-section" id="badges-section">
       <div class="badges-title">獲得バッジ</div>
-      <div class="badge-row">
-        <div class="badge-chip">🌟 Perfect!</div>
-        <div class="badge-chip">🔥 7日連続</div>
+      <div class="badge-row" id="badge-row">
+        <!-- dynamically populated by showResult() -->
       </div>
     </div>
 
@@ -1094,6 +1402,38 @@
   </div>
 
   <!-- ====== RECORDS ====== -->
+  <!-- ====== POINT SCREEN ====== -->
+  <div class="screen" id="point-screen">
+    <div class="point-header">
+      <div class="point-back-btn" onclick="showScreen('home-screen')">←</div>
+      <div class="point-header-info">
+        <div class="point-header-unit" id="point-header-unit">📌 要点まとめ</div>
+        <div class="point-header-title" id="point-header-title">Point</div>
+      </div>
+      <button class="point-start-btn" id="point-start-btn" onclick="">✏️ クイズへ</button>
+    </div>
+    <div class="point-content" id="point-content"></div>
+  </div>
+
+  <!-- ====== BADGE SCREEN ====== -->
+  <div class="screen" id="badge-screen">
+    <div class="badge-screen-header">
+      <div class="badge-screen-title">バッジ<span>コレクション</span></div>
+    </div>
+    <div class="badge-overall-progress">
+      <div class="badge-progress-top">
+        <div class="badge-progress-label">🏆 獲得バッジ</div>
+        <div class="badge-progress-count" id="bp-count">0<span> / 24</span></div>
+      </div>
+      <div class="badge-progress-bar-bg">
+        <div class="badge-progress-bar-fill" id="bp-bar" style="width:0%"></div>
+      </div>
+      <div class="badge-next-hint" id="bp-next-hint"></div>
+    </div>
+
+    <div id="badge-categories-container"></div>
+  </div>
+
   <div class="screen" id="records-screen">
     <div class="rec-header">
       <div class="rec-title">きろく <span>📊</span></div>
@@ -1141,7 +1481,7 @@
     <div class="nav-icon">📚</div>
     <span>まなぶ</span>
   </div>
-  <div class="nav-item" id="nav-badge" onclick="navTo('home-screen', this)">
+  <div class="nav-item" id="nav-badge" onclick="navTo('badge-screen', this)">
     <div class="nav-icon">🏆</div>
     <span>バッジ</span>
   </div>
@@ -1156,6 +1496,41 @@
 </nav>
 
 <script>
+// ===== 問題データ取得（静的 JSON から） =====
+async function fetchQuestionsFromNotion() {
+  document.getElementById('loading-overlay').style.display = 'flex';
+  try {
+    // Netlify関数の代わりに静的ファイルを参照
+    // fetch_questions.py + GitHub Actions で毎日自動更新される
+    const res = await fetch('/questions.json?v=' + (Math.floor(Date.now() / 3600000)));
+    if (!res.ok) throw new Error('fetch failed: ' + res.status);
+    const data = await res.json();
+    if (data.questions && Object.keys(data.questions).length > 0) {
+      Object.assign(quizData, data.questions);
+      updateUnitCards();
+      // 生成日時をコンソールに表示（デバッグ用）
+      if (data.generated_at) {
+        console.info('[Grammly] questions.json loaded. generated_at:', data.generated_at, '/ total:', data.total);
+      }
+    }
+  } catch (e) {
+    // オフライン or ファイルなし → フォールバックデータ（index.html内）をそのまま使用
+    console.warn('[Grammly] questions.json fetch failed, using built-in fallback:', e.message);
+  } finally {
+    document.getElementById('loading-overlay').style.display = 'none';
+  }
+}
+
+function updateUnitCards() {
+  document.querySelectorAll('.unit-card[data-unit]').forEach(card => {
+    const key = card.dataset.unit;
+    const sub = card.querySelector('.unit-sub');
+    if (!sub || !quizData[key]) return;
+    const total = quizData[key].length;
+    sub.textContent = `全${total}問`;
+  });
+}
+
 // ===== DATA PERSISTENCE (localStorage) =====
 const STORAGE_KEY = 'grammly_data';
 
@@ -1190,24 +1565,95 @@ function updateStreak(data) {
 // ===== Quiz data =====
 const quizData = {
   'be動詞': [
-    { q: 'She ___ a student at this school.', hint: '主語 She に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 1, explain: 'She は三人称単数なので is を使います。' },
-    { q: 'I ___ happy today!', hint: '主語 I に合う be動詞は？', choices: ['am', 'is', 'are', 'was'], answer: 0, explain: 'I の現在形は常に am です。' },
-    { q: 'They ___ very kind.', hint: '主語 They に合う be動詞は？', choices: ['is', 'am', 'be', 'are'], answer: 3, explain: 'They などの複数主語には are を使います。' },
-    { q: 'My dog ___ cute.', hint: '主語 My dog（単数）に合う be動詞は？', choices: ['are', 'am', 'is', 'be'], answer: 2, explain: 'My dog は三人称単数なので is を使います。' },
-    { q: 'You ___ my best friend!', hint: '主語 You に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 2, explain: 'You には常に are を使います。' },
-    { q: 'The books ___ on the table.', hint: '主語 The books（複数）に合う be動詞は？', choices: ['is', 'am', 'are', 'be'], answer: 2, explain: 'The books は複数なので are を使います。' },
-    { q: 'He ___ a soccer player.', hint: '主語 He に合う be動詞は？', choices: ['are', 'am', 'be', 'is'], answer: 3, explain: 'He は三人称単数なので is を使います。' },
-    { q: 'We ___ classmates.', hint: '主語 We に合う be動詞は？', choices: ['is', 'am', 'are', 'be'], answer: 2, explain: 'We は複数なので are を使います。' },
-    { q: 'It ___ a beautiful day.', hint: '主語 It に合う be動詞は？', choices: ['are', 'is', 'am', 'be'], answer: 1, explain: 'It は三人称単数なので is を使います。' },
-    { q: 'My sister and I ___ twins.', hint: '主語 My sister and I（複数）に合う be動詞は？', choices: ['is', 'am', 'are', 'be'], answer: 2, explain: '2人いるので複数扱い → are です。' },
+    { q: 'I ___ a student.', ja: '私は学生です。', level: '初級', hint: '主語 I に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 0, explain: 'I の現在形は常に am を使います。' },
+    { q: 'She ___ very tall.', ja: '彼女はとても背が高いです。', level: '初級', hint: '主語 She に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 1, explain: 'She は三人称単数なので is を使います。' },
+    { q: '___ you happy today?', ja: '今日は幸せですか？', level: '初級', hint: '疑問文！主語 you に合う be動詞は？', choices: ['Am', 'Is', 'Are', 'Do'], answer: 2, explain: 'You には Are を使います。Are you ~? が疑問形です。' },
+    { q: 'They ___ not at home now.', ja: '彼らは今、家にいません。', level: '初級', hint: '主語 They（複数）に合う be動詞は？', choices: ['is', 'are', 'am', 'be'], answer: 1, explain: 'They は複数なので are。否定は are not です。' },
+    { q: 'This ___ my cat, Momo.', ja: 'これが私の猫、モモです。', level: '初級', hint: '主語 This（単数）に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 1, explain: 'This は三人称単数扱いなので is を使います。' },
+    { q: 'We ___ best friends!', ja: '私たちは親友です！', level: '初級', hint: '主語 We に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 2, explain: 'We は複数なので are を使います。' },
+    { q: 'He ___ a soccer player.', ja: '彼はサッカー選手です。', level: '初級', hint: '主語 He に合う be動詞は？', choices: ['are', 'am', 'be', 'is'], answer: 3, explain: 'He は三人称単数なので is を使います。' },
+    { q: 'The books ___ on the table.', ja: '本はテーブルの上にあります。', level: '初級', hint: '主語 The books（複数）に合う be動詞は？', choices: ['is', 'am', 'are', 'be'], answer: 2, explain: 'The books は複数なので are を使います。' },
+    { q: 'It ___ a beautiful day!', ja: '素晴らしい天気ですね！', level: '中級', hint: '主語 It に合う be動詞は？', choices: ['are', 'am', 'is', 'be'], answer: 2, explain: 'It は三人称単数なので is を使います。' },
+    { q: 'My sister and I ___ twins.', ja: '私と姉は双子です。', level: '中級', hint: '2人いる！合う be動詞は？', choices: ['is', 'am', 'are', 'be'], answer: 2, explain: 'My sister and I で2人 → 複数扱いなので are です。' },
   ],
+
+  '一般動詞': [
+    { q: 'He ___ soccer every Saturday.', ja: '彼は毎週土曜日にサッカーをします。', level: '初級', hint: '主語 He（三単現）に合う形は？', choices: ['play', 'plays', 'playing', 'played'], answer: 1, explain: '三単現（He/She/It）では動詞に -s をつけます。' },
+    { q: 'We ___ to school by bus.', ja: '私たちはバスで学校へ行きます。', level: '初級', hint: '主語 We に合う形は？', choices: ['go', 'goes', 'going', 'went'], answer: 0, explain: 'We は複数なので go（原形）を使います。' },
+    { q: 'She ___ English very well.', ja: '彼女は英語をとても上手に勉強します。', level: '初級', hint: 'study の三単現は？ -y に注意！', choices: ['study', 'studys', 'studies', 'studying'], answer: 2, explain: '子音 + y で終わる動詞は y → ies に変えます（studies）。' },
+    { q: 'My brother ___ TV every night.', ja: '私の兄は毎晩テレビを見ます。', level: '初級', hint: 'watch の三単現は？', choices: ['watch', 'watchs', 'watches', 'watching'], answer: 2, explain: '-ch で終わる動詞には -es をつけます（watches）。' },
+    { q: 'I ___ like math. It\'s difficult!', ja: '私は数学が好きではありません。難しいです！', level: '初級', hint: '一般動詞の否定文（I）は？', choices: ["don't", "doesn't", 'not', "isn't"], answer: 0, explain: 'I の否定は do not（don\'t）+ 動詞の原形。' },
+    { q: 'She ___ have a pet.', ja: '彼女はペットを飼っていません。', level: '初級', hint: '三単現の否定文は？', choices: ["don't", "doesn't", 'not', "isn't"], answer: 1, explain: 'She の否定は does not（doesn\'t）+ 動詞の原形。' },
+    { q: '___ he like music?', ja: '彼は音楽が好きですか？', level: '初級', hint: '三単現の疑問文は？', choices: ['Do', 'Does', 'Is', 'Are'], answer: 1, explain: 'He の疑問文は Does + 主語 + 動詞の原形？ です。' },
+    { q: 'I ___ to music every morning.', ja: '私は毎朝音楽を聴きます。', level: '初級', hint: '主語 I に合う動詞の形は？', choices: ['listens', 'listen', 'listening', 'listened'], answer: 1, explain: 'I には動詞の原形（listen）を使います。' },
+    { q: 'She ___ up at 6 every day.', ja: '彼女は毎日6時に起きます。', level: '中級', hint: '三単現！wake の三単現は？', choices: ['wake', 'wakes', 'waking', 'waked'], answer: 1, explain: '三単現は基本 -s をつけます（wakes）。' },
+    { q: '___ you speak Japanese?', ja: 'あなたは日本語を話しますか？', level: '中級', hint: '一般動詞の疑問文（you）は？', choices: ['Are', 'Is', 'Do', 'Does'], answer: 2, explain: 'You の疑問文は Do + you + 動詞の原形？ です。' },
+  ],
+
   '現在進行形': [
-    { q: 'She ___ singing a song now.', hint: '現在進行形の形は？', choices: ['is', 'are', 'am', 'be'], answer: 0, explain: 'She は三人称単数なので is + -ing形。' },
-    { q: 'They ___ playing in the park.', hint: '主語 They に合う形は？', choices: ['is', 'be', 'are', 'am'], answer: 2, explain: 'They には are を使います。' },
-    { q: 'I ___ watching TV right now.', hint: '主語 I に合う形は？', choices: ['is', 'are', 'am', 'be'], answer: 2, explain: 'I には am を使います。' },
-    { q: 'What is she ___?', hint: '現在進行形の動詞の形は？', choices: ['do', 'does', 'doing', 'did'], answer: 2, explain: 'is の後には動詞の -ing 形（doing）が来ます。' },
-    { q: 'He is ___ his homework.', hint: '動詞 do の -ing 形は？', choices: ['does', 'done', 'do', 'doing'], answer: 3, explain: 'do の -ing 形は doing です。' },
-  ]
+    { q: 'Look! The dog ___ now.', ja: '見て！犬が今走っています。', level: '初級', hint: '現在進行形は be + ~ing！', choices: ['run', 'runs', 'is running', 'running'], answer: 2, explain: '現在進行中の動作は be動詞 + 動詞-ing（is running）。' },
+    { q: 'We ___ lunch at school today.', ja: '私たちは今日、学校で昼食を食べています。', level: '初級', hint: '主語 We に合う現在進行形は？', choices: ['eat', 'eats', 'are eating', 'eating'], answer: 2, explain: 'We には are を使い、are eating が正しい進行形です。' },
+    { q: 'She ___ to music in her room.', ja: '彼女は自分の部屋で音楽を聴いています。', level: '初級', hint: '主語 She に合う現在進行形は？', choices: ['listen', 'is listening', 'listens', 'listening'], answer: 1, explain: 'She には is を使い、is listening が正しい進行形です。' },
+    { q: '___ you doing your homework?', ja: 'あなたは宿題をしていますか？', level: '初級', hint: '進行形の疑問文！主語 you に合う be動詞は？', choices: ['Do', 'Are', 'Is', 'Does'], answer: 1, explain: '進行形の疑問文は be動詞を先頭に。you なので Are。' },
+    { q: 'They ___ not playing outside. It\'s raining.', ja: '彼らは外で遊んでいません。雨が降っています。', level: '初級', hint: '進行形の否定文！主語 They に合う be動詞は？', choices: ['is', 'are', 'do', 'does'], answer: 1, explain: 'They の進行形は are ~ing。否定は are not playing。' },
+    { q: 'I ___ a letter to my friend now.', ja: '私は今、友達に手紙を書いています。', level: '初級', hint: '主語 I に合う現在進行形は？', choices: ['write', 'writes', 'am writing', 'writing'], answer: 2, explain: 'I には am を使い、am writing が正しい進行形です。' },
+    { q: 'He ___ a cake for mom\'s birthday!', ja: '彼はお母さんの誕生日のためにケーキを作っています！', level: '初級', hint: '主語 He に合う現在進行形は？', choices: ['make', 'makes', 'is making', 'making'], answer: 2, explain: 'He には is を使い、is making が進行形。make → making（eを取る）。' },
+    { q: 'What ___ she doing now?', ja: '彼女は今、何をしていますか？', level: '初級', hint: '疑問詞+進行形！She に合う be動詞は？', choices: ['do', 'does', 'is', 'are'], answer: 2, explain: 'What is she doing? が正しい語順。She には is。' },
+    { q: 'The birds ___ in the sky.', ja: '鳥たちが空を飛んでいます。', level: '中級', hint: '主語 The birds（複数）に合う進行形は？', choices: ['fly', 'flies', 'are flying', 'is flying'], answer: 2, explain: 'The birds は複数なので are flying が正しい。' },
+    { q: 'Mom ___ dinner in the kitchen.', ja: 'お母さんはキッチンで夕食を料理しています。', level: '中級', hint: '主語 Mom（三人称単数）に合う進行形は？', choices: ['cook', 'cooks', 'are cooking', 'is cooking'], answer: 3, explain: 'Mom は三人称単数なので is cooking が正しい進行形。' },
+  ],
+
+  '過去形': [
+    { q: 'I ___ sick yesterday.', ja: '私は昨日、病気でした。', level: '初級', hint: 'be動詞の過去形！I に合う形は？', choices: ['am', 'was', 'were', 'is'], answer: 1, explain: 'I の be動詞過去形は was です。' },
+    { q: 'We ___ soccer after school last Friday.', ja: '私たちは先週金曜日、放課後にサッカーをしました。', level: '初級', hint: '一般動詞 play の過去形は？', choices: ['play', 'played', 'playing', 'plays'], answer: 1, explain: '規則動詞の過去形は -ed をつけます（played）。' },
+    { q: 'She ___ a book to me last week.', ja: '彼女は先週、私に本をくれました。', level: '初級', hint: 'give の過去形（不規則変化）は？', choices: ['give', 'gives', 'gave', 'giving'], answer: 2, explain: 'give は不規則動詞。過去形は gave です。' },
+    { q: '___ you at the park yesterday?', ja: 'あなたは昨日、公園にいましたか？', level: '初級', hint: 'be動詞過去形の疑問文！you に合う形は？', choices: ['Was', 'Were', 'Did', 'Are'], answer: 1, explain: 'You の be動詞過去形は were。疑問文は Were you ~? です。' },
+    { q: 'He ___ not come to school two days ago.', ja: '彼は2日前、学校に来ませんでした。', level: '初級', hint: '一般動詞過去形の否定文は？', choices: ['do', 'does', 'did', "didn't"], answer: 3, explain: '過去の否定は did not（didn\'t）+ 動詞の原形。' },
+    { q: 'They ___ very tired after the game.', ja: '彼らは試合の後、とても疲れていました。', level: '初級', hint: 'be動詞過去形！They に合う形は？', choices: ['was', 'were', 'are', 'is'], answer: 1, explain: 'They の be動詞過去形は were です。' },
+    { q: 'I ___ to Kyoto last summer.', ja: '私は去年の夏、京都へ行きました。', level: '初級', hint: 'go の過去形（不規則変化）は？', choices: ['go', 'goes', 'going', 'went'], answer: 3, explain: 'go は不規則動詞。過去形は went です。' },
+    { q: '___ she study hard for the test?', ja: '彼女はテストのために一生懸命勉強しましたか？', level: '初級', hint: '一般動詞過去形の疑問文は？', choices: ['Do', 'Does', 'Did', 'Was'], answer: 2, explain: '過去の疑問文は Did + 主語 + 動詞の原形？ です。' },
+    { q: 'We ___ a great time at the festival.', ja: '私たちはお祭りでとても楽しい時間を過ごしました。', level: '中級', hint: 'have の過去形（不規則変化）は？', choices: ['have', 'has', 'had', 'having'], answer: 2, explain: 'have の過去形は had です。' },
+    { q: 'My cat ___ on the sofa all day.', ja: '私の猫は一日中ソファの上にいました。', level: '中級', hint: 'be動詞過去形！My cat（単数）に合う形は？', choices: ['is', 'are', 'was', 'were'], answer: 2, explain: 'My cat は三人称単数なので be動詞過去形は was。' },
+  ],
+
+  '未来形': [
+    { q: 'I think it ___ rain this afternoon.', ja: '今日の午後は雨が降ると思います。', level: '初級', hint: '予測・推量の未来は？', choices: ['will', 'is going to', 'goes to', 'rained'], answer: 0, explain: '予測や推量には will を使います。（be going to も◯）' },
+    { q: 'She ___ to Tokyo next Sunday.', ja: '彼女は次の日曜日、東京へ行く予定です。', level: '初級', hint: '予定を表す！be going to の正しい形は？', choices: ['go', 'goes', 'is going', 'went'], answer: 2, explain: 'She は三人称単数。be going to → is going to が正しい。' },
+    { q: 'We ___ pizza for dinner tonight!', ja: '今夜は夕食にピザを食べます！', level: '初級', hint: '意志・決定を表す未来は？', choices: ['will eat', 'eat', 'eats', 'ate'], answer: 0, explain: '意志・その場での決定には will + 動詞の原形を使います。' },
+    { q: 'Look at the clouds! It ___ soon.', ja: '雲を見て！もうすぐ雨が降りそうです。', level: '初級', hint: '根拠のある予測！be going to vs will', choices: ['will rain', 'is going to rain', 'rains', 'rained'], answer: 1, explain: '目に見える根拠（雲）がある予測には be going to を使います。' },
+    { q: '___ you help me with my homework?', ja: '宿題を手伝ってくれますか？', level: '初級', hint: '依頼・未来の疑問文は？', choices: ['Will', 'Do', 'Are', 'Did'], answer: 0, explain: '依頼や未来の疑問文は Will you ~? です。' },
+    { q: 'I ___ call you later.', ja: '後で電話します。', level: '初級', hint: '約束・意志を表す未来は？', choices: ['will', 'am going to', 'do', 'did'], answer: 0, explain: 'その場での決定・約束には will を使います。' },
+    { q: 'She ___ be 15 next month.', ja: '彼女は来月15歳になります。', level: '初級', hint: '未来を表す助動詞は？', choices: ['is', 'was', 'will', 'does'], answer: 2, explain: '未来の状態を表すには will + 動詞の原形（will be）を使います。' },
+    { q: 'They ___ going to visit Okinawa.', ja: '彼らは沖縄を訪れる予定です。', level: '初級', hint: 'be going to の文！They に合う be動詞は？', choices: ['is', 'was', 'were', 'are'], answer: 3, explain: 'They は複数なので be going to → are going to が正しい。' },
+    { q: '___ it snow tomorrow?', ja: '明日は雪が降りますか？', level: '中級', hint: 'will の疑問文！', choices: ['Does', 'Is', 'Will', 'Do'], answer: 2, explain: 'will の疑問文は Will + 主語 + 動詞の原形？ です。' },
+    { q: 'I\'m not going ___ eat natto!', ja: '私は納豆を食べるつもりはありません！', level: '中級', hint: 'be going to の否定文の構造は？', choices: ['to', 'for', 'at', 'with'], answer: 0, explain: 'be going to + 動詞の原形。to が必要です。' },
+  ],
+
+  'There is/are': [
+    { q: 'There ___ a cat under the table.', ja: 'テーブルの下に猫が1匹います。', level: '初級', hint: 'a cat（単数）に合う be動詞は？', choices: ['is', 'are', 'am', 'be'], answer: 0, explain: 'a cat は単数なので There is を使います。' },
+    { q: 'There ___ many students in the gym.', ja: '体育館にたくさんの生徒がいます。', level: '初級', hint: 'many students（複数）に合う be動詞は？', choices: ['is', 'are', 'am', 'be'], answer: 1, explain: 'many students は複数なので There are を使います。' },
+    { q: '___ any milk in the fridge?', ja: '冷蔵庫に牛乳はありますか？', level: '初級', hint: 'milk（不可算・単数扱い）の疑問文は？', choices: ['Is there', 'Are there', 'There is', 'There are'], answer: 0, explain: 'milk は不可算名詞（単数扱い）なので Is there を使います。' },
+    { q: 'There ___ not any cookies left...', ja: 'クッキーが1つも残っていません…', level: '中級', hint: 'cookies（複数）の否定文は？', choices: ['is', 'are', 'be', "aren't"], answer: 3, explain: 'cookies は複数なので There aren\'t（are not）が正しい。' },
+    { q: 'How many chairs ___ in the classroom?', ja: '教室には椅子が何脚ありますか？', level: '中級', hint: '疑問詞 How many + 複数名詞の疑問文は？', choices: ['is there', 'are there', 'there is', 'there are'], answer: 1, explain: 'How many chairs? と聞くときは Are there を使います。' },
+    { q: 'There ___ a book on the desk.', ja: '机の上に本が1冊あります。', level: '初級', hint: 'a book（単数）に合う be動詞は？', choices: ['are', 'am', 'is', 'be'], answer: 2, explain: 'a book は単数なので There is を使います。' },
+    { q: '___ a park near your house?', ja: 'あなたの家の近くに公園はありますか？', level: '初級', hint: 'a park（単数）の疑問文は？', choices: ['Is there', 'Are there', 'Do there', 'Does there'], answer: 0, explain: 'a park は単数。疑問文は Is there ~? です。' },
+    { q: 'There are ___ apples in the basket.', ja: 'かごの中にいくつかりんごがあります。', level: '初級', hint: '複数のりんご！数量を表す語は？', choices: ['a', 'an', 'some', 'much'], answer: 2, explain: '複数の可算名詞には some（いくつかの）を使います。' },
+    { q: 'There ___ a lot of snow last winter.', ja: '昨年の冬はたくさんの雪が降りました。', level: '中級', hint: 'be動詞の過去形！snow（単数扱い）に合う形は？', choices: ['is', 'are', 'was', 'were'], answer: 2, explain: 'snow は不可算名詞（単数扱い）なので過去形は was。' },
+    { q: 'How many students ___ in your class?', ja: 'あなたのクラスには何人の生徒がいますか？', level: '中級', hint: '複数名詞の疑問文！', choices: ['is there', 'are there', 'there was', 'there were'], answer: 1, explain: 'students は複数なので Are there を使い、How many students are there? となります。' },
+  ],
+
+  '助動詞can': [
+    { q: 'I ___ swim very well.', ja: '私はとても上手に泳げます。', level: '初級', hint: '～できる を表す助動詞は？', choices: ['can', "can't", 'cans', 'canning'], answer: 0, explain: '～できる は can + 動詞の原形で表します。' },
+    { q: '___ you play the piano?', ja: 'あなたはピアノを弾けますか？', level: '初級', hint: 'can の疑問文！can を先頭に出すと？', choices: ['Can', 'Do', 'Are', 'Will'], answer: 0, explain: 'can の疑問文は Can + 主語 + 動詞の原形？ です。' },
+    { q: 'He ___ speak English a little.', ja: '彼は少し英語を話すことができます。', level: '初級', hint: '主語 He + can の組み合わせは？', choices: ['can', 'cans', "can't", 'canning'], answer: 0, explain: 'can は主語が何であっても形が変わりません（He cans × → He can ○）。' },
+    { q: 'We ___ not go to the park because of rain.', ja: '雨のため私たちは公園へ行けません。', level: '初級', hint: '～できない の否定形は？', choices: ['can', "can't", 'cans', 'could'], answer: 1, explain: 'can の否定は cannot または can\'t（短縮形）です。' },
+    { q: 'My sister ___ ride a bike when she was five.', ja: '私の姉（妹）は5歳のときに自転車に乗れました。', level: '中級', hint: '過去の「できた」を表す形は？', choices: ['can', 'could', "can't", 'cans'], answer: 1, explain: 'can の過去形は could。「～できた」は could + 動詞の原形です。' },
+    { q: '___ I use your pen?', ja: 'あなたのペンを使ってもいいですか？', level: '初級', hint: '許可を求める表現は？', choices: ['Will', 'Do', 'Can', 'Are'], answer: 2, explain: 'Can I ~? は「～してもいいですか？」と許可を求める表現です。' },
+    { q: 'She ___ sing very well!', ja: '彼女はとても上手に歌えます！', level: '初級', hint: '主語 She + can の組み合わせは？', choices: ['cans', 'could', 'can', "can't"], answer: 2, explain: 'can は三単現でも変化しません。She can が正しい。' },
+    { q: 'I ___ find my keys!', ja: '私は鍵が見つけられません！', level: '中級', hint: '「～できない」の否定形は？', choices: ['can', 'could', "can't", 'cans'], answer: 2, explain: '「見つけられない」= can\'t find。can の否定形です。' },
+    { q: 'You ___ see the sea from here.', ja: 'ここから海が見えます。', level: '初級', hint: '「ここから海が見える」肯定文は？', choices: ["can't", 'could', 'can', 'cans'], answer: 2, explain: '「～できる・～が見える」= can + 動詞の原形です。' },
+    { q: '___ he come to the party?', ja: '彼はパーティーに来られますか？', level: '初級', hint: 'can の疑問文（三人称単数）は？', choices: ['Does', 'Is', 'Can', 'Will'], answer: 2, explain: 'can の疑問文は主語に関わらず Can + 主語 + 動詞の原形？ です。' },
+  ],
 };
 
 const unitMeta = {
@@ -1233,6 +1679,8 @@ function navTo(screenId, navEl) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   navEl.classList.add('active');
   if (screenId === 'records-screen') renderRecords();
+  if (screenId === 'badge-screen') renderBadges();
+  if (screenId === 'home-screen') updateHomeProgress();
 }
 
 function showScreen(id) {
@@ -1241,16 +1689,188 @@ function showScreen(id) {
 }
 
 // ===== QUIZ =====
+
+// 難易度別に問題を分類するヘルパー
+function getByLevel(data, level) {
+  return data.filter(q => q.level === level);
+}
+
+// 単元の習熟度を判定（初級15問全正解→中級解放、中級15問全正解→上級解放）
+function getUnitMastery(unit) {
+  const appData = loadData();
+  const rec = appData.levelMastery?.[unit] || {};
+  // rec.beginner: 初級クリア済みか, rec.intermediate: 中級クリア済みか
+  return {
+    beginnerDone: rec.beginnerDone || false,
+    intermediateDone: rec.intermediateDone || false,
+  };
+}
+
+// 難易度配分を考慮したquestion選択
+function selectQuestions(unit) {
+  const data = quizData[unit] || [];
+  const mastery = getUnitMastery(unit);
+
+  const beginners = getByLevel(data, '初級');
+  const intermediates = getByLevel(data, '中級');
+  const advanced = getByLevel(data, '上級');
+
+  let pool = [];
+
+  if (!mastery.beginnerDone) {
+    // フェーズ1: 初級中心（初級5問 or 初級4+中1）
+    const bCount = Math.min(beginners.length, 5);
+    pool = [...beginners].sort(() => Math.random() - 0.5).slice(0, bCount);
+    // 初級が5未満なら中級で補完
+    if (pool.length < 5 && intermediates.length > 0) {
+      const fill = [...intermediates].sort(() => Math.random() - 0.5).slice(0, 5 - pool.length);
+      pool = [...pool, ...fill];
+    }
+  } else if (!mastery.intermediateDone) {
+    // フェーズ2: 中級メイン（中級3+初級1+上級1、または中級多め）
+    const iSlice = [...intermediates].sort(() => Math.random() - 0.5).slice(0, 3);
+    const bSlice = [...beginners].sort(() => Math.random() - 0.5).slice(0, 1);
+    const aSlice = [...advanced].sort(() => Math.random() - 0.5).slice(0, 1);
+    pool = [...iSlice, ...bSlice, ...aSlice].sort(() => Math.random() - 0.5);
+    if (pool.length < 5) {
+      const extra = [...intermediates, ...beginners].sort(() => Math.random() - 0.5).slice(0, 5 - pool.length);
+      pool = [...pool, ...extra];
+    }
+  } else {
+    // フェーズ3: 上級メイン（上級3+中級1+初級1）
+    const aSlice = [...advanced].sort(() => Math.random() - 0.5).slice(0, 3);
+    const iSlice = [...intermediates].sort(() => Math.random() - 0.5).slice(0, 1);
+    const bSlice = [...beginners].sort(() => Math.random() - 0.5).slice(0, 1);
+    pool = [...aSlice, ...iSlice, ...bSlice].sort(() => Math.random() - 0.5);
+    if (pool.length < 5) {
+      const extra = [...advanced, ...intermediates].sort(() => Math.random() - 0.5).slice(0, 5 - pool.length);
+      pool = [...pool, ...extra];
+    }
+  }
+
+  // 重複除去して最大5問
+  const seen = new Set();
+  return pool.filter(q => {
+    const k = q.q;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  }).slice(0, 5);
+}
+
+// 結果反映時に習熟度を更新（questionStatsから難易度別正解数を集計）
+function checkAndUpdateMastery(unit) {
+  const appData = loadData();
+  if (!appData.levelMastery) appData.levelMastery = {};
+  if (!appData.levelMastery[unit]) appData.levelMastery[unit] = {};
+  if (!appData.levelCorrect) appData.levelCorrect = {};
+  if (!appData.levelCorrect[unit]) appData.levelCorrect[unit] = { '初級': 0, '中級': 0, '上級': 0 };
+
+  // questionStatsから各難易度の正解合計を算出
+  const stats = appData.questionStats || {};
+  const unitData = quizData[unit] || [];
+  const counts = { '初級': 0, '中級': 0, '上級': 0 };
+  for (const q of unitData) {
+    const key = `${unit}::${q.q}`;
+    const st = stats[key];
+    if (st && st.correct > 0) {
+      const lv = q.level || '初級';
+      counts[lv] += st.correct;
+    }
+  }
+
+  appData.levelCorrect[unit] = counts;
+
+  // 初級15問正解累積でクリア判定
+  if (!appData.levelMastery[unit].beginnerDone && counts['初級'] >= 15) {
+    appData.levelMastery[unit].beginnerDone = true;
+  }
+  // 中級15問正解累積でクリア判定
+  if (!appData.levelMastery[unit].intermediateDone && counts['中級'] >= 15) {
+    appData.levelMastery[unit].intermediateDone = true;
+  }
+
+  // Unit Clear: 全問を1回以上正解
+  const allAnswered = unitData.every(q => {
+    const key = `${unit}::${q.q}`;
+    return (stats[key]?.correct || 0) >= 1;
+  });
+  if (unitData.length > 0) appData.levelMastery[unit].unitClear = allAnswered;
+
+  // Unit Master: 全問を3回以上正解
+  const allMastered = unitData.every(q => {
+    const key = `${unit}::${q.q}`;
+    return (stats[key]?.correct || 0) >= 3;
+  });
+  if (unitData.length > 0) appData.levelMastery[unit].unitMaster = allMastered;
+
+  saveData(appData);
+}
+
+let weakMode = false;
+
 function startQuiz(unit, emoji) {
+  weakMode = false;
   currentUnit = unit;
   currentEmoji = emoji;
-  const data = quizData[unit] || quizData['be動詞'];
-  questions = [...data].sort(() => Math.random() - 0.5).slice(0, Math.min(data.length, 10));
+  questions = selectQuestions(unit);
   currentQ = 0;
   correctCount = 0;
   loadQuestion();
   showScreen('quiz-screen');
-  // reset nav highlight
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('nav-home').classList.add('active');
+}
+
+function startWeakMode() {
+  weakMode = true;
+  currentUnit = '苦手チャレンジ';
+  currentEmoji = '🎯';
+
+  const appData = loadData();
+  const qStats = appData.questionStats || {};
+
+  // 全単元の問題を集めて正答率でソート
+  let allQ = [];
+  for (const [unit, qs] of Object.entries(quizData)) {
+    for (const q of qs) {
+      const key = `${unit}::${q.q}`;
+      const stat = qStats[key] || { correct: 0, total: 0 };
+      const rate = stat.total > 0 ? stat.correct / stat.total : 0.5;
+      allQ.push({ ...q, _unit: unit, _rate: rate, _key: key });
+    }
+  }
+
+  // 正答率が低い順にソート（同率はランダム）
+  allQ.sort((a, b) => a._rate - b._rate + (Math.random() - 0.5) * 0.01);
+
+  // 各単元から最低1問入るよう、上位弱問を選ぶ（最大5問）
+  const units = [...new Set(allQ.map(q => q._unit))];
+  const selected = [];
+  const usedUnits = new Set();
+
+  // まず各単元の最弱問を1問ずつ
+  for (const unit of units.sort(() => Math.random() - 0.5)) {
+    const worst = allQ.find(q => q._unit === unit && !selected.includes(q));
+    if (worst) selected.push(worst);
+    if (selected.length >= 5) break;
+  }
+
+  // 5問に満たなければ全体の弱問で補完
+  if (selected.length < 5) {
+    for (const q of allQ) {
+      if (!selected.includes(q)) {
+        selected.push(q);
+        if (selected.length >= 5) break;
+      }
+    }
+  }
+
+  questions = selected.sort(() => Math.random() - 0.5);
+  currentQ = 0;
+  correctCount = 0;
+  loadQuestion();
+  showScreen('quiz-screen');
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('nav-home').classList.add('active');
 }
@@ -1261,6 +1881,7 @@ function loadQuestion() {
   const q = questions[currentQ];
   document.getElementById('quiz-unit-tag').textContent = currentEmoji + ' ' + currentUnit;
   document.getElementById('question-text').textContent = q.q;
+  document.getElementById('question-ja').textContent = q.ja || '';
   document.getElementById('question-hint').textContent = q.hint;
   document.getElementById('quiz-count').textContent = (currentQ + 1) + '/' + questions.length;
   document.getElementById('quiz-prog-fill').style.width = ((currentQ) / questions.length * 100) + '%';
@@ -1285,8 +1906,9 @@ function selectAnswer(btn, idx) {
   answered = true;
   const q = questions[currentQ];
   const allBtns = document.querySelectorAll('.choice-btn');
+  const isCorrect = idx === q.answer;
 
-  if (idx === q.answer) {
+  if (isCorrect) {
     btn.classList.add('correct');
     correctCount++;
     showFeedback(true, q.explain);
@@ -1299,6 +1921,16 @@ function selectAnswer(btn, idx) {
 
   allBtns.forEach(b => { if (b !== btn && !b.classList.contains('correct')) b.classList.add('disabled'); });
   document.getElementById('next-btn').className = 'next-btn show';
+
+  // 問題ごとの統計を記録
+  const unitKey = q._unit || currentUnit;
+  const qKey = `${unitKey}::${q.q}`;
+  const appData = loadData();
+  if (!appData.questionStats) appData.questionStats = {};
+  if (!appData.questionStats[qKey]) appData.questionStats[qKey] = { correct: 0, total: 0 };
+  appData.questionStats[qKey].total++;
+  if (isCorrect) appData.questionStats[qKey].correct++;
+  saveData(appData);
 }
 
 function showFeedback(correct, note) {
@@ -1346,11 +1978,57 @@ function showResult() {
   if (appData.history.length > 20) appData.history = appData.history.slice(0, 20);
 
   saveData(appData);
+
+  // 習熟度チェック（通常クイズのみ）
+  if (!weakMode) {
+    checkAndUpdateMastery(currentUnit);
+  }
+
+  // バッジ評価（全モード）
+  evaluateBadges(correctCount, questions.length);
+
   updateStreakPill(appData.streak);
+  updateMasteryBadge();
+
+  // 獲得バッジ（動的）
+  const badgeRow = document.getElementById('badge-row');
+  badgeRow.innerHTML = '';
+  const freshData = loadData();
+  // Perfect判定: 問題数が1問以上かつ全問正解
+  const isPerfect = questions.length > 0 && correctCount === questions.length;
+  if (isPerfect) {
+    const b = document.createElement('div');
+    b.className = 'badge-chip'; b.textContent = '🌟 Perfect!';
+    badgeRow.appendChild(b);
+  }
+  if (freshData.streak >= 3) {
+    const b = document.createElement('div');
+    b.className = 'badge-chip'; b.textContent = `🔥 ${freshData.streak}日連続`;
+    badgeRow.appendChild(b);
+  }
+  if (!weakMode && freshData.levelMastery?.[currentUnit]?.unitMaster) {
+    const b = document.createElement('div');
+    b.className = 'badge-chip'; b.textContent = '👑 Unit Master!';
+    badgeRow.appendChild(b);
+  } else if (!weakMode && freshData.levelMastery?.[currentUnit]?.unitClear) {
+    const b = document.createElement('div');
+    b.className = 'badge-chip'; b.textContent = '✨ Unit Clear!';
+    badgeRow.appendChild(b);
+  }
+  if (badgeRow.children.length === 0) {
+    document.getElementById('badges-section').style.display = 'none';
+  } else {
+    document.getElementById('badges-section').style.display = '';
+  }
 
   let illus, comment, sub;
-  if (pct === 100) { illus = '🌸'; comment = 'Perfect! 満点だよ！'; sub = currentUnit + '、完全マスターした✨'; }
-  else if (pct >= 70) { illus = '⭐'; comment = 'すごい！よくできたね'; sub = '次はもっと上を目指そう！'; }
+  if (isPerfect && freshData.levelMastery?.[currentUnit]?.unitMaster) {
+    illus = '👑'; comment = 'Unit Master達成！！'; sub = currentUnit + 'を完全制覇したよ🎉';
+  } else if (isPerfect && freshData.levelMastery?.[currentUnit]?.unitClear) {
+    illus = '✨'; comment = 'Unit Clear！すごい！'; sub = currentUnit + '、全問クリアしたよ🌸';
+  } else if (isPerfect) {
+    illus = '🌸'; comment = 'Perfect! 満点だよ！'; sub = currentUnit + '、完全マスターした✨';
+  } else if (pct >= 70) { illus = '⭐'; comment = 'すごい！よくできたね'; sub = '次はもっと上を目指そう！'; }
   else if (pct >= 50) { illus = '🌿'; comment = 'がんばったね！'; sub = 'もう一度やってみると完璧になれるよ'; }
   else { illus = '💙'; comment = 'ドンマイ！一緒に復習しよう'; sub = '練習が大事！また挑戦してね'; }
 
@@ -1358,6 +2036,37 @@ function showResult() {
   document.getElementById('result-comment').textContent = comment;
   document.getElementById('result-sub').textContent = sub;
   showScreen('result-screen');
+  // ホーム画面のリングも更新しておく
+  updateHomeProgress();
+}
+
+
+function updateMasteryBadge() {
+  // Unit cards: update badge row for Clear/Master
+  const appData = loadData();
+  document.querySelectorAll('.unit-card[data-unit]').forEach(card => {
+    const unit = card.dataset.unit;
+    const mastery = appData.levelMastery?.[unit] || {};
+    // Remove old badge row if present
+    const oldRow = card.querySelector('.unit-badge-row');
+    if (oldRow) oldRow.remove();
+    const oldDone = card.querySelector('.unit-done');
+
+    if (mastery.unitMaster) {
+      if (oldDone) oldDone.remove();
+      const row = document.createElement('div');
+      row.className = 'unit-badge-row';
+      row.innerHTML = '<span class="unit-badge-pill unit-badge-master">👑 Master</span><span class="unit-badge-pill unit-badge-clear">✓ Clear</span>';
+      card.appendChild(row);
+    } else if (mastery.unitClear) {
+      if (oldDone) oldDone.remove();
+      const row = document.createElement('div');
+      row.className = 'unit-badge-row';
+      row.innerHTML = '<span class="unit-badge-pill unit-badge-clear">✓ Clear</span>';
+      card.appendChild(row);
+    }
+    // If neither, keep the original .unit-done or .unit-progress as-is
+  });
 }
 
 function updateStreakPill(streak) {
@@ -1469,11 +2178,898 @@ function renderRecords() {
   }
 }
 
+// ===== UNIT SUMMARY DATA =====
+const UNIT_SUMMARIES = {
+  'be動詞': {
+    rules: [
+      { icon: '📌', text: '<strong>I</strong> → <strong>am</strong>　/ 　<strong>He / She / It</strong> → <strong>is</strong>　/ 　<strong>You / We / They</strong> → <strong>are</strong>' },
+      { icon: '❓', text: '疑問文: <strong>be動詞を文の先頭に</strong>移動<br><em>Are you happy? / Is she tall?</em>' },
+      { icon: '🚫', text: '否定文: be動詞の後ろに <strong>not</strong><br><em>I am not / She is not (isn\'t) / They are not (aren\'t)</em>' },
+    ],
+    tables: [
+      {
+        title: '主語 ↔ be動詞 対応表',
+        headers: ['主語', 'be動詞', '例文'],
+        rows: [
+          ['I', 'am', 'I am a student.'],
+          ['He / She / It', 'is', 'She is tall.'],
+          ['You / We / They', 'are', 'We are friends.'],
+          ['This / That / 単数名詞', 'is', 'This is my cat.'],
+          ['These / Those / 複数名詞', 'are', 'The books are heavy.'],
+        ]
+      }
+    ]
+  },
+  '一般動詞': {
+    rules: [
+      { icon: '📌', text: 'ふつうは動詞そのまま: <strong>I play / We eat / They go</strong>' },
+      { icon: '⚠️', text: '<strong>He / She / It</strong>（三単現）は語尾に <strong>-s / -es / -ies</strong><br><em>plays / watches / studies</em>' },
+      { icon: '❓', text: '疑問文: <strong>Do / Does</strong> + 主語 + 動詞の原形<br><em>Do you like? / Does she have?</em>' },
+      { icon: '🚫', text: '否定文: <strong>don\'t / doesn\'t</strong> + 動詞の原形<br><em>I don\'t like / He doesn\'t go</em>' },
+    ],
+    tables: [
+      {
+        title: '三単現の -s のつけ方',
+        headers: ['パターン', '変化', '例'],
+        rows: [
+          ['ふつうの動詞', '+ s', 'play → plays'],
+          ['-s / -sh / -ch / -x / -o で終わる', '+ es', 'watch → watches'],
+          ['子音 + y で終わる', 'y → ies', 'study → studies'],
+          ['have だけ特別', 'have → has', 'She has a dog.'],
+        ]
+      }
+    ]
+  },
+  '現在進行形': {
+    rules: [
+      { icon: '📌', text: '形: <strong>be動詞 + 動詞-ing</strong>（今まさにしている動作）<br><em>I am running. / She is eating.</em>' },
+      { icon: '⚠️', text: '<strong>-ing のつけ方に注意！</strong>語尾によって変わる' },
+      { icon: '❓', text: '疑問文: <strong>be動詞を先頭に</strong><br><em>Are you studying? / Is he sleeping?</em>' },
+      { icon: '🚫', text: '否定文: be動詞 + <strong>not</strong><br><em>I am not playing. / They are not watching.</em>' },
+    ],
+    tables: [
+      {
+        title: '-ing のつけ方',
+        headers: ['パターン', '変化', '例'],
+        rows: [
+          ['ふつうの動詞', '+ ing', 'play → playing'],
+          ['e で終わる', 'e を取って + ing', 'make → making'],
+          ['短母音+子音1文字で終わる', '子音を重ねて + ing', 'run → running, swim → swimming'],
+          ['ie で終わる', 'ie → y + ing', 'die → dying'],
+        ]
+      },
+      {
+        title: '主語別の be動詞',
+        headers: ['主語', 'be動詞'],
+        rows: [
+          ['I', 'am'],
+          ['He / She / It', 'is'],
+          ['You / We / They', 'are'],
+        ]
+      }
+    ]
+  },
+  '過去形': {
+    rules: [
+      { icon: '📌', text: '<strong>規則動詞</strong>: 語尾に <strong>-ed</strong> をつけるだけ<br><em>play → played / watch → watched</em>' },
+      { icon: '⚠️', text: '<strong>不規則動詞</strong>: 形が丸ごと変わる。まるごと覚える！<br><em>go → went / have → had / give → gave</em>' },
+      { icon: '❓', text: '疑問文: <strong>Did</strong> + 主語 + 動詞の<strong>原形</strong><br><em>Did you go? / Did she eat?</em>' },
+      { icon: '🚫', text: '否定文: <strong>didn\'t</strong> + 動詞の<strong>原形</strong><br><em>I didn\'t go. / He didn\'t come.</em>' },
+      { icon: '💡', text: 'be動詞の過去形: <strong>was</strong>（I / He / She / It）/ <strong>were</strong>（You / We / They）' },
+    ],
+    tables: [
+      {
+        title: '-ed のつけ方（規則動詞）',
+        headers: ['パターン', '変化', '例'],
+        rows: [
+          ['ふつう', '+ ed', 'play → played'],
+          ['e で終わる', '+ d だけ', 'like → liked'],
+          ['子音 + y で終わる', 'y → ied', 'study → studied'],
+          ['短母音+子音1文字', '子音を重ねて + ed', 'stop → stopped'],
+        ]
+      },
+      {
+        title: '絶対覚えたい不規則動詞',
+        headers: ['原形', '過去形', '意味'],
+        rows: [
+          ['go', 'went', '行く'],
+          ['come', 'came', '来る'],
+          ['have', 'had', '持つ・食べる'],
+          ['get', 'got', '得る'],
+          ['give', 'gave', '与える'],
+          ['take', 'took', '取る・かかる'],
+          ['make', 'made', '作る'],
+          ['see', 'saw', '見る'],
+          ['eat', 'ate', '食べる'],
+          ['buy', 'bought', '買う'],
+          ['run', 'ran', '走る'],
+          ['say', 'said', '言う'],
+          ['know', 'knew', '知る'],
+          ['think', 'thought', '思う'],
+          ['write', 'wrote', '書く'],
+        ]
+      }
+    ]
+  },
+  '未来形': {
+    rules: [
+      { icon: '📌', text: '<strong>will</strong> = その場で決めた・予想・約束<br><em>I will call you later. / I think it will rain.</em>' },
+      { icon: '📌', text: '<strong>be going to</strong> = 前から決めていた予定・根拠のある予測<br><em>I am going to visit Tokyo. / Look at the clouds — it\'s going to rain!</em>' },
+      { icon: '⚠️', text: 'will の後 / be going to の to の後は<strong>動詞の原形</strong><br><em>will go ✓ / will goes ✗</em>' },
+      { icon: '❓', text: '疑問文: <strong>Will</strong> + 主語 + 動詞の原形？<br><em>Will you help me?</em>' },
+      { icon: '🚫', text: '否定文: <strong>won\'t</strong> / <strong>am not going to</strong> / <strong>isn\'t going to</strong>' },
+    ],
+    tables: [
+      {
+        title: 'will vs be going to',
+        headers: ['', 'will', 'be going to'],
+        rows: [
+          ['いつ決めた？', 'その場で', '前から決めていた'],
+          ['予測の根拠', '漠然とした予想', '目に見える根拠あり'],
+          ['例', 'I\'ll have the pizza.', 'I\'m going to buy a new bike.'],
+        ]
+      },
+      {
+        title: 'be going to の主語変化',
+        headers: ['主語', '形'],
+        rows: [
+          ['I', 'I am going to'],
+          ['He / She / It', 'He is going to'],
+          ['You / We / They', 'They are going to'],
+        ]
+      }
+    ]
+  },
+  'There is/are': {
+    rules: [
+      { icon: '📌', text: '<strong>There is</strong> + 単数・不可算名詞<br><em>There is a cat. / There is some milk.</em>' },
+      { icon: '📌', text: '<strong>There are</strong> + 複数名詞<br><em>There are many students.</em>' },
+      { icon: '❓', text: '疑問文: <strong>Is there / Are there</strong> ～ ?<br><em>Is there a park near here?</em>' },
+      { icon: '🚫', text: '否定文: <strong>There isn\'t / There aren\'t</strong><br><em>There aren\'t any cookies left.</em>' },
+      { icon: '🕰️', text: '過去形: <strong>There was</strong>（単数）/ <strong>There were</strong>（複数）' },
+    ],
+    tables: [
+      {
+        title: 'is / are の選び方',
+        headers: ['名詞の種類', '形', '例'],
+        rows: [
+          ['単数（1つ）', 'There is', 'There is a book.'],
+          ['複数（2つ以上）', 'There are', 'There are two books.'],
+          ['不可算名詞（water, milk...）', 'There is', 'There is some water.'],
+          ['過去・単数', 'There was', 'There was a dog.'],
+          ['過去・複数', 'There were', 'There were many people.'],
+        ]
+      }
+    ]
+  },
+  '助動詞can': {
+    rules: [
+      { icon: '📌', text: '<strong>can</strong> + 動詞の原形 = 〜できる<br><em>I can swim. / She can play piano.</em>' },
+      { icon: '⚠️', text: 'canは主語が何でも形が変わらない！<br><em>He can ✓ / He cans ✗</em>' },
+      { icon: '🚫', text: '否定: <strong>can\'t / cannot</strong> + 動詞の原形<br><em>I can\'t drive.</em>' },
+      { icon: '❓', text: '疑問文: <strong>Can</strong> + 主語 + 動詞の原形？<br><em>Can you help me?</em>' },
+      { icon: '🙏', text: '<strong>Can I ～?</strong> = 〜してもいいですか？（許可を求める）<br><em>Can I use your pen?</em>' },
+      { icon: '🕰️', text: '過去形は <strong>could</strong><br><em>I could run fast when I was young.</em>' },
+    ],
+    tables: [
+      {
+        title: 'can の使い分け',
+        headers: ['使い方', '例文', '意味'],
+        rows: [
+          ['能力・可能', 'She can speak French.', '〜できる'],
+          ['許可を求める', 'Can I sit here?', '〜してもいい?'],
+          ['依頼する', 'Can you help me?', '〜してくれる?'],
+          ['否定', 'I can\'t find it.', '〜できない'],
+          ['過去（能力）', 'He could swim at 5.', '〜できた'],
+          ['丁寧な依頼', 'Could you say that again?', 'Could = より丁寧'],
+        ]
+      }
+    ]
+  },
+};
+
+function showPointScreen(unit, emoji) {
+  // ヘッダー更新
+  const meta = unitMeta[unit] || {};
+  document.getElementById('point-header-unit').textContent = emoji + ' ' + unit;
+  document.getElementById('point-header-title').innerHTML = 'ポイント<span>まとめ</span>';
+  // クイズへボタン
+  document.getElementById('point-start-btn').onclick = () => startQuiz(unit, emoji);
+  // コンテンツ生成
+  document.getElementById('point-content').innerHTML = buildPointHTML(unit);
+  showScreen('point-screen');
+  // ナビのアクティブを外す（pointはhome系）
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('nav-home').classList.add('active');
+}
+
+function buildPointHTML(unit) {
+  const data = UNIT_SUMMARIES[unit];
+  if (!data) return '<p style="color:#B8AECA;font-size:13px;padding:12px">準備中...</p>';
+
+  let html = '';
+
+  if (data.rules && data.rules.length) {
+    html += '<div class="point-section">';
+    html += '<div class="point-section-title">✏️ これだけ覚えればOK</div>';
+    for (const r of data.rules) {
+      html += `<div class="point-rule"><div class="point-rule-icon">${r.icon}</div><div class="point-rule-text">${r.text}</div></div>`;
+    }
+    html += '</div>';
+  }
+
+  if (data.tables && data.tables.length) {
+    for (const tbl of data.tables) {
+      html += '<div class="point-section">';
+      html += `<div class="point-section-title">📋 ${tbl.title}</div>`;
+      html += '<div class="point-table-wrap"><table class="point-table"><thead><tr>';
+      for (const h of tbl.headers) html += `<th>${h}</th>`;
+      html += '</tr></thead><tbody>';
+      for (const row of tbl.rows) {
+        html += '<tr>';
+        for (let i = 0; i < row.length; i++) {
+          const cls = i === 0 ? ' class="en"' : i === row.length - 1 ? ' class="ja"' : ' class="en"';
+          html += `<td${cls}>${row[i]}</td>`;
+        }
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+      html += '</div>';
+    }
+  }
+
+  return html;
+}
+
+
+// バッジ定義
+const BADGE_DEFS = {
+  // ── セッション系 ──
+  session: {
+    label: '🌟 セッション',
+    badges: [
+      {
+        id: 'first_quiz',
+        emoji: '🐣', name: 'はじめの一歩',
+        desc: '初めてクイズを解いた',
+        check: (d) => getTotalQuestions(d) >= 1,
+      },
+      {
+        id: 'first_perfect',
+        emoji: '🌸', name: 'Perfect!',
+        desc: '1セッション全問正解',
+        check: (d) => (d.perfectCount || 0) >= 1,
+      },
+      {
+        id: 'perfect3',
+        emoji: '💫', name: 'Perfectマスター',
+        desc: 'Perfect 3回達成',
+        check: (d) => (d.perfectCount || 0) >= 3,
+        progress: (d) => ({ cur: Math.min(d.perfectCount || 0, 3), max: 3 }),
+      },
+      {
+        id: 'challenge10',
+        emoji: '🎯', name: '10回挑戦',
+        desc: 'クイズを10セッションこなした',
+        check: (d) => (d.sessionCount || 0) >= 10,
+        progress: (d) => ({ cur: Math.min(d.sessionCount || 0, 10), max: 10 }),
+      },
+      {
+        id: 'challenge30',
+        emoji: '🚀', name: '30回挑戦',
+        desc: 'クイズを30セッションこなした',
+        check: (d) => (d.sessionCount || 0) >= 30,
+        progress: (d) => ({ cur: Math.min(d.sessionCount || 0, 30), max: 30 }),
+      },
+      {
+        id: 'revenge',
+        emoji: '🔁', name: 'リベンジ！',
+        desc: '前回不正解の問題に正解した',
+        check: (d) => (d.revengeCount || 0) >= 1,
+      },
+    ]
+  },
+
+  // ── 継続系 ──
+  streak: {
+    label: '🔥 継続',
+    badges: [
+      {
+        id: 'streak3',
+        emoji: '🔥', name: '3日連続',
+        desc: '3日連続で学習した',
+        check: (d) => d.streak >= 3,
+        progress: (d) => ({ cur: Math.min(d.streak, 3), max: 3 }),
+      },
+      {
+        id: 'streak7',
+        emoji: '🌈', name: '7日連続',
+        desc: '1週間連続で学習した',
+        check: (d) => d.streak >= 7,
+        progress: (d) => ({ cur: Math.min(d.streak, 7), max: 7 }),
+      },
+      {
+        id: 'streak14',
+        emoji: '⭐', name: '2週間連続',
+        desc: '2週間毎日学習した！',
+        check: (d) => d.streak >= 14,
+        progress: (d) => ({ cur: Math.min(d.streak, 14), max: 14 }),
+      },
+      {
+        id: 'streak30',
+        emoji: '🌙', name: '1ヶ月連続',
+        desc: '30日連続で学習した！',
+        check: (d) => d.streak >= 30,
+        progress: (d) => ({ cur: Math.min(d.streak, 30), max: 30 }),
+      },
+      {
+        id: 'cotsukotsu',
+        emoji: '🐢', name: 'コツコツ屋さん',
+        desc: '1日1問を7日継続（少しでもOK）',
+        check: (d) => (d.smallStreakDays || 0) >= 7,
+        progress: (d) => ({ cur: Math.min(d.smallStreakDays || 0, 7), max: 7 }),
+      },
+      {
+        id: 'weekly_all',
+        emoji: '📅', name: '今週皆勤',
+        desc: '月〜金すべて学習した',
+        check: (d) => checkWeeklyAll(d),
+      },
+    ]
+  },
+
+  // ── 問題数系 ──
+  questions: {
+    label: '📚 問題数',
+    badges: [
+      {
+        id: 'q10',
+        emoji: '✏️', name: '10問クリア',
+        desc: '合計10問解いた',
+        check: (d) => getTotalQuestions(d) >= 10,
+        progress: (d) => ({ cur: Math.min(getTotalQuestions(d), 10), max: 10 }),
+      },
+      {
+        id: 'q50',
+        emoji: '📖', name: '50問クリア',
+        desc: '合計50問解いた',
+        check: (d) => getTotalQuestions(d) >= 50,
+        progress: (d) => ({ cur: Math.min(getTotalQuestions(d), 50), max: 50 }),
+      },
+      {
+        id: 'q100',
+        emoji: '🏅', name: '100問クリア',
+        desc: '合計100問解いた！',
+        check: (d) => getTotalQuestions(d) >= 100,
+        progress: (d) => ({ cur: Math.min(getTotalQuestions(d), 100), max: 100 }),
+      },
+      {
+        id: 'q300',
+        emoji: '💎', name: '300問クリア',
+        desc: '全問題に挑戦した伝説級！',
+        check: (d) => getTotalQuestions(d) >= 300,
+        progress: (d) => ({ cur: Math.min(getTotalQuestions(d), 300), max: 300 }),
+      },
+    ]
+  },
+
+  // ── 単元クリア系 ──
+  units: {
+    label: '✨ 単元クリア',
+    badges: [
+      {
+        id: 'clear_be',
+        emoji: '💙', name: 'be動詞 Clear',
+        desc: 'be動詞の全問を1回正解',
+        check: (d) => d.levelMastery?.['be動詞']?.unitClear,
+      },
+      {
+        id: 'clear_verb',
+        emoji: '🌸', name: '一般動詞 Clear',
+        desc: '一般動詞の全問を1回正解',
+        check: (d) => d.levelMastery?.['一般動詞']?.unitClear,
+      },
+      {
+        id: 'clear_prog',
+        emoji: '🪄', name: '進行形 Clear',
+        desc: '現在進行形の全問を1回正解',
+        check: (d) => d.levelMastery?.['現在進行形']?.unitClear,
+      },
+      {
+        id: 'clear_past',
+        emoji: '🌷', name: '過去形 Clear',
+        desc: '過去形の全問を1回正解',
+        check: (d) => d.levelMastery?.['過去形']?.unitClear,
+      },
+      {
+        id: 'clear_future',
+        emoji: '🌿', name: '未来形 Clear',
+        desc: '未来形の全問を1回正解',
+        check: (d) => d.levelMastery?.['未来形']?.unitClear,
+      },
+      {
+        id: 'clear_there',
+        emoji: '🌼', name: 'There is Clear',
+        desc: 'There is/areの全問を1回正解',
+        check: (d) => d.levelMastery?.['There is/are']?.unitClear,
+      },
+      {
+        id: 'clear_can',
+        emoji: '🫧', name: 'can Clear',
+        desc: '助動詞canの全問を1回正解',
+        check: (d) => d.levelMastery?.['助動詞can']?.unitClear,
+      },
+      {
+        id: 'master_any',
+        emoji: '👑', name: 'Unit Master',
+        desc: 'どれか1単元を全問3回正解',
+        check: (d) => Object.values(d.levelMastery || {}).some(m => m.unitMaster),
+      },
+    ]
+  },
+
+  // ── かくしバッジ ──
+  secret: {
+    label: '💎 かくしバッジ',
+    secret: true,
+    badges: [
+      {
+        id: 'hayaoki',
+        emoji: '🌅', name: 'はやおき',
+        desc: '朝6〜8時に学習した',
+        secretDesc: '???',
+        check: (d) => (d.hayaoki || false),
+      },
+      {
+        id: 'yofukashi',
+        emoji: '🦉', name: 'よふかし',
+        desc: '夜22時以降に学習した',
+        secretDesc: '???',
+        check: (d) => (d.yofukashi || false),
+      },
+      {
+        id: 'never_give_up',
+        emoji: '💪', name: 'あきらめない心',
+        desc: '不正解が続いても最後まで解いた',
+        secretDesc: '???',
+        check: (d) => (d.neverGiveUp || false),
+      },
+      {
+        id: 'all_units',
+        emoji: '🎓', name: '全単元制覇',
+        desc: '全7単元でクイズを解いた',
+        secretDesc: '???',
+        check: (d) => Object.keys(d.unitStats || {}).length >= 7,
+      },
+      {
+        id: 'big_mistake',
+        emoji: '🌱', name: 'まけないぞ！',
+        desc: '間違えても続けてクリアした',
+        secretDesc: '???',
+        check: (d) => (d.bigMistakeCleared || false),
+      },
+      {
+        id: 'comeback',
+        emoji: '🦋', name: 'カムバック',
+        desc: '3日以上ぶりに帰ってきた',
+        secretDesc: '???',
+        check: (d) => (d.comeback || false),
+      },
+    ]
+  },
+};
+
+// ヘルパー
+function getTotalQuestions(d) {
+  return Object.values(d.unitStats || {}).reduce((s, v) => s + v.total, 0);
+}
+
+function checkWeeklyAll(d) {
+  const now = new Date();
+  const dow = now.getDay();
+  const mondayOffset = dow === 0 ? -6 : 1 - dow;
+  let days = 0;
+  for (let i = 0; i < 5; i++) { // 月〜金
+    const dt = new Date(now);
+    dt.setDate(now.getDate() + mondayOffset + i);
+    const dStr = dt.toISOString().slice(0, 10);
+    if ((d.weekLog || {})[dStr]) days++;
+  }
+  return days >= 5;
+}
+
+function getTotalBadgeCount() {
+  return Object.values(BADGE_DEFS).reduce((s, cat) => s + cat.badges.length, 0);
+}
+
+// バッジ獲得チェック・記録（セッション終了時に呼ぶ）
+function evaluateBadges(sessionCorrect, sessionTotal) {
+  const data = loadData();
+
+  // カウンター更新
+  if (!data.sessionCount) data.sessionCount = 0;
+  data.sessionCount++;
+
+  // Perfect カウント
+  if (sessionTotal > 0 && sessionCorrect === sessionTotal) {
+    data.perfectCount = (data.perfectCount || 0) + 1;
+  }
+
+  // 連続日数（既存streakを使用）
+  // smallStreakDays: 1日1問以上の継続日数
+  const today = todayStr();
+  if (data.weekLog?.[today] > 0) {
+    if (!data.lastSmallStreak || data.lastSmallStreak !== today) {
+      const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+      const yStr = yesterday.toISOString().slice(0, 10);
+      data.smallStreakDays = (data.lastSmallStreak === yStr) ? (data.smallStreakDays || 0) + 1 : 1;
+      data.lastSmallStreak = today;
+    }
+  }
+
+  // リベンジ判定: 前セッションで不正解だった問題に今回正解
+  const stats = data.questionStats || {};
+  let revengeFound = false;
+  for (const [key, st] of Object.entries(stats)) {
+    if (st.total > st.correct && st.correct > 0) { revengeFound = true; break; }
+  }
+  if (revengeFound) data.revengeCount = (data.revengeCount || 0) + 1;
+
+  // 大量不正解後クリア
+  if (sessionTotal > 0 && sessionCorrect / sessionTotal >= 0.5 && sessionCorrect < sessionTotal) {
+    data.bigMistakeCleared = true;
+  }
+  // ずっと不正解続きでも最後まで
+  if (sessionTotal >= 5 && sessionCorrect === 0) {
+    data.neverGiveUp = true;
+  } else if (sessionTotal >= 5 && sessionCorrect <= 2) {
+    data.neverGiveUp = true;
+  }
+
+  // 時刻系
+  const hour = new Date().getHours();
+  if (hour >= 6 && hour < 8) data.hayaoki = true;
+  if (hour >= 22) data.yofukashi = true;
+
+  // カムバック: 最後のセッションから3日以上空いた
+  if (data.lastSessionDate) {
+    const last = new Date(data.lastSessionDate);
+    const now2 = new Date();
+    const diffDays = Math.floor((now2 - last) / 86400000);
+    if (diffDays >= 3) data.comeback = true;
+  }
+  data.lastSessionDate = today;
+
+  // バッジ獲得チェック
+  if (!data.unlockedBadges) data.unlockedBadges = {};
+  let newBadges = [];
+  const allDefs = Object.values(BADGE_DEFS).flatMap(cat => cat.badges);
+  for (const def of allDefs) {
+    if (!data.unlockedBadges[def.id] && def.check(data)) {
+      data.unlockedBadges[def.id] = today;
+      newBadges.push(def);
+    }
+  }
+
+  saveData(data);
+  if (newBadges.length > 0) showNewBadgeToast(newBadges);
+}
+
+// 新バッジ獲得トースト
+function showNewBadgeToast(badges) {
+  const existing = document.getElementById('badge-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'badge-toast';
+  toast.style.cssText = `
+    position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:linear-gradient(135deg,#3D3250,#5A4A72); color:white;
+    border-radius:18px; padding:14px 20px; z-index:500;
+    font-family:'Nunito',sans-serif; font-size:13px; font-weight:700;
+    box-shadow:0 8px 32px rgba(61,50,80,0.35); min-width:240px; text-align:center;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1); opacity:0;
+  `;
+  const names = badges.map(b => `${b.emoji} ${b.name}`).join('  ');
+  toast.innerHTML = `<div style="font-size:11px;opacity:0.7;margin-bottom:4px;letter-spacing:1px;">🎉 NEW BADGE!</div><div>${names}</div>`;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+  });
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(20px)';
+    setTimeout(() => toast.remove(), 400);
+  }, 3000);
+}
+
+// バッジ画面レンダリング
+function renderBadges() {
+  const data = loadData();
+  const unlocked = data.unlockedBadges || {};
+  const total = getTotalBadgeCount();
+  const earnedCount = Object.keys(unlocked).length;
+
+  // 全体進捗
+  document.getElementById('bp-count').innerHTML = `${earnedCount}<span> / ${total}</span>`;
+  const pct = total > 0 ? Math.round(earnedCount / total * 100) : 0;
+  document.getElementById('bp-bar').style.width = pct + '%';
+
+  // 次に取れそうなバッジを探す（進捗バー付きで一番近いもの）
+  let nextHint = '';
+  let bestGap = Infinity;
+  const allDefs = Object.values(BADGE_DEFS).flatMap(cat => cat.badges);
+  for (const def of allDefs) {
+    if (unlocked[def.id]) continue;
+    if (def.progress) {
+      const p = def.progress(data);
+      const gap = p.max - p.cur;
+      if (gap < bestGap) {
+        bestGap = gap;
+        nextHint = `次のバッジまであと <strong>${gap}</strong> ／ ${def.name}`;
+      }
+    }
+  }
+  if (!nextHint && earnedCount < total) {
+    nextHint = `あと <strong>${total - earnedCount}個</strong> のバッジが待ってるよ！`;
+  }
+  document.getElementById('bp-next-hint').innerHTML = nextHint;
+
+  // カテゴリ別レンダリング
+  const container = document.getElementById('badge-categories-container');
+  container.innerHTML = '';
+
+  for (const [catKey, cat] of Object.entries(BADGE_DEFS)) {
+    const section = document.createElement('div');
+    section.className = 'badge-category-section';
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'badge-category-title';
+    titleEl.textContent = cat.label;
+    section.appendChild(titleEl);
+
+    const grid = document.createElement('div');
+    grid.className = 'badge-grid';
+
+    // この中でlocked badgeを探して「一番進捗が高い未獲得」をnext-upに
+    let catNextUpId = null;
+    let catBestPct = -1;
+    for (const def of cat.badges) {
+      if (unlocked[def.id]) continue;
+      if (def.progress) {
+        const p = def.progress(data);
+        const pp = p.cur / p.max;
+        if (pp > catBestPct) { catBestPct = pp; catNextUpId = def.id; }
+      } else if (catNextUpId === null) {
+        catNextUpId = def.id;
+      }
+    }
+
+    for (const def of cat.badges) {
+      const isUnlocked = !!unlocked[def.id];
+      const isNextUp = !isUnlocked && def.id === catNextUpId;
+      const isSecret = cat.secret && !isUnlocked;
+
+      const card = document.createElement('div');
+      let cardClass = 'badge-card';
+      if (isUnlocked) cardClass += ' unlocked';
+      else if (isNextUp) cardClass += ' next-up';
+      else if (isSecret) cardClass += ' secret';
+      else cardClass += ' locked';
+      card.className = cardClass;
+
+      // NEW タグ（今日獲得）
+      if (isUnlocked && unlocked[def.id] === todayStr()) {
+        const tag = document.createElement('div');
+        tag.className = 'badge-new-tag';
+        tag.textContent = 'NEW';
+        card.appendChild(tag);
+      }
+
+      const emojiEl = document.createElement('div');
+      emojiEl.className = 'badge-emoji';
+      emojiEl.textContent = isSecret ? '🔮' : def.emoji;
+      card.appendChild(emojiEl);
+
+      const nameEl = document.createElement('div');
+      nameEl.className = 'badge-name';
+      nameEl.textContent = isSecret ? '???' : def.name;
+      card.appendChild(nameEl);
+
+      const descEl = document.createElement('div');
+      descEl.className = 'badge-desc';
+      if (isSecret) {
+        descEl.textContent = 'ひみつのバッジ';
+      } else if (isUnlocked) {
+        descEl.textContent = def.desc;
+      } else if (def.progress) {
+        const p = def.progress(data);
+        descEl.textContent = `${p.cur} / ${p.max}`;
+      } else {
+        descEl.textContent = def.desc;
+      }
+      card.appendChild(descEl);
+
+      // 進捗バー（未獲得 & progress定義あり）
+      if (!isUnlocked && !isSecret && def.progress) {
+        const p = def.progress(data);
+        const pctVal = p.max > 0 ? Math.round(p.cur / p.max * 100) : 0;
+        const miniBar = document.createElement('div');
+        miniBar.className = 'badge-progress-mini';
+        miniBar.innerHTML = `<div class="badge-progress-mini-fill" style="width:${pctVal}%"></div>`;
+        card.appendChild(miniBar);
+      }
+
+      // 獲得日
+      if (isUnlocked && unlocked[def.id]) {
+        const dateEl = document.createElement('div');
+        dateEl.className = 'badge-unlocked-date';
+        const d = new Date(unlocked[def.id]);
+        dateEl.textContent = `${d.getMonth()+1}/${d.getDate()} 獲得`;
+        card.appendChild(dateEl);
+      }
+
+      grid.appendChild(card);
+    }
+
+    section.appendChild(grid);
+    container.appendChild(section);
+  }
+}
+
 // ===== INIT =====
 window.addEventListener('DOMContentLoaded', () => {
   const data = loadData();
   if (data.streak > 0) updateStreakPill(data.streak);
+  updateHomeProgress();
+  // Notionから最新問題を取得
+  fetchQuestionsFromNotion().then(() => {
+    updateHomeProgress();
+  });
 });
+
+// ===== HOME PROGRESS RING =====
+const MOTIVATIONAL_MSGS = {
+  beginner: [
+    ['はじめの一歩！', '初級をコツコツ進めよう 🌱'],
+    ['よく来たね！', '今日も1問チャレンジしよう 📖'],
+    ['準備はいい？', '一緒に英語を楽しもう ✨'],
+    ['おかえり！', '今日もできるよ、やってみよう 💪'],
+    ['すこしずつが大事！', '焦らなくていい、進もう 🐢'],
+    ['今日もここに来たね', 'それだけで100点満点 🌸'],
+    ['難しくないよ！', 'まず1問、やってみよう 🎯'],
+  ],
+  intermediate: [
+    ['初級クリア！次のステージへ', '中級も一緒に攻略しよう 🚀'],
+    ['成長してるよ！', '中級問題に挑戦してみよう ⭐'],
+    ['調子いいね！', 'このまま中級も突破しよう 🔥'],
+    ['初級は完璧！', '次は中級をマスターしよう 💫'],
+    ['ここまで来たね！', '中級もきっとできる 🌈'],
+    ['すごい進歩！', '中級もコツコツいこう 🌟'],
+    ['初級マスター！', '中級の扉が開いたよ 🚪'],
+  ],
+  advanced: [
+    ['中級も突破！', '上級まであと少し 👑'],
+    ['もう上級レベル！', 'ラストスパートいこう 🔥'],
+    ['ここまで来たら本物！', '上級で仕上げよう 💎'],
+    ['すごすぎる！', '上級でグランドマスター目指そう 🏆'],
+    ['中級完璧！', '上級で英語の達人になろう ✨'],
+    ['あと少し！', '上級クリアで全単元制覇だ 🎓'],
+    ['ほぼ完璧！', '上級で有終の美を飾ろう 🌸'],
+  ],
+  complete: [
+    ['全部クリア！', 'あなたは英語マスターだ 👑'],
+    ['グランドマスター！', 'Grammlyを制覇した伝説 🏆'],
+    ['パーフェクト！', 'どの単元も完璧だよ 💎'],
+  ],
+};
+
+function updateHomeProgress() {
+  const data = loadData();
+  const units = Object.keys(unitMeta);
+  const mastery = data.levelMastery || {};
+
+  // 各単元の初級/中級/上級クリア数を集計
+  let beginnerCleared = 0;
+  let intermediateCleared = 0;
+  let advancedCleared = 0;
+
+  for (const unit of units) {
+    const m = mastery[unit] || {};
+    if (m.beginnerDone) beginnerCleared++;
+    if (m.intermediateDone) intermediateCleared++;
+    if (m.unitClear) advancedCleared++; // 全問1回正解 = 上級相当クリア
+  }
+
+  const total = units.length; // 7
+
+  // フェーズ判定
+  let phase, pct, labelText, gradStart, gradEnd;
+
+  if (beginnerCleared < total) {
+    // 初級フェーズ
+    phase = 'beginner';
+    pct = Math.round(beginnerCleared / total * 100);
+    labelText = '初級達成率';
+    gradStart = '#A8DADC'; gradEnd = '#7EC8CA';
+  } else if (intermediateCleared < total) {
+    // 中級フェーズ
+    phase = 'intermediate';
+    pct = Math.round(intermediateCleared / total * 100);
+    labelText = '中級達成率';
+    gradStart = '#D4B8E0'; gradEnd = '#B894D0';
+  } else if (advancedCleared < total) {
+    // 上級フェーズ
+    phase = 'advanced';
+    pct = Math.round(advancedCleared / total * 100);
+    labelText = '上級達成率';
+    gradStart = '#F5C842'; gradEnd = '#F4A261';
+  } else {
+    // 全クリア
+    phase = 'complete';
+    pct = 100;
+    labelText = '全クリア！';
+    gradStart = '#F5C842'; gradEnd = '#F4A261';
+  }
+
+  // リングを更新
+  const CIRCUMFERENCE = 263.9;
+  const offset = CIRCUMFERENCE * (1 - pct / 100);
+  const circle = document.getElementById('ring-circle');
+  if (circle) circle.setAttribute('stroke-dashoffset', offset.toFixed(1));
+
+  document.getElementById('ring-pct').textContent = pct + '%';
+  document.getElementById('ring-label').textContent = labelText;
+
+  const gradStart_el = document.getElementById('ring-grad-start');
+  const gradEnd_el = document.getElementById('ring-grad-end');
+  if (gradStart_el) gradStart_el.setAttribute('stop-color', gradStart);
+  if (gradEnd_el) gradEnd_el.setAttribute('stop-color', gradEnd);
+
+  // メッセージをランダム選択（起動ごとに変わる）
+  const msgPool = MOTIVATIONAL_MSGS[phase] || MOTIVATIONAL_MSGS.beginner;
+  const idx = Math.floor(Math.random() * msgPool.length);
+  const [line1, line2] = msgPool[idx];
+  document.getElementById('progress-msg').innerHTML = `${line1}<br>${line2}`;
+
+  // サブメッセージ（進捗に応じた「あと○○」）
+  document.getElementById('progress-sub').textContent = buildSubMessage(phase, {
+    units, total, beginnerCleared, intermediateCleared, advancedCleared, pct
+  });
+}
+
+function buildSubMessage(phase, { units, total, beginnerCleared, intermediateCleared, advancedCleared, pct }) {
+  const mastery = (loadData().levelMastery) || {};
+
+  if (phase === 'complete') return '全単元マスター達成！おめでとう 🎉';
+
+  if (phase === 'beginner') {
+    const remaining = total - beginnerCleared;
+    if (remaining === total) return 'まずは初級から挑戦しよう！';
+    if (remaining === 1) return '初級はあと1単元で全クリア！';
+    if (pct >= 70) return `初級あと${remaining}単元、もう少し！`;
+    return `初級クリア済み ${beginnerCleared} / ${total} 単元`;
+  }
+
+  if (phase === 'intermediate') {
+    const remaining = total - intermediateCleared;
+    if (remaining === 1) return '中級はあと1単元で全クリア！';
+    if (intermediateCleared === 0) return '初級全クリア！次は中級へ 🚀';
+    if (pct >= 70) return `中級あと${remaining}単元、ラストスパート！`;
+    return `中級クリア済み ${intermediateCleared} / ${total} 単元`;
+  }
+
+  if (phase === 'advanced') {
+    const remaining = total - advancedCleared;
+    if (remaining === 1) return '上級はあと1単元で全クリア！';
+    if (advancedCleared === 0) return '中級全クリア！いよいよ上級へ 👑';
+    if (pct >= 70) return `上級あと${remaining}単元、もう少しで全制覇！`;
+    return `上級クリア済み ${advancedCleared} / ${total} 単元`;
+  }
+
+  return '';
+}
 </script>
 
 <!-- Service Worker 登録 -->

@@ -1,0 +1,40 @@
+name: Sync Notion Questions
+
+on:
+  schedule:
+    # 毎日 JST 4:00 (UTC 19:00 前日) に実行
+    - cron: '0 19 * * *'
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # questions.json をコミットするために必要
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch questions from Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: python fetch_questions.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add questions.json
+          # 差分がある時だけコミット
+          git diff --staged --quiet || git commit -m "chore: sync questions from Notion [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push

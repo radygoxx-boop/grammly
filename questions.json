@@ -1,0 +1,4429 @@
+{
+  "questions": {
+    "be動詞": [
+      {
+        "q": "I ___ a student.",
+        "ja": "私は生徒です。",
+        "hint": "主語 I に合うbe動詞は？",
+        "choices": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "answer": 0,
+        "explain": "Iの現在形は常にamです。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ very kind.",
+        "ja": "彼女はとても親切です。",
+        "hint": "主語 She（三人称単数）に合うbe動詞は？",
+        "choices": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "answer": 1,
+        "explain": "She/He/Itは三人称単数なのでisを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ my best friends.",
+        "ja": "彼らは私の親友です。",
+        "hint": "主語 They（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "複数主語にはareを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "You ___ so cute!",
+        "ja": "あなたはとてもかわいいです！",
+        "hint": "主語 You に合うbe動詞は？",
+        "choices": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "YouにはareがつきますよApp。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ a soccer player.",
+        "ja": "彼はサッカー選手です。",
+        "hint": "主語 He に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "He（三人称単数）にはisを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "It ___ very cold today.",
+        "ja": "今日はとても寒いです。",
+        "hint": "主語 It に合うbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "It（三人称単数）にはisを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ in the same class.",
+        "ja": "私たちは同じクラスです。",
+        "hint": "主語 We に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "WeはareThem Youと同じareを使います。複数扱いです。",
+        "level": "初級"
+      },
+      {
+        "q": "My cat ___ so fluffy.",
+        "ja": "私の猫はとてもふわふわです。",
+        "hint": "My cat（単数）に合うbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "My catは三人称単数なのでisを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "The flowers ___ beautiful.",
+        "ja": "その花はきれいです。",
+        "hint": "The flowers（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "flowersは複数なのでareを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ not tired at all.",
+        "ja": "私は全然疲れていません。",
+        "hint": "be動詞の否定文。I に合う形は？",
+        "choices": [
+          "am not",
+          "is not",
+          "are not",
+          "be not"
+        ],
+        "answer": 0,
+        "explain": "I + am not が正しい否定形です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you a junior high student?",
+        "ja": "あなたは中学生ですか？",
+        "hint": "you の疑問文に使うbe動詞は？",
+        "choices": [
+          "Am",
+          "Is",
+          "Are",
+          "Be"
+        ],
+        "answer": 2,
+        "explain": "Youの疑問文はAre you ~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "My brother and I ___ twins.",
+        "ja": "私と兄（弟）は双子です。",
+        "hint": "A and B は複数扱い。合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "A and B で2人→複数なのでareです。",
+        "level": "初級"
+      },
+      {
+        "q": "This ___ my favorite song.",
+        "ja": "これは私のお気に入りの曲です。",
+        "hint": "主語 This に合うbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "This（単数）にはisを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "Your eyes ___ so pretty.",
+        "ja": "あなたの目はとてもきれいです。",
+        "hint": "Your eyes（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "眼（複数）なのでareです。",
+        "level": "初級"
+      },
+      {
+        "q": "Math ___ my favorite subject.",
+        "ja": "数学は私の得意教科です。",
+        "hint": "教科名（単数扱い）に合うbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "教科名は単数扱いなのでisです。",
+        "level": "初級"
+      },
+      {
+        "q": "___ your sister a high school student?",
+        "ja": "あなたのお姉さんは高校生ですか？",
+        "hint": "your sisterの疑問文。be動詞は？",
+        "choices": [
+          "Am",
+          "Is",
+          "Are",
+          "Do"
+        ],
+        "answer": 1,
+        "explain": "your sister（三人称単数）の疑問文はIs~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "Those bags ___ not mine.",
+        "ja": "あれらのバッグは私のではありません。",
+        "hint": "Those bags（複数）の否定文。be動詞は？",
+        "choices": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 1,
+        "explain": "Those bags（複数）なのでare notです。",
+        "level": "中級"
+      },
+      {
+        "q": "How ___ you today?",
+        "ja": "今日の調子はどうですか？",
+        "hint": "Howを使ったbe動詞の疑問文。youに合う形は？",
+        "choices": [
+          "am",
+          "is",
+          "are",
+          "do"
+        ],
+        "answer": 2,
+        "explain": "How are you? が定番の挨拶表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "Ken ___ not at school today.",
+        "ja": "ケンは今日学校にいません。",
+        "hint": "Ken（三人称単数）の否定文。be動詞は？",
+        "choices": [
+          "are not",
+          "am not",
+          "is not",
+          "not be"
+        ],
+        "answer": 2,
+        "explain": "Ken（三人称単数）なのでis notを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ a dog in the garden.",
+        "ja": "庭に犬が1匹います。",
+        "hint": "There be構文。a dog（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a dog（単数）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "The weather ___ nice today, isn't it?",
+        "ja": "今日は天気がいいですね。",
+        "hint": "付加疑問文！The weather（単数）のbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "The weather（単数）にはisを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "English and math ___ my favorite subjects.",
+        "ja": "英語と数学が私の好きな教科です。",
+        "hint": "A and B の複数形。be動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "英語and数学で複数→areです。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ not good at cooking.",
+        "ja": "私は料理が得意ではありません。",
+        "hint": "I の否定文。be動詞は？",
+        "choices": [
+          "is not",
+          "are not",
+          "am not",
+          "not be"
+        ],
+        "answer": 2,
+        "explain": "I am notが正しい否定形です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ those your new shoes?",
+        "ja": "それらはあなたの新しい靴ですか？",
+        "hint": "those（複数）の疑問文。be動詞は？",
+        "choices": [
+          "Is",
+          "Am",
+          "Are",
+          "Do"
+        ],
+        "answer": 2,
+        "explain": "those（複数）の疑問文はAre~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "The students in my class ___ very hardworking.",
+        "ja": "私のクラスの生徒はとても勤勉です。",
+        "hint": "The students（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "students（複数）なのでareです。",
+        "level": "中級"
+      },
+      {
+        "q": "Sushi ___ my favorite Japanese food.",
+        "ja": "寿司は私の大好きな和食です。",
+        "hint": "食べ物名（単数扱い）に合うbe動詞は？",
+        "choices": [
+          "am",
+          "are",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "固有名詞や不可算名詞は単数扱いでisです。",
+        "level": "中級"
+      },
+      {
+        "q": "His eyes ___ dark brown.",
+        "ja": "彼の目はダークブラウンです。",
+        "hint": "His eyes（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "eyes（複数）なのでareです。",
+        "level": "中級"
+      },
+      {
+        "q": "___ Emma and Kate best friends?",
+        "ja": "エマとケイトは親友ですか？",
+        "hint": "Emma and Kate（複数）の疑問文。be動詞は？",
+        "choices": [
+          "Is",
+          "Am",
+          "Are",
+          "Do"
+        ],
+        "answer": 2,
+        "explain": "Emma and Kate（複数）の疑問文はAre~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "The movie ___ not interesting.",
+        "ja": "その映画はおもしろくありませんでした。",
+        "hint": "The movie（単数）の否定文。be動詞は？",
+        "choices": [
+          "are not",
+          "am not",
+          "is not",
+          "not be"
+        ],
+        "answer": 2,
+        "explain": "The movie（単数）なのでis notです。",
+        "level": "中級"
+      },
+      {
+        "q": "Both of my sisters ___ good at sports.",
+        "ja": "私の姉（妹）は二人ともスポーツが得意です。",
+        "hint": "Both of ~（複数扱い）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "Both of~は複数扱いなのでareです。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ born in Osaka.",
+        "ja": "私は大阪で生まれました。",
+        "hint": "be born の過去形。I に合うbe動詞過去形は？",
+        "choices": [
+          "was",
+          "were",
+          "am",
+          "is"
+        ],
+        "answer": 0,
+        "explain": "I was born in ~. が「私は～で生まれた」の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "They ___ not ready for the exam.",
+        "ja": "彼らは試験の準備ができていませんでした。",
+        "hint": "They（複数）のbe動詞過去形否定は？",
+        "choices": [
+          "wasn't",
+          "am not",
+          "weren't",
+          "isn't"
+        ],
+        "answer": 2,
+        "explain": "They（複数）のbe過去形はwere→否定はweren'tです。",
+        "level": "上級"
+      },
+      {
+        "q": "___ she absent from school yesterday?",
+        "ja": "彼女は昨日、学校を休みましたか？",
+        "hint": "she（三人称単数）のbe動詞過去形疑問文は？",
+        "choices": [
+          "Were",
+          "Was",
+          "Is",
+          "Did"
+        ],
+        "answer": 1,
+        "explain": "she（単数）のbe過去形はwas→疑問文はWas she~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "The concert ___ amazing last night.",
+        "ja": "昨夜のコンサートはすごかったです。",
+        "hint": "The concert（単数）のbe動詞過去形は？",
+        "choices": [
+          "were",
+          "is",
+          "was",
+          "are"
+        ],
+        "answer": 2,
+        "explain": "単数のbe過去形はwasです。",
+        "level": "上級"
+      },
+      {
+        "q": "We ___ surprised at the news.",
+        "ja": "私たちはそのニュースに驚きました。",
+        "hint": "We（複数）のbe動詞過去形は？",
+        "choices": [
+          "was",
+          "is",
+          "are",
+          "were"
+        ],
+        "answer": 3,
+        "explain": "We（複数）のbe過去形はwereです。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you at home when it started raining?",
+        "ja": "雨が降り始めたとき、あなたは家にいましたか？",
+        "hint": "you のbe動詞過去形疑問文は？",
+        "choices": [
+          "Was",
+          "Is",
+          "Were",
+          "Are"
+        ],
+        "answer": 2,
+        "explain": "youのbe過去形はwere→疑問文はWere you~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ many stars in the sky last night.",
+        "ja": "昨夜、空にたくさんの星がありました。",
+        "hint": "There be構文の過去形。stars（複数）に合う形は？",
+        "choices": [
+          "is",
+          "was",
+          "are",
+          "were"
+        ],
+        "answer": 3,
+        "explain": "stars（複数）のbe過去形はwere→There wereです。",
+        "level": "上級"
+      },
+      {
+        "q": "The test ___ not as hard as I expected.",
+        "ja": "そのテストは予想していたほど難しくありませんでした。",
+        "hint": "The test（単数）のbe過去否定は？",
+        "choices": [
+          "weren't",
+          "isn't",
+          "wasn't",
+          "aren't"
+        ],
+        "answer": 2,
+        "explain": "The test（単数）のbe過去否定はwasn'tです。",
+        "level": "上級"
+      },
+      {
+        "q": "Who ___ your homeroom teacher last year?",
+        "ja": "去年のあなたの担任の先生は誰でしたか？",
+        "hint": "Whoで始まるbe過去の疑問文（単数想定）は？",
+        "choices": [
+          "were",
+          "is",
+          "are",
+          "was"
+        ],
+        "answer": 3,
+        "explain": "単数の主語を想定してwasを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "My parents ___ not home when I came back.",
+        "ja": "私が帰ってきたとき、両親は家にいませんでした。",
+        "hint": "My parents（複数）のbe過去否定は？",
+        "choices": [
+          "wasn't",
+          "isn't",
+          "aren't",
+          "weren't"
+        ],
+        "answer": 3,
+        "explain": "parents（複数）のbe過去否定はweren'tです。",
+        "level": "上級"
+      },
+      {
+        "q": "How long ___ you in Tokyo last summer?",
+        "ja": "去年の夏、あなたはどのくらい東京にいましたか？",
+        "hint": "you のbe過去疑問文。be動詞は？",
+        "choices": [
+          "was",
+          "is",
+          "were",
+          "are"
+        ],
+        "answer": 2,
+        "explain": "youのbe過去はwere→How long were you~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "The food at the restaurant ___ delicious.",
+        "ja": "そのレストランの料理はとてもおいしかったです。",
+        "hint": "The food（単数）のbe過去形は？",
+        "choices": [
+          "were",
+          "are",
+          "is",
+          "was"
+        ],
+        "answer": 3,
+        "explain": "food（単数）のbe過去はwasです。",
+        "level": "上級"
+      },
+      {
+        "q": "All the students ___ excited about the trip.",
+        "ja": "生徒全員が旅行に興奮していました。",
+        "hint": "All the students（複数）のbe過去形は？",
+        "choices": [
+          "was",
+          "is",
+          "are",
+          "were"
+        ],
+        "answer": 3,
+        "explain": "students（複数）のbe過去はwereです。",
+        "level": "上級"
+      },
+      {
+        "q": "___ there a swimming pool at your old school?",
+        "ja": "あなたの前の学校にはプールがありましたか？",
+        "hint": "There be構文の過去疑問。pool（単数）に合う形は？",
+        "choices": [
+          "Were",
+          "Is",
+          "Are",
+          "Was"
+        ],
+        "answer": 3,
+        "explain": "pool（単数）のbe過去はwas→Was there~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "The reason ___ that she was too busy.",
+        "ja": "理由は彼女が忙しすぎたからでした。",
+        "hint": "The reason（単数）のbe過去形は？",
+        "choices": [
+          "were",
+          "are",
+          "is",
+          "was"
+        ],
+        "answer": 3,
+        "explain": "reason（単数）のbe過去はwasです。",
+        "level": "上級"
+      }
+    ],
+    "一般動詞": [
+      {
+        "q": "I ___ soccer every weekend.",
+        "ja": "私は毎週末サッカーをします。",
+        "hint": "主語 I に合う play の形は？",
+        "choices": [
+          "plays",
+          "playing",
+          "play",
+          "played"
+        ],
+        "answer": 2,
+        "explain": "Iには動詞の原形（play）を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ to school by bike.",
+        "ja": "彼女は自転車で学校へ行きます。",
+        "hint": "She（三単現）に合う go の形は？",
+        "choices": [
+          "go",
+          "going",
+          "goed",
+          "goes"
+        ],
+        "answer": 3,
+        "explain": "三単現（She）にはgoesを使います。go+es→goesです。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ lunch at noon.",
+        "ja": "彼らは正午に昼食を食べます。",
+        "hint": "They（複数）に合う eat の形は？",
+        "choices": [
+          "eats",
+          "eating",
+          "ate",
+          "eat"
+        ],
+        "answer": 3,
+        "explain": "They（複数）には動詞の原形（eat）を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ English and math every day.",
+        "ja": "彼は毎日英語と数学を勉強します。",
+        "hint": "He（三単現）に合う study の形は？",
+        "choices": [
+          "study",
+          "studys",
+          "studies",
+          "studying"
+        ],
+        "answer": 2,
+        "explain": "子音+yで終わる動詞はy→iesに変えます。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ like horror movies.",
+        "ja": "私はホラー映画が好きではありません。",
+        "hint": "一般動詞 I の否定文は？",
+        "choices": [
+          "doesn't",
+          "isn't",
+          "don't",
+          "not"
+        ],
+        "answer": 2,
+        "explain": "I/you/we/theyの否定はdon't+動詞の原形です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you like K-pop?",
+        "ja": "あなたはK-POPが好きですか？",
+        "hint": "一般動詞 you の疑問文は？",
+        "choices": [
+          "Are",
+          "Is",
+          "Does",
+          "Do"
+        ],
+        "answer": 3,
+        "explain": "you/I/we/theyの疑問文はDo~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "My brother ___ TV every night.",
+        "ja": "私の兄（弟）は毎晩テレビを見ます。",
+        "hint": "My brother（三単現）に合う watch の形は？",
+        "choices": [
+          "watch",
+          "watchs",
+          "watches",
+          "watching"
+        ],
+        "answer": 2,
+        "explain": "-chで終わる動詞には-esをつけます。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ to school by train.",
+        "ja": "私たちは電車で通学します。",
+        "hint": "We（複数）に合う go の形は？",
+        "choices": [
+          "goes",
+          "going",
+          "went",
+          "go"
+        ],
+        "answer": 3,
+        "explain": "We（複数）には動詞の原形（go）を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ have any pets.",
+        "ja": "彼女はペットを飼っていません。",
+        "hint": "She（三単現）の否定文は？",
+        "choices": [
+          "don't",
+          "isn't",
+          "doesn't",
+          "not"
+        ],
+        "answer": 2,
+        "explain": "She/He/Itの否定はdoesn't+動詞の原形です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ he play basketball?",
+        "ja": "彼はバスケットボールをしますか？",
+        "hint": "He（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "He/She/Itの疑問文はDoes~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ up at 6:30 every morning.",
+        "ja": "私は毎朝6時30分に起きます。",
+        "hint": "主語 I に合う wake の形は？",
+        "choices": [
+          "wakes",
+          "waking",
+          "wake",
+          "waked"
+        ],
+        "answer": 2,
+        "explain": "Iには動詞の原形（wake）を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "My father ___ home late every day.",
+        "ja": "私の父は毎日帰りが遅いです。",
+        "hint": "My father（三単現）に合う come の形は？",
+        "choices": [
+          "come",
+          "coming",
+          "came",
+          "comes"
+        ],
+        "answer": 3,
+        "explain": "三単現にはcomesを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ basketball after school.",
+        "ja": "彼らは放課後バスケをします。",
+        "hint": "They（複数）に合う play の形は？",
+        "choices": [
+          "plays",
+          "playing",
+          "played",
+          "play"
+        ],
+        "answer": 3,
+        "explain": "They（複数）には動詞の原形を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ her teeth twice a day.",
+        "ja": "彼女は1日2回歯を磨きます。",
+        "hint": "She（三単現）に合う brush の形は？",
+        "choices": [
+          "brush",
+          "bruch",
+          "brushes",
+          "brushing"
+        ],
+        "answer": 2,
+        "explain": "-shで終わる動詞には-esをつけます。",
+        "level": "初級"
+      },
+      {
+        "q": "___ your parents speak English?",
+        "ja": "あなたの両親は英語を話しますか？",
+        "hint": "your parents（複数）の疑問文は？",
+        "choices": [
+          "Does",
+          "Is",
+          "Are",
+          "Do"
+        ],
+        "answer": 3,
+        "explain": "parents（複数）の疑問文はDo~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "Does she ___ any hobbies?",
+        "ja": "彼女は何か趣味を持っていますか？",
+        "hint": "Does を使った疑問文の動詞の形は？",
+        "choices": [
+          "has",
+          "have",
+          "having",
+          "had"
+        ],
+        "answer": 1,
+        "explain": "Does + 主語 + 動詞の原形。have が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "My mother ___ not cook on Sundays.",
+        "ja": "私の母は日曜日には料理をしません。",
+        "hint": "My mother（三単現）の否定文。doの形は？",
+        "choices": [
+          "don't",
+          "do not",
+          "doesn't",
+          "not"
+        ],
+        "answer": 2,
+        "explain": "三単現の否定はdoesn't + 動詞の原形です。",
+        "level": "中級"
+      },
+      {
+        "q": "He ___ his homework before dinner.",
+        "ja": "彼は夕食前に宿題をします。",
+        "hint": "He（三単現）に合う finish の形は？",
+        "choices": [
+          "finish",
+          "finishs",
+          "finishing",
+          "finishes"
+        ],
+        "answer": 3,
+        "explain": "-shで終わる動詞には-esをつけます。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ music while walking to school.",
+        "ja": "私は登校中に音楽を聴きます。",
+        "hint": "主語 I に合う listen の形は？",
+        "choices": [
+          "listens",
+          "listening",
+          "listened",
+          "listen"
+        ],
+        "answer": 3,
+        "explain": "Iには動詞の原形（listen）を使います。",
+        "level": "中級"
+      },
+      {
+        "q": "She always ___ the dishes after dinner.",
+        "ja": "彼女はいつも夕食後に皿洗いをします。",
+        "hint": "She（三単現）に合う wash の形は？",
+        "choices": [
+          "wash",
+          "washes",
+          "washing",
+          "washs"
+        ],
+        "answer": 1,
+        "explain": "-shで終わる動詞には-esをつけます。",
+        "level": "中級"
+      },
+      {
+        "q": "___ Tom and Yui go to the same school?",
+        "ja": "トムとユイは同じ学校に通っていますか？",
+        "hint": "Tom and Yui（複数）の疑問文は？",
+        "choices": [
+          "Does",
+          "Is",
+          "Are",
+          "Do"
+        ],
+        "answer": 3,
+        "explain": "複数の主語の疑問文はDo~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "My dog ___ a lot of food every day.",
+        "ja": "私の犬は毎日たくさん食べます。",
+        "hint": "My dog（三単現）に合う eat の形は？",
+        "choices": [
+          "eat",
+          "eating",
+          "ate",
+          "eats"
+        ],
+        "answer": 3,
+        "explain": "三単現（単数）にはeatsを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "I usually ___ to bed at 11 pm.",
+        "ja": "私はたいてい夜の11時に寝ます。",
+        "hint": "主語 I に合う go の形は？",
+        "choices": [
+          "goes",
+          "going",
+          "went",
+          "go"
+        ],
+        "answer": 3,
+        "explain": "Iには動詞の原形（go）を使います。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ not understand the question.",
+        "ja": "彼女はその問題が理解できません。",
+        "hint": "She（三単現）の否定文は？",
+        "choices": [
+          "don't",
+          "isn't",
+          "not",
+          "doesn't"
+        ],
+        "answer": 3,
+        "explain": "She の否定はdoesn't + 動詞の原形です。",
+        "level": "中級"
+      },
+      {
+        "q": "My sister ___ piano every day for an hour.",
+        "ja": "私の姉（妹）は毎日1時間ピアノを練習します。",
+        "hint": "My sister（三単現）に合う practice の形は？",
+        "choices": [
+          "practice",
+          "practices",
+          "practics",
+          "practicing"
+        ],
+        "answer": 1,
+        "explain": "-ceで終わる動詞には-sをつけます（practices）。",
+        "level": "中級"
+      },
+      {
+        "q": "___ your teacher give a lot of homework?",
+        "ja": "あなたの先生はたくさん宿題を出しますか？",
+        "hint": "your teacher（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "三単現の疑問文はDoes~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "Both of my parents ___ to work early.",
+        "ja": "両親は二人とも早く仕事に行きます。",
+        "hint": "Both of my parents（複数）に合う go の形は？",
+        "choices": [
+          "goes",
+          "going",
+          "went",
+          "go"
+        ],
+        "answer": 3,
+        "explain": "both→複数なので動詞の原形（go）を使います。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ the piano and the guitar.",
+        "ja": "彼女はピアノとギターを弾きます。",
+        "hint": "She（三単現）に合う play の形は？",
+        "choices": [
+          "play",
+          "playing",
+          "played",
+          "plays"
+        ],
+        "answer": 3,
+        "explain": "She（三単現）にはplaysを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "He never ___ late for school.",
+        "ja": "彼は学校に遅刻したことがありません。",
+        "hint": "He（三単現）に合う be の形は？（一般文脈）",
+        "choices": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 0,
+        "explain": "He（三単現）のbe動詞はisです。",
+        "level": "中級"
+      },
+      {
+        "q": "___ she study at the library after school?",
+        "ja": "彼女は放課後図書館で勉強しますか？",
+        "hint": "she（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "she（三単現）の疑問文はDoes~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ to music to relax after studying.",
+        "ja": "私は勉強後にリラックスするために音楽を聴きます。",
+        "hint": "I に合う listen の形＋目的を表す表現は？",
+        "choices": [
+          "listens",
+          "listening",
+          "listen",
+          "listened"
+        ],
+        "answer": 2,
+        "explain": "I + 動詞原形（listen）が正しい形です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ three languages including Japanese.",
+        "ja": "彼女は日本語を含む3言語を話します。",
+        "hint": "She（三単現）に合う speak の形は？",
+        "choices": [
+          "speak",
+          "speaking",
+          "spoke",
+          "speaks"
+        ],
+        "answer": 3,
+        "explain": "三単現にはspeaksを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "___ he often help you with your homework?",
+        "ja": "彼はよくあなたの宿題を手伝ってくれますか？",
+        "hint": "he（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "he（三単現）の疑問文はDoes~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "My grandmother ___ not use a smartphone.",
+        "ja": "私の祖母はスマートフォンを使いません。",
+        "hint": "My grandmother（三単現）の否定文は？",
+        "choices": [
+          "don't",
+          "isn't",
+          "not",
+          "doesn't"
+        ],
+        "answer": 3,
+        "explain": "三単現の否定はdoesn't + 動詞の原形です。",
+        "level": "上級"
+      },
+      {
+        "q": "The school ___ at 8:30 every morning.",
+        "ja": "学校は毎朝8時30分に始まります。",
+        "hint": "The school（三単現）に合う start の形は？",
+        "choices": [
+          "start",
+          "starting",
+          "starts",
+          "started"
+        ],
+        "answer": 2,
+        "explain": "三単現にはstartsを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "She always ___ hard for every test.",
+        "ja": "彼女はいつも全てのテストに向けて一生懸命勉強します。",
+        "hint": "She（三単現）に合う study の形は？",
+        "choices": [
+          "study",
+          "studys",
+          "studying",
+          "studies"
+        ],
+        "answer": 3,
+        "explain": "子音+y→iesに変えてstudiesです。",
+        "level": "上級"
+      },
+      {
+        "q": "___ your class teacher come from abroad?",
+        "ja": "あなたのクラスの先生は海外出身ですか？",
+        "hint": "your class teacher（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "三単現の疑問文はDoes~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "He ___ his dog for a walk twice a day.",
+        "ja": "彼は1日2回犬を散歩に連れていきます。",
+        "hint": "He（三単現）に合う take の形は？",
+        "choices": [
+          "take",
+          "taking",
+          "took",
+          "takes"
+        ],
+        "answer": 3,
+        "explain": "三単現にはtakesを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ believe she is telling the truth.",
+        "ja": "私は彼女が本当のことを言っていると思います。",
+        "hint": "I に合う believe の形は？",
+        "choices": [
+          "believes",
+          "believing",
+          "believed",
+          "believe"
+        ],
+        "answer": 3,
+        "explain": "Iには動詞の原形（believe）を使います。",
+        "level": "上級"
+      },
+      {
+        "q": "My best friend ___ me up every morning.",
+        "ja": "私の親友は毎朝私を電話で起こしてくれます。",
+        "hint": "My best friend（三単現）に合う wake の形は？",
+        "choices": [
+          "wake",
+          "waking",
+          "wakes",
+          "waked"
+        ],
+        "answer": 2,
+        "explain": "三単現にはwakesを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ not want to hurt his feelings.",
+        "ja": "彼女は彼の気持ちを傷つけたくないと思っています。",
+        "hint": "She（三単現）の否定文は？",
+        "choices": [
+          "don't",
+          "isn't",
+          "not",
+          "doesn't"
+        ],
+        "answer": 3,
+        "explain": "She の否定はdoesn't + 動詞の原形です。",
+        "level": "上級"
+      },
+      {
+        "q": "The library ___ at 9 am and ___ at 8 pm.",
+        "ja": "図書館は午前9時に開いて午後8時に閉まります。",
+        "hint": "The library（三単現）に合う open/close の形は？",
+        "choices": [
+          "open / close",
+          "opens / close",
+          "open / closes",
+          "opens / closes"
+        ],
+        "answer": 3,
+        "explain": "三単現なのでopens/closesどちらも三単現です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ your brother like playing video games?",
+        "ja": "あなたのお兄さん（弟さん）はビデオゲームが好きですか？",
+        "hint": "your brother（三単現）の疑問文は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Are",
+          "Does"
+        ],
+        "answer": 3,
+        "explain": "三単現の疑問文はDoes~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ to the gym three times a week.",
+        "ja": "彼女は週3回ジムへ行きます。",
+        "hint": "She（三単現）に合う go の形は？",
+        "choices": [
+          "go",
+          "going",
+          "went",
+          "goes"
+        ],
+        "answer": 3,
+        "explain": "三単現にはgoesを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "My teacher always ___ us with difficult questions.",
+        "ja": "私の先生はいつも難しい問題で私たちを挑戦させます。",
+        "hint": "My teacher（三単現）に合う challenge の形は？",
+        "choices": [
+          "challenge",
+          "challenged",
+          "challenging",
+          "challenges"
+        ],
+        "answer": 3,
+        "explain": "三単現にはchallengesを使います。",
+        "level": "上級"
+      }
+    ],
+    "現在進行形": [
+      {
+        "q": "She ___ a song now.",
+        "ja": "彼女は今歌を歌っています。",
+        "hint": "進行形！She に合う be+singingは？",
+        "choices": [
+          "sing",
+          "sings",
+          "is singing",
+          "are singing"
+        ],
+        "answer": 2,
+        "explain": "She（三人称単数）にはis、現在進行形はis + ~ingです。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ my homework right now.",
+        "ja": "私は今宿題をしているところです。",
+        "hint": "I に合う現在進行形は？",
+        "choices": [
+          "do",
+          "am doing",
+          "does",
+          "are doing"
+        ],
+        "answer": 1,
+        "explain": "I + am + ~ing が現在進行形です。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ soccer in the park.",
+        "ja": "彼らは公園でサッカーをしています。",
+        "hint": "They（複数）に合う進行形は？",
+        "choices": [
+          "plays",
+          "is playing",
+          "play",
+          "are playing"
+        ],
+        "answer": 3,
+        "explain": "They（複数）にはareを使い、are + ~ingです。",
+        "level": "初級"
+      },
+      {
+        "q": "Look! The baby ___.",
+        "ja": "見て！赤ちゃんが笑っています。",
+        "hint": "The baby（単数）に合う is smiling か are smiling？",
+        "choices": [
+          "smile",
+          "smiles",
+          "are smiling",
+          "is smiling"
+        ],
+        "answer": 3,
+        "explain": "The baby（単数）にはis + ~ingが正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you listening to me?",
+        "ja": "ちゃんと聞いていますか？",
+        "hint": "you の進行形疑問文。be動詞は？",
+        "choices": [
+          "Do",
+          "Am",
+          "Is",
+          "Are"
+        ],
+        "answer": 3,
+        "explain": "youの進行形疑問文はAre you ~ing?です。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ lunch right now.",
+        "ja": "私たちは今ちょうど昼ごはんを食べているところです。",
+        "hint": "We（複数）に合う現在進行形は？",
+        "choices": [
+          "eat",
+          "eats",
+          "are eating",
+          "is eating"
+        ],
+        "answer": 2,
+        "explain": "We（複数）にはare + ~ingが正しい進行形です。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ not ___ TV. He's studying.",
+        "ja": "彼はテレビを見ていません。勉強しています。",
+        "hint": "He の進行形否定は？",
+        "choices": [
+          "doesn't watch",
+          "isn't watching",
+          "aren't watching",
+          "don't watch"
+        ],
+        "answer": 1,
+        "explain": "He + is not（isn't）+ ~ing が正しい進行形否定です。",
+        "level": "初級"
+      },
+      {
+        "q": "What ___ she doing in the kitchen?",
+        "ja": "彼女はキッチンで何をしていますか？",
+        "hint": "she の進行形疑問文。be動詞は？",
+        "choices": [
+          "do",
+          "does",
+          "are",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "she（三人称単数）の進行形疑問文はIs she ~ing?です。",
+        "level": "初級"
+      },
+      {
+        "q": "The dog ___ on the sofa.",
+        "ja": "犬がソファの上で眠っています。",
+        "hint": "The dog（単数）に合う進行形は？",
+        "choices": [
+          "sleep",
+          "sleeps",
+          "are sleeping",
+          "is sleeping"
+        ],
+        "answer": 3,
+        "explain": "The dog（単数）にはis + ~ingが正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "My parents ___ dinner right now.",
+        "ja": "両親は今夕食を作っています。",
+        "hint": "My parents（複数）に合う進行形は？",
+        "choices": [
+          "is cooking",
+          "cook",
+          "cooks",
+          "are cooking"
+        ],
+        "answer": 3,
+        "explain": "My parents（複数）にはare + ~ingが正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ a book about animals.",
+        "ja": "私は動物についての本を読んでいます。",
+        "hint": "I に合う現在進行形は？",
+        "choices": [
+          "reads",
+          "read",
+          "am reading",
+          "is reading"
+        ],
+        "answer": 2,
+        "explain": "I + am + ~ing が正しい現在進行形です。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ to music on her way home.",
+        "ja": "彼女は帰り道に音楽を聴いています。",
+        "hint": "She（三人称単数）に合う進行形は？",
+        "choices": [
+          "listens",
+          "listen",
+          "is listening",
+          "are listening"
+        ],
+        "answer": 2,
+        "explain": "She + is + ~ing が正しい進行形です。",
+        "level": "初級"
+      },
+      {
+        "q": "The children ___ in the pool.",
+        "ja": "子どもたちはプールで泳いでいます。",
+        "hint": "The children（複数）に合う進行形は？",
+        "choices": [
+          "swims",
+          "swim",
+          "is swimming",
+          "are swimming"
+        ],
+        "answer": 3,
+        "explain": "children（複数）にはare + ~ingが正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "___ it raining outside?",
+        "ja": "外は雨が降っていますか？",
+        "hint": "It（単数）の進行形疑問文。be動詞は？",
+        "choices": [
+          "Do",
+          "Does",
+          "Are",
+          "Is"
+        ],
+        "answer": 3,
+        "explain": "It（単数）の進行形疑問文はIs it ~ing?です。",
+        "level": "初級"
+      },
+      {
+        "q": "My brother ___ on the phone.",
+        "ja": "私の兄（弟）は電話中です。",
+        "hint": "My brother（三人称単数）に合う進行形は？",
+        "choices": [
+          "talks",
+          "talk",
+          "are talking",
+          "is talking"
+        ],
+        "answer": 3,
+        "explain": "三人称単数にはis + ~ingが正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "She is ___ a letter to her pen pal.",
+        "ja": "彼女はペンパルへの手紙を書いています。",
+        "hint": "writeの -ing形（e脱落）は？",
+        "choices": [
+          "write",
+          "writing",
+          "writting",
+          "writes"
+        ],
+        "answer": 1,
+        "explain": "eで終わる動詞はeを取って+ingにします（writing）。",
+        "level": "中級"
+      },
+      {
+        "q": "He is ___ in the river.",
+        "ja": "彼は川で泳いでいます。",
+        "hint": "swimの -ing形（子音字重複）は？",
+        "choices": [
+          "swiming",
+          "swimeing",
+          "swims",
+          "swimming"
+        ],
+        "answer": 3,
+        "explain": "短母音+子音字で終わる場合、子音字を重ねてからingをつけます。",
+        "level": "中級"
+      },
+      {
+        "q": "They ___ not playing outside. It's raining.",
+        "ja": "雨なので彼らは外で遊んでいません。",
+        "hint": "They の進行形否定は？",
+        "choices": [
+          "doesn't play",
+          "isn't playing",
+          "aren't playing",
+          "don't play"
+        ],
+        "answer": 2,
+        "explain": "They（複数）+ are not（aren't）+ ~ingが正しい進行形否定です。",
+        "level": "中級"
+      },
+      {
+        "q": "Where are you ___?",
+        "ja": "あなたはどこへ行くところですか？",
+        "hint": "goの -ing形は？",
+        "choices": [
+          "go",
+          "goes",
+          "going",
+          "gone"
+        ],
+        "answer": 2,
+        "explain": "goの-ing形はgoingです（単純に+ingをつけます）。",
+        "level": "中級"
+      },
+      {
+        "q": "I'm ___ for the train.",
+        "ja": "私は電車を待っているところです。",
+        "hint": "waitの -ing形は？",
+        "choices": [
+          "wait",
+          "waitting",
+          "waits",
+          "waiting"
+        ],
+        "answer": 3,
+        "explain": "waitの-ing形はwaitingです。",
+        "level": "中級"
+      },
+      {
+        "q": "She is ___ a new language these days.",
+        "ja": "彼女は最近新しい言語を学んでいます。",
+        "hint": "learnの -ing形は？",
+        "choices": [
+          "learn",
+          "learning",
+          "learned",
+          "learnes"
+        ],
+        "answer": 1,
+        "explain": "learnの-ing形はlearningです（単純に+ing）。",
+        "level": "中級"
+      },
+      {
+        "q": "Is he ___ lunch right now?",
+        "ja": "彼は今ちょうど昼食を食べていますか？",
+        "hint": "eatの -ing形は？",
+        "choices": [
+          "eat",
+          "eats",
+          "eaten",
+          "eating"
+        ],
+        "answer": 3,
+        "explain": "eatの-ing形はeatingです（eで終わる→eを残してing）。",
+        "level": "中級"
+      },
+      {
+        "q": "The class ___ starting in 5 minutes.",
+        "ja": "授業は5分後に始まります。",
+        "hint": "現在進行形で近未来を表す。classは単数。be動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "class（単数）+ is + ~ingが正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "We are ___ a surprise party for her.",
+        "ja": "私たちは彼女のためにサプライズパーティーを計画しています。",
+        "hint": "planの -ing形（子音字重複）は？",
+        "choices": [
+          "plan",
+          "planing",
+          "plans",
+          "planning"
+        ],
+        "answer": 3,
+        "explain": "短母音+n で終わるのでnを重ねてplanning。",
+        "level": "中級"
+      },
+      {
+        "q": "Is she ___ for the competition?",
+        "ja": "彼女は大会に向けて練習していますか？",
+        "hint": "practiceの -ing形（e脱落）は？",
+        "choices": [
+          "practicing",
+          "practiceing",
+          "practices",
+          "practiced"
+        ],
+        "answer": 0,
+        "explain": "eで終わる→eを取って+ing → practicing。",
+        "level": "中級"
+      },
+      {
+        "q": "They ___ great progress.",
+        "ja": "彼らは素晴らしい進歩を遂げています。",
+        "hint": "They（複数）に合う進行形。make の形は？",
+        "choices": [
+          "makes progress",
+          "is making progress",
+          "made progress",
+          "are making progress"
+        ],
+        "answer": 3,
+        "explain": "They（複数）+ are + ~ing が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "My sister is ___ a new manga series.",
+        "ja": "私の姉（妹）は新しい漫画シリーズを読んでいます。",
+        "hint": "readの -ing形は？",
+        "choices": [
+          "reed",
+          "reads",
+          "read",
+          "reading"
+        ],
+        "answer": 3,
+        "explain": "readの-ing形はreadingです。",
+        "level": "中級"
+      },
+      {
+        "q": "It ___ getting dark outside.",
+        "ja": "外が暗くなってきています。",
+        "hint": "It（単数）に合う現在進行形は？",
+        "choices": [
+          "are",
+          "is",
+          "am",
+          "do"
+        ],
+        "answer": 1,
+        "explain": "It + is + ~ing が正しい現在進行形。",
+        "level": "中級"
+      },
+      {
+        "q": "What ___ your friends planning for summer?",
+        "ja": "あなたの友達は夏にどんな計画を立てていますか？",
+        "hint": "your friends（複数）の進行形疑問文。be動詞は？",
+        "choices": [
+          "Is",
+          "Am",
+          "Are",
+          "Do"
+        ],
+        "answer": 2,
+        "explain": "friends（複数）の進行形疑問文はAre~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "He's ___ to his friend right now.",
+        "ja": "彼は今ちょうど友達に電話しています。",
+        "hint": "talkingの前のbe動詞はhe に合う？",
+        "choices": [
+          "are talking",
+          "am talking",
+          "is talking",
+          "be talking"
+        ],
+        "answer": 2,
+        "explain": "He + is（'s）+ talkingが正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "I'm ___ to the new school well.",
+        "ja": "私は新しい学校にうまく慣れています。",
+        "hint": "getの -ing形は？（短母音+t）",
+        "choices": [
+          "get",
+          "geting",
+          "getting",
+          "getted"
+        ],
+        "answer": 2,
+        "explain": "短母音+t→tを重ねてgettingです。",
+        "level": "上級"
+      },
+      {
+        "q": "She is ___ her best in the competition.",
+        "ja": "彼女は大会で最善を尽くしています。",
+        "hint": "doの -ing形は？",
+        "choices": [
+          "do",
+          "does",
+          "done",
+          "doing"
+        ],
+        "answer": 3,
+        "explain": "doの-ing形はdoingです（単純に+ing）。",
+        "level": "上級"
+      },
+      {
+        "q": "They aren't ___ their time wisely.",
+        "ja": "彼らは時間をうまく使えていません。",
+        "hint": "useの -ing形（e脱落）は？",
+        "choices": [
+          "use",
+          "useing",
+          "used",
+          "using"
+        ],
+        "answer": 3,
+        "explain": "eを取って+ing → usingです。",
+        "level": "上級"
+      },
+      {
+        "q": "Is she ___ the position seriously?",
+        "ja": "彼女はその立場を真剣に考えていますか？",
+        "hint": "considerの -ing形は？",
+        "choices": [
+          "consider",
+          "considers",
+          "considering",
+          "considered"
+        ],
+        "answer": 2,
+        "explain": "considerの-ing形はconsideringです。",
+        "level": "上級"
+      },
+      {
+        "q": "We ___ forward to the school festival.",
+        "ja": "私たちは学校祭をとても楽しみにしています。",
+        "hint": "look forward to の進行形。We の be動詞は？",
+        "choices": [
+          "is looking",
+          "am looking",
+          "are looking",
+          "was looking"
+        ],
+        "answer": 2,
+        "explain": "We（複数）+ are + lookingが正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "He ___ on his science project all week.",
+        "ja": "彼は一週間ずっと理科のプロジェクトに取り組んでいます。",
+        "hint": "He（三単現）の進行形。work on の形は？",
+        "choices": [
+          "worked on",
+          "works on",
+          "is working on",
+          "are working on"
+        ],
+        "answer": 2,
+        "explain": "He + is + working on が正しい進行形。",
+        "level": "上級"
+      },
+      {
+        "q": "The situation ___ worse day by day.",
+        "ja": "状況は日々悪化しています。",
+        "hint": "The situation（単数）の進行形。get の形は？",
+        "choices": [
+          "gets",
+          "are getting",
+          "is getting",
+          "get"
+        ],
+        "answer": 2,
+        "explain": "単数 + is + ~ing が正しい進行形。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you enjoying your new school life?",
+        "ja": "新しい学校生活は楽しんでいますか？",
+        "hint": "you の進行形疑問文。be動詞は？",
+        "choices": [
+          "Do",
+          "Is",
+          "Am",
+          "Are"
+        ],
+        "answer": 3,
+        "explain": "youの進行形疑問文はAre you ~ing?です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ a lot lately due to stress.",
+        "ja": "彼女はストレスで最近よく泣いています。",
+        "hint": "She（三単現）に合う進行形。cry の -ing形は？",
+        "choices": [
+          "is crying",
+          "are crying",
+          "am crying",
+          "is cring"
+        ],
+        "answer": 0,
+        "explain": "She + is + crying（y → ying はそのまま）が正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "I'm ___ of studying the same thing.",
+        "ja": "私は同じことを勉強するのに飽き飽きしています。",
+        "hint": "getの -ing形 + tired of は？",
+        "choices": [
+          "gotten",
+          "getting",
+          "get",
+          "geting"
+        ],
+        "answer": 1,
+        "explain": "get tired of の進行形はgetting tired ofです。",
+        "level": "上級"
+      },
+      {
+        "q": "They are ___ their best to solve the problem.",
+        "ja": "彼らは問題を解決するために最善を尽くしています。",
+        "hint": "doの -ing形は？",
+        "choices": [
+          "done",
+          "do",
+          "does",
+          "doing"
+        ],
+        "answer": 3,
+        "explain": "do の -ing形は doingです。",
+        "level": "上級"
+      },
+      {
+        "q": "The teacher is ___ new methods to teach.",
+        "ja": "先生は新しい指導法を試みています。",
+        "hint": "tryの -ing形（y→yingはそのまま）は？",
+        "choices": [
+          "tryes",
+          "tring",
+          "try",
+          "trying"
+        ],
+        "answer": 3,
+        "explain": "tryの-ing形はtryingです（yはそのまま）。",
+        "level": "上級"
+      },
+      {
+        "q": "___ the students working hard on the project?",
+        "ja": "生徒たちはプロジェクトに一生懸命取り組んでいますか？",
+        "hint": "the students（複数）の進行形疑問文。be動詞は？",
+        "choices": [
+          "Is",
+          "Am",
+          "Do",
+          "Are"
+        ],
+        "answer": 3,
+        "explain": "students（複数）の進行形疑問文はAre~?です。",
+        "level": "上級"
+      },
+      {
+        "q": "She's ___ her schedule for next week.",
+        "ja": "彼女は来週のスケジュールを調整しています。",
+        "hint": "adjustの -ing形は？",
+        "choices": [
+          "adjusting",
+          "adjustsing",
+          "adjust",
+          "adjusted"
+        ],
+        "answer": 0,
+        "explain": "adjustの-ing形はadjustingです（単純に+ing）。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ reading more books this year.",
+        "ja": "私は今年もっと本を読もうとしています。",
+        "hint": "I に合う進行形。try の形は？",
+        "choices": [
+          "am trying",
+          "is trying",
+          "try",
+          "trying"
+        ],
+        "answer": 0,
+        "explain": "I + am + trying が正しい現在進行形です。",
+        "level": "上級"
+      }
+    ],
+    "過去形": [
+      {
+        "q": "I ___ sick last week.",
+        "ja": "私は先週、具合が悪かったです。",
+        "hint": "I の be動詞過去形は？",
+        "choices": [
+          "am",
+          "were",
+          "was",
+          "is"
+        ],
+        "answer": 2,
+        "explain": "Iのbe動詞過去形はwasです。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ to Kyoto last summer.",
+        "ja": "彼女は去年の夏、京都へ行きました。",
+        "hint": "go の過去形（不規則変化）は？",
+        "choices": [
+          "go",
+          "goes",
+          "going",
+          "went"
+        ],
+        "answer": 3,
+        "explain": "goの過去形はwent（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ soccer after school yesterday.",
+        "ja": "私たちは昨日、放課後サッカーをしました。",
+        "hint": "play の過去形は？（規則変化）",
+        "choices": [
+          "play",
+          "plays",
+          "playing",
+          "played"
+        ],
+        "answer": 3,
+        "explain": "規則動詞の過去形は+edです（played）。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ not go to school two days ago.",
+        "ja": "彼は2日前に学校に行きませんでした。",
+        "hint": "一般動詞過去の否定文。doの形は？",
+        "choices": [
+          "don't",
+          "doesn't",
+          "didn't",
+          "not"
+        ],
+        "answer": 2,
+        "explain": "過去の否定はdidn't + 動詞の原形です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you enjoy the concert?",
+        "ja": "あなたはコンサートを楽しみましたか？",
+        "hint": "一般動詞過去の疑問文。doの形は？",
+        "choices": [
+          "Do",
+          "Does",
+          "Were",
+          "Did"
+        ],
+        "answer": 3,
+        "explain": "過去の疑問文はDid + 主語 + 動詞の原形？です。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ very happy at the party.",
+        "ja": "彼らはパーティーでとても楽しそうでした。",
+        "hint": "They（複数）のbe動詞過去形は？",
+        "choices": [
+          "was",
+          "is",
+          "are",
+          "were"
+        ],
+        "answer": 3,
+        "explain": "They（複数）のbe過去形はwereです。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ a beautiful picture.",
+        "ja": "彼女はきれいな絵を描きました。",
+        "hint": "draw の過去形（不規則変化）は？",
+        "choices": [
+          "draw",
+          "drawed",
+          "draws",
+          "drew"
+        ],
+        "answer": 3,
+        "explain": "drawの過去形はdrew（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ pizza for lunch.",
+        "ja": "私は昼食にピザを食べました。",
+        "hint": "eat の過去形（不規則変化）は？",
+        "choices": [
+          "eated",
+          "eat",
+          "ate",
+          "eats"
+        ],
+        "answer": 2,
+        "explain": "eatの過去形はate（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ she at home yesterday?",
+        "ja": "彼女は昨日、家にいましたか？",
+        "hint": "she のbe動詞過去疑問文は？",
+        "choices": [
+          "Were",
+          "Was",
+          "Is",
+          "Did"
+        ],
+        "answer": 1,
+        "explain": "she（三人称単数）のbe過去疑問文はWas she~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ a cold last week.",
+        "ja": "彼は先週、風邪をひきました。",
+        "hint": "catch の過去形（不規則変化）は？",
+        "choices": [
+          "catched",
+          "catch",
+          "catches",
+          "caught"
+        ],
+        "answer": 3,
+        "explain": "catchの過去形はcaught（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ to the beach last Sunday.",
+        "ja": "私たちは先週の日曜日、海へ行きました。",
+        "hint": "go の過去形（不規則変化）は？",
+        "choices": [
+          "go",
+          "goes",
+          "going",
+          "went"
+        ],
+        "answer": 3,
+        "explain": "goの過去形はwentです。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ a great idea.",
+        "ja": "彼女はすばらしいアイデアを思いつきました。",
+        "hint": "have の過去形（不規則変化）は？",
+        "choices": [
+          "have",
+          "has",
+          "having",
+          "had"
+        ],
+        "answer": 3,
+        "explain": "haveの過去形はhad（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ my homework before dinner.",
+        "ja": "私は夕食前に宿題を終わらせました。",
+        "hint": "finish の過去形は？（規則変化）",
+        "choices": [
+          "finish",
+          "finishs",
+          "finishing",
+          "finished"
+        ],
+        "answer": 3,
+        "explain": "規則動詞の過去形は+edです（finished）。",
+        "level": "初級"
+      },
+      {
+        "q": "___ they at school yesterday?",
+        "ja": "彼らは昨日、学校にいましたか？",
+        "hint": "they（複数）のbe動詞過去疑問文は？",
+        "choices": [
+          "Was",
+          "Is",
+          "Were",
+          "Are"
+        ],
+        "answer": 2,
+        "explain": "they（複数）のbe過去疑問文はWere they~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ me a surprise on my birthday.",
+        "ja": "彼女は私の誕生日にサプライズをしてくれました。",
+        "hint": "give の過去形（不規則変化）は？",
+        "choices": [
+          "gived",
+          "give",
+          "gives",
+          "gave"
+        ],
+        "answer": 3,
+        "explain": "giveの過去形はgave（不規則変化）です。",
+        "level": "初級"
+      },
+      {
+        "q": "I didn't ___ the answer to the question.",
+        "ja": "私はその問題の答えがわかりませんでした。",
+        "hint": "didn't の後の動詞の形は？",
+        "choices": [
+          "knew",
+          "knowing",
+          "knows",
+          "know"
+        ],
+        "answer": 3,
+        "explain": "didn't + 動詞の原形。know が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ the whole book in one day.",
+        "ja": "彼女は1日でその本を全部読みました。",
+        "hint": "read の過去形は？（形は同じ、発音変化）",
+        "choices": [
+          "readed",
+          "reads",
+          "reading",
+          "read"
+        ],
+        "answer": 3,
+        "explain": "readの過去形はread（形は同じでも発音はレッドになる）です。",
+        "level": "中級"
+      },
+      {
+        "q": "They ___ all night for the big test.",
+        "ja": "彼らはその大事なテストのために一晩中勉強しました。",
+        "hint": "study の過去形は？（規則変化・y→ied）",
+        "choices": [
+          "studyed",
+          "study",
+          "studies",
+          "studied"
+        ],
+        "answer": 3,
+        "explain": "y→iedに変えてstudied（規則変化）です。",
+        "level": "中級"
+      },
+      {
+        "q": "He ___ late because he missed the bus.",
+        "ja": "バスに乗り遅れたので彼は遅刻しました。",
+        "hint": "arrive の過去形は？（e + d）",
+        "choices": [
+          "arrive",
+          "arrives",
+          "arriveed",
+          "arrived"
+        ],
+        "answer": 3,
+        "explain": "eで終わる規則動詞は+dでarrived。",
+        "level": "中級"
+      },
+      {
+        "q": "___ you see the shooting star last night?",
+        "ja": "昨夜、流れ星を見ましたか？",
+        "hint": "一般動詞過去の疑問文は？",
+        "choices": [
+          "Do",
+          "Does",
+          "Were",
+          "Did"
+        ],
+        "answer": 3,
+        "explain": "過去の疑問文はDid + 主語 + 動詞の原形？です。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ her keys somewhere.",
+        "ja": "彼女はどこかに鍵を置き忘れました。",
+        "hint": "leave の過去形（不規則変化）は？",
+        "choices": [
+          "leaved",
+          "leave",
+          "leaves",
+          "left"
+        ],
+        "answer": 3,
+        "explain": "leaveの過去形はleft（不規則変化）です。",
+        "level": "中級"
+      },
+      {
+        "q": "We ___ the movie because it was too scary.",
+        "ja": "映画が怖すぎたので、私たちは途中で止めました。",
+        "hint": "stop の過去形は？（p重複+ed）",
+        "choices": [
+          "stoped",
+          "stopp",
+          "stop",
+          "stopped"
+        ],
+        "answer": 3,
+        "explain": "短母音+p → pを重ねてstoppedです。",
+        "level": "中級"
+      },
+      {
+        "q": "He ___ the problem by himself.",
+        "ja": "彼は1人でその問題を解決しました。",
+        "hint": "solve の過去形は？（e + d）",
+        "choices": [
+          "solve",
+          "solves",
+          "solveed",
+          "solved"
+        ],
+        "answer": 3,
+        "explain": "eで終わる規則動詞は+dでsolvedです。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ so nervous before my presentation.",
+        "ja": "プレゼン前、私はとても緊張していました。",
+        "hint": "be の過去形。I に合う形は？",
+        "choices": [
+          "were",
+          "am",
+          "is",
+          "was"
+        ],
+        "answer": 3,
+        "explain": "Iのbe過去形はwasです。",
+        "level": "中級"
+      },
+      {
+        "q": "Did she ___ you about the plan?",
+        "ja": "彼女はあなたにその計画を話しましたか？",
+        "hint": "Did の後の動詞の形は？",
+        "choices": [
+          "told",
+          "telling",
+          "tells",
+          "tell"
+        ],
+        "answer": 3,
+        "explain": "Did + 主語 + 動詞の原形？ → tell が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "They ___ a lot of fun at the school festival.",
+        "ja": "彼らは文化祭でたくさん楽しみました。",
+        "hint": "have の過去形（不規則変化）は？",
+        "choices": [
+          "have",
+          "has",
+          "having",
+          "had"
+        ],
+        "answer": 3,
+        "explain": "haveの過去形はhad（不規則変化）です。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ the guitar at the concert.",
+        "ja": "彼女はコンサートでギターを弾きました。",
+        "hint": "play の過去形は？（規則変化）",
+        "choices": [
+          "play",
+          "plays",
+          "playing",
+          "played"
+        ],
+        "answer": 3,
+        "explain": "規則動詞 play + ed = playedです。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ to bed very late last night.",
+        "ja": "私は昨夜、とても遅くに寝ました。",
+        "hint": "go の過去形（不規則変化）は？",
+        "choices": [
+          "go",
+          "goes",
+          "going",
+          "went"
+        ],
+        "answer": 3,
+        "explain": "goの過去形はwent（不規則変化）です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ he practice enough before the match?",
+        "ja": "彼は試合前に十分練習しましたか？",
+        "hint": "一般動詞過去の疑問文は？",
+        "choices": [
+          "Do",
+          "Does",
+          "Was",
+          "Did"
+        ],
+        "answer": 3,
+        "explain": "過去の疑問文はDid + 主語 + 動詞の原形？です。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ me a beautiful handmade card.",
+        "ja": "彼女は私に美しい手作りカードを送ってくれました。",
+        "hint": "send の過去形（不規則変化）は？",
+        "choices": [
+          "sended",
+          "send",
+          "sends",
+          "sent"
+        ],
+        "answer": 3,
+        "explain": "sendの過去形はsent（不規則変化）です。",
+        "level": "中級"
+      },
+      {
+        "q": "By the time I arrived, she ___ already left.",
+        "ja": "私が到着した時、彼女はすでに出発していました。",
+        "hint": "「すでに～していた」過去完了。she に合う形は？",
+        "choices": [
+          "already left",
+          "has already left",
+          "had already left",
+          "have already left"
+        ],
+        "answer": 2,
+        "explain": "過去完了（had + 過去分詞）はhad already leftです。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ studying for hours when she called.",
+        "ja": "彼女が電話してきたとき、私は何時間も勉強し続けていました。",
+        "hint": "「ずっと～していた」過去進行形。I に合う形は？",
+        "choices": [
+          "studied",
+          "was studying",
+          "were studying",
+          "have studied"
+        ],
+        "answer": 1,
+        "explain": "過去進行形はwas/were + ~ingです。I→was studying。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ not realize how late it was.",
+        "ja": "彼女はどれほど遅いか気づきませんでした。",
+        "hint": "過去の否定。She に合う形は？",
+        "choices": [
+          "don't",
+          "doesn't",
+          "wasn't",
+          "didn't"
+        ],
+        "answer": 3,
+        "explain": "She + didn't + 動詞原形が正しい過去否定です。",
+        "level": "上級"
+      },
+      {
+        "q": "They ___ been friends since elementary school.",
+        "ja": "彼らは小学校からずっと友達です。",
+        "hint": "「ずっと～している」現在完了。They に合う形は？",
+        "choices": [
+          "are",
+          "was",
+          "have",
+          "has"
+        ],
+        "answer": 2,
+        "explain": "They（複数）+ have + 過去分詞が現在完了です。",
+        "level": "上級"
+      },
+      {
+        "q": "He ___ the test three times before he passed.",
+        "ja": "合格する前に彼は3回テストを受けました。",
+        "hint": "take の過去形（不規則変化）は？",
+        "choices": [
+          "taked",
+          "takes",
+          "taking",
+          "took"
+        ],
+        "answer": 3,
+        "explain": "takeの過去形はtook（不規則変化）です。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ never eaten sushi until last month.",
+        "ja": "先月まで私は寿司を食べたことがありませんでした。",
+        "hint": "「～したことがない」現在完了否定。I に合う形は？",
+        "choices": [
+          "haven't",
+          "hadn't",
+          "didn't",
+          "wasn't"
+        ],
+        "answer": 0,
+        "explain": "I + have + never + 過去分詞が現在完了否定です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ practicing piano for 10 years.",
+        "ja": "彼女はピアノを10年練習してきました。",
+        "hint": "「ずっと～している」現在完了進行形。She に合う形は？",
+        "choices": [
+          "is",
+          "was",
+          "has been",
+          "have been"
+        ],
+        "answer": 2,
+        "explain": "She（単数）+ has been + ~ing が現在完了進行形です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you ever been to Okinawa?",
+        "ja": "あなたは沖縄に行ったことがありますか？",
+        "hint": "経験を問う現在完了疑問文。you に合う形は？",
+        "choices": [
+          "Did",
+          "Were",
+          "Have",
+          "Has"
+        ],
+        "answer": 2,
+        "explain": "Have you ever~? が経験を問う現在完了疑問文です。",
+        "level": "上級"
+      },
+      {
+        "q": "He told me that he ___ lost his wallet.",
+        "ja": "彼は財布をなくしたと私に言いました。",
+        "hint": "「言った時点より前の出来事」過去完了は？",
+        "choices": [
+          "loses",
+          "has lost",
+          "had lost",
+          "was losing"
+        ],
+        "answer": 2,
+        "explain": "過去完了（had + 過去分詞）はhad lost。時制の一致です。",
+        "level": "上級"
+      },
+      {
+        "q": "By next year, I ___ studied English for 5 years.",
+        "ja": "来年には、私は英語を5年間勉強したことになります。",
+        "hint": "「来年には～したことになる」未来完了。I に合う形は？",
+        "choices": [
+          "will study",
+          "have studied",
+          "had studied",
+          "will have studied"
+        ],
+        "answer": 3,
+        "explain": "will have + 過去分詞が未来完了形です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ been very busy lately.",
+        "ja": "彼女は最近とても忙しくしています。",
+        "hint": "「最近ずっと～している」現在完了。She に合う形は？",
+        "choices": [
+          "is",
+          "was",
+          "have been",
+          "has been"
+        ],
+        "answer": 3,
+        "explain": "She（単数）+ has been が現在完了です。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ just finished my assignment.",
+        "ja": "私はちょうど課題を終えたところです。",
+        "hint": "「ちょうど～した」現在完了。I に合う形は？",
+        "choices": [
+          "just finished",
+          "have just finished",
+          "had just finished",
+          "just finish"
+        ],
+        "answer": 1,
+        "explain": "I + have just + 過去分詞が現在完了です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ she ever won a trophy before?",
+        "ja": "彼女はこれまでにトロフィーを獲得したことがありますか？",
+        "hint": "経験を問う現在完了疑問文。she に合う形は？",
+        "choices": [
+          "Did",
+          "Were",
+          "Have",
+          "Has"
+        ],
+        "answer": 3,
+        "explain": "Has she ever~? が経験を問う現在完了疑問文です（三人称単数）。",
+        "level": "上級"
+      },
+      {
+        "q": "They ___ working on the project since Monday.",
+        "ja": "彼らは月曜日からずっとそのプロジェクトに取り組んでいます。",
+        "hint": "「ずっと～している」現在完了進行形。They に合う形は？",
+        "choices": [
+          "is",
+          "are",
+          "has been",
+          "have been"
+        ],
+        "answer": 3,
+        "explain": "They（複数）+ have been + ~ing が現在完了進行形です。",
+        "level": "上級"
+      },
+      {
+        "q": "He said he ___ never seen anything like that.",
+        "ja": "彼はそんなものは見たことがないと言いました。",
+        "hint": "「言った時点での経験」時制の一致。he に合う形は？",
+        "choices": [
+          "has never seen",
+          "never saw",
+          "had never seen",
+          "didn't see"
+        ],
+        "answer": 2,
+        "explain": "過去完了（had never + 過去分詞）。時制の一致でhad never seen。",
+        "level": "上級"
+      }
+    ],
+    "未来形": [
+      {
+        "q": "I ___ call you later.",
+        "ja": "あとで電話するね。",
+        "hint": "その場での決定・約束を表す未来は？",
+        "choices": [
+          "am going to",
+          "do",
+          "will",
+          "going to"
+        ],
+        "answer": 2,
+        "explain": "その場での決定・約束にはwill + 動詞の原形を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ going to study abroad next year.",
+        "ja": "彼女は来年、留学するつもりです。",
+        "hint": "She（単数）のbe going to。be動詞は？",
+        "choices": [
+          "will",
+          "am",
+          "are",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "She + is going to + 動詞原形が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "They ___ visit us this weekend.",
+        "ja": "彼らは今週末、私たちを訪ねてくれます。",
+        "hint": "意志・予定を表す未来は？",
+        "choices": [
+          "are going",
+          "will",
+          "go to",
+          "going to"
+        ],
+        "answer": 1,
+        "explain": "意志を表す未来にはwill + 動詞の原形を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you be free tomorrow?",
+        "ja": "明日、暇ですか？",
+        "hint": "will の疑問文の語順は？",
+        "choices": [
+          "Do",
+          "Are",
+          "Is",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "willの疑問文はWill + 主語 + 動詞の原形？です。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ not go to the party tonight.",
+        "ja": "私は今夜のパーティーには行きません。",
+        "hint": "will の否定形は？",
+        "choices": [
+          "won't",
+          "don't will",
+          "will not going",
+          "not will"
+        ],
+        "answer": 0,
+        "explain": "willの否定はwill not（won't）+ 動詞の原形です。",
+        "level": "初級"
+      },
+      {
+        "q": "Look at those clouds! It ___ rain soon.",
+        "ja": "あの雲を見て！もうすぐ雨が降りそう。",
+        "hint": "根拠のある予測にはwillとbe going toどちら？",
+        "choices": [
+          "will",
+          "is going to",
+          "goes to",
+          "rains"
+        ],
+        "answer": 1,
+        "explain": "目に見える根拠がある予測にはbe going toを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "We ___ going to have a picnic tomorrow.",
+        "ja": "私たちは明日、ピクニックをする予定です。",
+        "hint": "We（複数）のbe going to。be動詞は？",
+        "choices": [
+          "is",
+          "was",
+          "am",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "We（複数）+ are going to + 動詞原形が正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ be at home tonight.",
+        "ja": "彼は今夜、家にいるでしょう。",
+        "hint": "予測・推量を表す未来は？",
+        "choices": [
+          "is going to",
+          "goes",
+          "will",
+          "is"
+        ],
+        "answer": 2,
+        "explain": "予測・推量にはwill + 動詞の原形を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "I'm going ___ meet her at the station.",
+        "ja": "私は駅で彼女と会う予定です。",
+        "hint": "be going to のtoの後は？",
+        "choices": [
+          "to meet",
+          "meeting",
+          "meet",
+          "meets"
+        ],
+        "answer": 0,
+        "explain": "be going to + 動詞の原形（to meet）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ they arrive on time?",
+        "ja": "彼らは時間通りに到着するでしょうか？",
+        "hint": "will の疑問文は？",
+        "choices": [
+          "Are",
+          "Do",
+          "Were",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "willの疑問文はWill + 主語 + 動詞の原形？です。",
+        "level": "初級"
+      },
+      {
+        "q": "She is not going to ___ the event.",
+        "ja": "彼女はそのイベントには参加しないつもりです。",
+        "hint": "be going toの否定。notの後の動詞の形は？",
+        "choices": [
+          "joins",
+          "joining",
+          "join",
+          "joined"
+        ],
+        "answer": 2,
+        "explain": "not going to + 動詞の原形（join）が正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ be back in ten minutes.",
+        "ja": "10分後に戻ります。",
+        "hint": "約束を表す未来は？",
+        "choices": [
+          "am going to",
+          "going",
+          "will",
+          "go to"
+        ],
+        "answer": 2,
+        "explain": "約束・その場の決定にはwillを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "My family ___ going to travel to Europe.",
+        "ja": "私の家族はヨーロッパへ旅行する予定です。",
+        "hint": "My family（単数扱い）のbe going to。be動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "were",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "My family（単数扱い）+ is going to が正しい。",
+        "level": "初級"
+      },
+      {
+        "q": "It ___ be sunny tomorrow according to the weather report.",
+        "ja": "天気予報によると明日は晴れるそうです。",
+        "hint": "情報に基づく予測。willとbe going toどちら？",
+        "choices": [
+          "is going to",
+          "will",
+          "goes to",
+          "is"
+        ],
+        "answer": 1,
+        "explain": "天気予報などの情報に基づく予測はwillを使います（be going toも可）。",
+        "level": "初級"
+      },
+      {
+        "q": "___ she study for the test tonight?",
+        "ja": "彼女は今夜テストに備えて勉強するつもりですか？",
+        "hint": "will の疑問文は？",
+        "choices": [
+          "Does",
+          "Is",
+          "Do",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "willの疑問文はWill + 主語 + 動詞の原形？です。",
+        "level": "初級"
+      },
+      {
+        "q": "I think she ___ become a famous artist.",
+        "ja": "彼女はきっと有名なアーティストになると思います。",
+        "hint": "予測を表す will の文。think の後の従属節は？",
+        "choices": [
+          "becomes",
+          "become",
+          "will become",
+          "going to become"
+        ],
+        "answer": 2,
+        "explain": "I think (that) + 主語 + will + 動詞原形が正しい形。",
+        "level": "中級"
+      },
+      {
+        "q": "We are going ___ move to a new house.",
+        "ja": "私たちは新しい家に引っ越す予定です。",
+        "hint": "be going to の構造。toの後は？",
+        "choices": [
+          "to move",
+          "moving",
+          "moved",
+          "move"
+        ],
+        "answer": 0,
+        "explain": "be going to + 動詞の原形（to move）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "By the time you wake up, I ___ already left.",
+        "ja": "あなたが起きる頃には、私はもう出発しているでしょう。",
+        "hint": "「その時点では完了している」未来完了は？",
+        "choices": [
+          "will leave",
+          "will be leaving",
+          "am going to leave",
+          "will have left"
+        ],
+        "answer": 3,
+        "explain": "will have + 過去分詞（未来完了）が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ you be joining us for dinner tonight?",
+        "ja": "今夜の夕食に一緒に来られますか？",
+        "hint": "willの疑問文（丁寧な誘い）は？",
+        "choices": [
+          "Do",
+          "Are",
+          "Were",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "Will you be ~ing?（未来進行形）も使えます。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ have finished her project by Friday.",
+        "ja": "彼女は金曜日までにプロジェクトを終わらせているでしょう。",
+        "hint": "「金曜日時点で完了」未来完了。She に合う形は？",
+        "choices": [
+          "is going to finish",
+          "has finished",
+          "will have finished",
+          "will finish"
+        ],
+        "answer": 2,
+        "explain": "will have + 過去分詞（未来完了）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "I won't ___ to the party if it rains.",
+        "ja": "雨が降ったらパーティーには行きません。",
+        "hint": "won't の後の動詞の形は？",
+        "choices": [
+          "go",
+          "going",
+          "went",
+          "goes"
+        ],
+        "answer": 0,
+        "explain": "won't（will not）+ 動詞の原形（go）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "They ___ been dating for three years next month.",
+        "ja": "来月で彼らは付き合って3年になります。",
+        "hint": "「来月で3年になる」未来完了。They に合う形は？",
+        "choices": [
+          "are",
+          "have",
+          "were",
+          "will have"
+        ],
+        "answer": 3,
+        "explain": "will have + 過去分詞（未来完了）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "She is going to ___ the national exam next year.",
+        "ja": "彼女は来年、全国模試を受ける予定です。",
+        "hint": "be going to の後の動詞の形は？",
+        "choices": [
+          "takes",
+          "taking",
+          "took",
+          "take"
+        ],
+        "answer": 3,
+        "explain": "be going to + 動詞の原形（take）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "___ it be possible to change the meeting time?",
+        "ja": "会議の時間を変更することは可能でしょうか？",
+        "hint": "丁寧な依頼に使うwillの疑問文は？",
+        "choices": [
+          "Is",
+          "Are",
+          "Does",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "Will it be possible to~? が丁寧な表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "I'm sure she ___ win the competition.",
+        "ja": "きっと彼女はコンクールで優勝すると思います。",
+        "hint": "「確信の予測」I'm sure the後のwillの文は？",
+        "choices": [
+          "wins",
+          "winning",
+          "will win",
+          "won"
+        ],
+        "answer": 2,
+        "explain": "I'm sure + 主語 + will + 動詞原形が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "We ___ be studying for finals all week.",
+        "ja": "私たちは一週間ずっと期末試験の勉強をするでしょう。",
+        "hint": "「一週間ずっと」未来進行形。We に合う形は？",
+        "choices": [
+          "will study",
+          "are going to study",
+          "will be studying",
+          "going to be studying"
+        ],
+        "answer": 2,
+        "explain": "will be + ~ing（未来進行形）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "He ___ going to apologize to her.",
+        "ja": "彼は彼女に謝るつもりです。",
+        "hint": "He（単数）のbe going to。be動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "were"
+        ],
+        "answer": 2,
+        "explain": "He + is going to + 動詞原形が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "By this time next year, I ___ graduated from this school.",
+        "ja": "来年の今頃には、私はこの学校を卒業しているでしょう。",
+        "hint": "「来年の今頃には完了」未来完了は？",
+        "choices": [
+          "will graduate",
+          "have graduated",
+          "am going to graduate",
+          "will have graduated"
+        ],
+        "answer": 3,
+        "explain": "will have + 過去分詞（未来完了）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "___ you be able to come to the study group?",
+        "ja": "勉強会に来られますか？",
+        "hint": "「できる」be able to を使ったwill疑問文は？",
+        "choices": [
+          "Do",
+          "Are",
+          "Were",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "Will you be able to~? が「できますか？」の表現。",
+        "level": "中級"
+      },
+      {
+        "q": "She promises she ___ study harder from now on.",
+        "ja": "彼女はこれからもっと頑張ると約束します。",
+        "hint": "約束を表すwillの従属節は？",
+        "choices": [
+          "studies",
+          "studied",
+          "is studying",
+          "will study"
+        ],
+        "answer": 3,
+        "explain": "She promises + that + 主語 + will + 動詞原形が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "By the time she arrives, we ___ waiting for an hour.",
+        "ja": "彼女が到着する頃には、私たちは1時間待っていることになります。",
+        "hint": "「到着時点で1時間待っていた」未来完了進行形は？",
+        "choices": [
+          "will wait",
+          "will have been waiting",
+          "are going to wait",
+          "will be waiting"
+        ],
+        "answer": 1,
+        "explain": "will have been + ~ing（未来完了進行形）が正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "I'll let you know as soon as I ___ the result.",
+        "ja": "結果が分かり次第お知らせします。",
+        "hint": "時間の副詞節（as soon as）の中で未来は現在形？",
+        "choices": [
+          "will get",
+          "am going to get",
+          "get",
+          "gets"
+        ],
+        "answer": 2,
+        "explain": "時間の副詞節の中では現在形で未来を表します。",
+        "level": "上級"
+      },
+      {
+        "q": "She said she ___ come to the party.",
+        "ja": "彼女はパーティーに来ると言いました。",
+        "hint": "時制の一致。「言った」時点でwill→?",
+        "choices": [
+          "will come",
+          "comes",
+          "would come",
+          "is going to come"
+        ],
+        "answer": 2,
+        "explain": "時制の一致：will → would になります。",
+        "level": "上級"
+      },
+      {
+        "q": "If it ___ tomorrow, we'll cancel the trip.",
+        "ja": "明日雨が降ったら、旅行はキャンセルします。",
+        "hint": "条件節（if）の中で未来は現在形？",
+        "choices": [
+          "will rain",
+          "is going to rain",
+          "rained",
+          "rains"
+        ],
+        "answer": 3,
+        "explain": "条件節の中では現在形で未来を表します（rains）。",
+        "level": "上級"
+      },
+      {
+        "q": "I'm afraid I ___ be able to make it to the meeting.",
+        "ja": "残念ながら、会議に参加できないと思います。",
+        "hint": "「できない」be able toを使ったwon't文は？",
+        "choices": [
+          "won't be able to",
+          "won't able to",
+          "will be not able to",
+          "won't can"
+        ],
+        "answer": 0,
+        "explain": "won't be able to + 動詞原形が正しい否定形。",
+        "level": "上級"
+      },
+      {
+        "q": "By next April, she ___ been studying Japanese for 3 years.",
+        "ja": "来年の4月には、彼女は日本語を3年間勉強していることになります。",
+        "hint": "「来年4月で3年継続」未来完了進行形は？",
+        "choices": [
+          "will study",
+          "has been studying",
+          "will have been studying",
+          "will be studying"
+        ],
+        "answer": 2,
+        "explain": "will have been + ~ing（未来完了進行形）が正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "He told me he ___ call me back.",
+        "ja": "彼は折り返し電話すると言いました。",
+        "hint": "時制の一致。will → ?",
+        "choices": [
+          "will call",
+          "calls",
+          "is going to call",
+          "would call"
+        ],
+        "answer": 3,
+        "explain": "時制の一致：will → would になります（would call）。",
+        "level": "上級"
+      },
+      {
+        "q": "Unless she ___ harder, she won't pass the exam.",
+        "ja": "もっと頑張らなければ、彼女は試験に合格しません。",
+        "hint": "条件節（unless）の中で未来は現在形？",
+        "choices": [
+          "will study",
+          "is going to study",
+          "studies",
+          "studied"
+        ],
+        "answer": 2,
+        "explain": "条件節の中では現在形で未来を表します。",
+        "level": "上級"
+      },
+      {
+        "q": "I wonder if it ___ be possible to finish by tomorrow.",
+        "ja": "明日までに終わらせることができるかどうか気になります。",
+        "hint": "「～かどうか」のif節の中ではwillを使う？",
+        "choices": [
+          "would",
+          "will",
+          "is going to",
+          "might"
+        ],
+        "answer": 1,
+        "explain": "名詞節のif（～かどうか）はwillを使います（条件節は現在形）。",
+        "level": "上級"
+      },
+      {
+        "q": "She will ___ retired by the time her kids graduate.",
+        "ja": "子どもたちが卒業する頃には彼女は引退しているでしょう。",
+        "hint": "未来完了。She will have の後は？",
+        "choices": [
+          "retire",
+          "retired",
+          "retiring",
+          "be retired"
+        ],
+        "answer": 0,
+        "explain": "will have + 過去分詞（retired）が未来完了です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you have finished this book by Friday?",
+        "ja": "金曜日までにこの本を読み終えますか？",
+        "hint": "「金曜日までに完了」未来完了疑問文は？",
+        "choices": [
+          "Do",
+          "Are",
+          "Have",
+          "Will"
+        ],
+        "answer": 3,
+        "explain": "Will you have + 過去分詞?（未来完了疑問文）が正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "I promise I ___ forget about this.",
+        "ja": "このことは忘れないと約束します。",
+        "hint": "約束の強調。won'tとwon'tどちら？（否定）",
+        "choices": [
+          "will",
+          "won't",
+          "am not going to",
+          "don't"
+        ],
+        "answer": 1,
+        "explain": "「忘れない」=won't forget。否定の約束です。",
+        "level": "上級"
+      },
+      {
+        "q": "By the end of the month, they ___ completed the project.",
+        "ja": "月末までには彼らはプロジェクトを完了させているでしょう。",
+        "hint": "「月末時点で完了」未来完了は？",
+        "choices": [
+          "will complete",
+          "are going to complete",
+          "have completed",
+          "will have completed"
+        ],
+        "answer": 3,
+        "explain": "will have + 過去分詞（未来完了）が正しい。",
+        "level": "上級"
+      },
+      {
+        "q": "She won't ___ you down — I promise.",
+        "ja": "彼女はあなたを失望させません、約束します。",
+        "hint": "won't の後の動詞の形は？",
+        "choices": [
+          "let",
+          "lets",
+          "letting",
+          "let down"
+        ],
+        "answer": 0,
+        "explain": "won't + 動詞原形（let）が正しい形です。",
+        "level": "上級"
+      },
+      {
+        "q": "Whatever happens, I ___ always be here for you.",
+        "ja": "何があっても、ずっとそばにいます。",
+        "hint": "「ずっとここにいる」約束のwillは？",
+        "choices": [
+          "am going to",
+          "will",
+          "am",
+          "would"
+        ],
+        "answer": 1,
+        "explain": "約束・意志のwill + always + be が正しい。",
+        "level": "上級"
+      }
+    ],
+    "There is/are": [
+      {
+        "q": "There ___ a pen on the desk.",
+        "ja": "机の上にペンが1本あります。",
+        "hint": "a pen（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a pen（単数）なのでThere isを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ two cats in the garden.",
+        "ja": "庭に猫が2匹います。",
+        "hint": "two cats（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "two cats（複数）なのでThere areを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "___ there a post office near here?",
+        "ja": "この近くに郵便局はありますか？",
+        "hint": "a post office（単数）の疑問文は？",
+        "choices": [
+          "Are",
+          "Am",
+          "Is",
+          "Do"
+        ],
+        "answer": 2,
+        "explain": "単数の疑問文はIs there~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ not any milk in the fridge.",
+        "ja": "冷蔵庫に牛乳がありません。",
+        "hint": "milk（不可算・単数扱い）の否定文は？",
+        "choices": [
+          "are not",
+          "am not",
+          "is not",
+          "be not"
+        ],
+        "answer": 2,
+        "explain": "milk（単数扱い）なのでThere is notを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ many students in the gym.",
+        "ja": "体育館に多くの生徒がいます。",
+        "hint": "many students（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "many students（複数）なのでThere areを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "___ there a park near your school?",
+        "ja": "学校の近くに公園はありますか？",
+        "hint": "a park（単数）の疑問文は？",
+        "choices": [
+          "Are",
+          "Am",
+          "Do",
+          "Is"
+        ],
+        "answer": 3,
+        "explain": "a park（単数）の疑問文はIs there~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ some flowers on the table.",
+        "ja": "テーブルの上に花が少しあります。",
+        "hint": "some flowers（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "be",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "flowers（複数）なのでThere areを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ no one in the classroom.",
+        "ja": "教室には誰もいません。",
+        "hint": "no one（単数扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "no one（単数扱い）なのでThere isを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ a lot of homework today.",
+        "ja": "今日はたくさん宿題があります。",
+        "hint": "a lot of homework（不可算・単数扱い）に合う be動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "homework（不可算・単数扱い）なのでThere isを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "___ there any students in the library?",
+        "ja": "図書館に生徒はいますか？",
+        "hint": "students（複数）の疑問文は？",
+        "choices": [
+          "Is",
+          "Am",
+          "Do",
+          "Are"
+        ],
+        "answer": 3,
+        "explain": "students（複数）の疑問文はAre there~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ a big concert this weekend.",
+        "ja": "今週末、大きなコンサートがあります。",
+        "hint": "a big concert（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "a concert（単数）なのでThere isを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ five chairs in this room.",
+        "ja": "この部屋には椅子が5脚あります。",
+        "hint": "five chairs（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "five chairs（複数）なのでThere areを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ no time left.",
+        "ja": "時間がもう残っていません。",
+        "hint": "no time（単数・不可算扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "time（不可算・単数扱い）なのでThere isを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "___ there a swimming pool at your school?",
+        "ja": "あなたの学校にはプールがありますか？",
+        "hint": "a swimming pool（単数）の疑問文は？",
+        "choices": [
+          "Are",
+          "Am",
+          "Do",
+          "Is"
+        ],
+        "answer": 3,
+        "explain": "a pool（単数）の疑問文はIs there~?です。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ three books on my bed.",
+        "ja": "私のベッドの上に本が3冊あります。",
+        "hint": "three books（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "three books（複数）なのでThere areを使います。",
+        "level": "初級"
+      },
+      {
+        "q": "There ___ a lot of snow in Hokkaido in winter.",
+        "ja": "北海道の冬はたくさんの雪が降ります。",
+        "hint": "snow（不可算・単数扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "snow（不可算・単数扱い）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "How many people ___ there in your family?",
+        "ja": "あなたの家族は何人ですか？",
+        "hint": "people（複数）の「How many ~」疑問文は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "do"
+        ],
+        "answer": 2,
+        "explain": "people（複数）なのでAre there~? → How many people are there?です。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ not enough chairs for everyone.",
+        "ja": "全員分の椅子が足りません。",
+        "hint": "chairs（複数）の否定文は？",
+        "choices": [
+          "isn't",
+          "am not",
+          "aren't",
+          "not be"
+        ],
+        "answer": 2,
+        "explain": "chairs（複数）なのでThere aren'tを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ a famous museum in this city.",
+        "ja": "この街には有名な美術館があります。",
+        "hint": "a museum（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a museum（単数）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "___ there any trouble with your computer?",
+        "ja": "あなたのコンピュータに何か問題がありますか？",
+        "hint": "trouble（不可算・単数扱い）の疑問文は？",
+        "choices": [
+          "Are",
+          "Am",
+          "Do",
+          "Is"
+        ],
+        "answer": 3,
+        "explain": "trouble（単数扱い）の疑問文はIs there~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ many things I want to do this summer.",
+        "ja": "今年の夏にやりたいことがたくさんあります。",
+        "hint": "many things（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "things（複数）なのでThere areを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ a huge difference between the two.",
+        "ja": "その二つの間には大きな違いがあります。",
+        "hint": "a difference（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a difference（単数）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ a lot of things I still don't understand.",
+        "ja": "まだ理解できていないことがたくさんあります。",
+        "hint": "things（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "be",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "things（複数）なのでThere areを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "___ there enough time to finish the test?",
+        "ja": "テストを終わらせるための時間は十分ありますか？",
+        "hint": "time（不可算・単数扱い）の疑問文は？",
+        "choices": [
+          "Are",
+          "Am",
+          "Do",
+          "Is"
+        ],
+        "answer": 3,
+        "explain": "time（単数扱い）の疑問文はIs there~?です。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ not much traffic in the morning.",
+        "ja": "朝はあまり渋滞がありません。",
+        "hint": "traffic（不可算・単数扱い）の否定文は？",
+        "choices": [
+          "aren't",
+          "am not",
+          "isn't",
+          "not be"
+        ],
+        "answer": 2,
+        "explain": "traffic（単数扱い）なのでThere isn'tを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ two new students in our class today.",
+        "ja": "今日、私たちのクラスに2人の新入生がいます。",
+        "hint": "two students（複数）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "two students（複数）なのでThere areを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ a nice café near the station.",
+        "ja": "駅の近くに素敵なカフェがあります。",
+        "hint": "a café（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "a café（単数）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ no easy answers to this problem.",
+        "ja": "この問題には簡単な答えがありません。",
+        "hint": "no answers（複数形）に合うbe動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "answers（複数）なのでThere areを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "How many rooms ___ there in your house?",
+        "ja": "あなたの家には何部屋ありますか？",
+        "hint": "rooms（複数）の「How many~」疑問文は？",
+        "choices": [
+          "is",
+          "am",
+          "do",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "rooms（複数）なのでHow many rooms are there?です。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ something strange about this place.",
+        "ja": "この場所には何か不思議なものがあります。",
+        "hint": "something（単数扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "something（単数扱い）なのでThere isを使います。",
+        "level": "中級"
+      },
+      {
+        "q": "There ___ said to be many undiscovered species in the ocean.",
+        "ja": "海にはまだ発見されていない種がたくさんいると言われています。",
+        "hint": "受動態＋There be構文。主語は複数。be動詞は？",
+        "choices": [
+          "is",
+          "am",
+          "be",
+          "are"
+        ],
+        "answer": 3,
+        "explain": "species（複数）なのでThere areを使います（受動態）。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ thought to be a connection between the two events.",
+        "ja": "その二つの出来事の間には関連があると考えられています。",
+        "hint": "受動態＋There be構文。a connection（単数）に合う形は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a connection（単数）なのでThere isを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ been a lot of changes in the school recently.",
+        "ja": "最近、学校に多くの変化がありました。",
+        "hint": "現在完了形のThere be構文。changes（複数）に合う形は？",
+        "choices": [
+          "has",
+          "have",
+          "had",
+          "is"
+        ],
+        "answer": 1,
+        "explain": "changes（複数）なのでThere have beenを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ expected to be a major storm tomorrow.",
+        "ja": "明日、大嵐になると予想されています。",
+        "hint": "受動態＋There be構文。a storm（単数）に合う形は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "a storm（単数）なのでThere isを使います（受動態）。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ no denying that she is talented.",
+        "ja": "彼女が才能があることは否定できません。",
+        "hint": "no ~ing（動名詞）を主語とする表現。be動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "no denying（単数扱い）なのでThere isを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ a possibility that it might snow tomorrow.",
+        "ja": "明日、雪が降る可能性があります。",
+        "hint": "a possibility（単数）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a possibility（単数）なのでThere isを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ been some improvements in her grades lately.",
+        "ja": "最近、彼女の成績にいくつかの改善が見られます。",
+        "hint": "現在完了のThere be構文。improvements（複数）に合う形は？",
+        "choices": [
+          "has",
+          "is",
+          "had",
+          "have"
+        ],
+        "answer": 3,
+        "explain": "improvements（複数）なのでThere have beenを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ little hope of winning at this rate.",
+        "ja": "このままでは勝ち目がほとんどありません。",
+        "hint": "little hope（不可算・単数扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "hope（不可算・単数扱い）なのでThere isを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ no use crying over spilt milk.",
+        "ja": "覆水盆に返らず。（こぼれたミルクを嘆いても仕方がない）",
+        "hint": "no use + ~ingの構文。no use（単数扱い）のbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 3,
+        "explain": "no use（単数扱い）なのでThere isを使います（慣用表現）。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ never been a student quite like her.",
+        "ja": "彼女のような生徒はこれまでいませんでした。",
+        "hint": "現在完了否定のThere be構文。neverを使う場合は？",
+        "choices": [
+          "has",
+          "is",
+          "had",
+          "have"
+        ],
+        "answer": 0,
+        "explain": "一人（単数）なのでThere has never beenを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ been a significant increase in applications.",
+        "ja": "応募数が大幅に増加しています。",
+        "hint": "現在完了のThere be構文。an increase（単数）に合う形は？",
+        "choices": [
+          "are",
+          "have",
+          "had",
+          "has"
+        ],
+        "answer": 3,
+        "explain": "an increase（単数）なのでThere has beenを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ rumored to be a sequel to the movie.",
+        "ja": "その映画の続編がある、と噂されています。",
+        "hint": "受動態＋There be構文。a sequel（単数）に合う形は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "a sequel（単数）なのでThere isを使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ appeared to be some confusion about the rules.",
+        "ja": "ルールについて混乱があるようです。",
+        "hint": "There appear to be のappearの変化。主語（複数）に合う形は？",
+        "choices": [
+          "appeared",
+          "is appeared",
+          "has appeared",
+          "appears"
+        ],
+        "answer": 3,
+        "explain": "There appears to be（単数）/There appear to be（複数）の形。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ been no word from her since last week.",
+        "ja": "先週から彼女からの連絡がありません。",
+        "hint": "現在完了否定のThere be構文。no word（単数）に合う形は？",
+        "choices": [
+          "is",
+          "were",
+          "have",
+          "has"
+        ],
+        "answer": 3,
+        "explain": "no word（単数）なのでThere has been（現在完了）を使います。",
+        "level": "上級"
+      },
+      {
+        "q": "There ___ little point in arguing about it anymore.",
+        "ja": "これ以上それについて言い争っても意味がありません。",
+        "hint": "little point（単数扱い）に合うbe動詞は？",
+        "choices": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2,
+        "explain": "point（単数扱い）なのでThere isを使います。",
+        "level": "上級"
+      }
+    ],
+    "助動詞can": [
+      {
+        "q": "I ___ swim very well.",
+        "ja": "私はとても上手に泳げます。",
+        "hint": "「できる」を表す助動詞は？",
+        "choices": [
+          "can",
+          "cans",
+          "can't",
+          "could"
+        ],
+        "answer": 0,
+        "explain": "「できる」はcan + 動詞の原形を使います。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ speak three languages.",
+        "ja": "彼女は3言語を話すことができます。",
+        "hint": "can の後の動詞。She（三単現）でも形は変わる？",
+        "choices": [
+          "speaks",
+          "speaking",
+          "spoke",
+          "speak"
+        ],
+        "answer": 3,
+        "explain": "canの後は主語に関わらず動詞の原形（speak）です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ I use your pen?",
+        "ja": "あなたのペンを使ってもいいですか？",
+        "hint": "許可を求める「～してもいい？」の表現は？",
+        "choices": [
+          "Will",
+          "Do",
+          "Am",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Can I~?は「～してもいいですか？」と許可を求める表現です。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ play the guitar.",
+        "ja": "彼はギターを弾くことができます。",
+        "hint": "He（三単現）+ can の組み合わせ。動詞の形は？",
+        "choices": [
+          "plays",
+          "playing",
+          "played",
+          "play"
+        ],
+        "answer": 3,
+        "explain": "He can + 動詞の原形（play）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "My grandfather ___ use a smartphone.",
+        "ja": "私の祖父はスマートフォンを使えません。",
+        "hint": "「できない」can の否定形は？",
+        "choices": [
+          "don't can",
+          "isn't can",
+          "doesn't",
+          "can't"
+        ],
+        "answer": 3,
+        "explain": "can の否定はcannot（can't）です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ you help me with my bag?",
+        "ja": "荷物を持つのを手伝ってもらえますか？",
+        "hint": "依頼を表す can を使った疑問文は？",
+        "choices": [
+          "Are",
+          "Do",
+          "Will",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Can you~?は「～してくれますか？」と依頼する表現です。",
+        "level": "初級"
+      },
+      {
+        "q": "Dogs ___ swim.",
+        "ja": "犬は泳ぐことができます。",
+        "hint": "能力・性質を表す can の文。Dogs に合う形は？",
+        "choices": [
+          "can't",
+          "cans",
+          "are",
+          "can"
+        ],
+        "answer": 3,
+        "explain": "Dogs + can + 動詞の原形（swim）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "She ___ run faster than me.",
+        "ja": "彼女は私より速く走れます。",
+        "hint": "「できる」能力を表す can を使った文は？",
+        "choices": [
+          "is",
+          "does",
+          "runs",
+          "can"
+        ],
+        "answer": 3,
+        "explain": "She + can + 動詞の原形（run）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "I ___ find my keys anywhere.",
+        "ja": "どこにも鍵が見つかりません。",
+        "hint": "「どこを探しても見つからない」否定は？",
+        "choices": [
+          "don't",
+          "can't",
+          "couldn't",
+          "won't"
+        ],
+        "answer": 1,
+        "explain": "can't find（見つけられない）が正しい表現です。",
+        "level": "初級"
+      },
+      {
+        "q": "___ he come to the party?",
+        "ja": "彼はパーティーに来られますか？",
+        "hint": "can の疑問文。He に合う形は？",
+        "choices": [
+          "Does",
+          "Is",
+          "Do",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Canの疑問文はCan + 主語 + 動詞の原形?です（主語に関わらず）。",
+        "level": "初級"
+      },
+      {
+        "q": "Birds ___ fly.",
+        "ja": "鳥は飛ぶことができます。",
+        "hint": "能力・性質を表す can の文は？",
+        "choices": [
+          "are flying",
+          "flies",
+          "can",
+          "are"
+        ],
+        "answer": 2,
+        "explain": "Birds + can + 動詞の原形（fly）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "A newborn baby ___ walk.",
+        "ja": "生まれたばかりの赤ちゃんは歩けません。",
+        "hint": "「できない」can の否定形は？",
+        "choices": [
+          "don't",
+          "isn't",
+          "doesn't",
+          "can't"
+        ],
+        "answer": 3,
+        "explain": "A newborn baby + can't + 動詞原形（walk）が正しい否定形。",
+        "level": "初級"
+      },
+      {
+        "q": "You ___ see the sea from this window.",
+        "ja": "この窓から海が見えます。",
+        "hint": "「見える（可能性）」を表す can の文は？",
+        "choices": [
+          "are",
+          "do",
+          "will",
+          "can"
+        ],
+        "answer": 3,
+        "explain": "You + can + 動詞の原形（see）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "Can she swim? — Yes, ___ ___.",
+        "ja": "彼女は泳げますか？－はい、泳げます。",
+        "hint": "can の疑問文に対する短い答えは？",
+        "choices": [
+          "she is",
+          "she does",
+          "she can",
+          "she will"
+        ],
+        "answer": 2,
+        "explain": "Can~?に対する肯定の答えはYes, 主語 + canです。",
+        "level": "初級"
+      },
+      {
+        "q": "He ___ speak a little Chinese.",
+        "ja": "彼は少し中国語が話せます。",
+        "hint": "少しできる能力を表す can の文は？",
+        "choices": [
+          "speaks",
+          "is speaking",
+          "spoke",
+          "can speak"
+        ],
+        "answer": 3,
+        "explain": "He + can + 動詞の原形（speak）が正しい形です。",
+        "level": "初級"
+      },
+      {
+        "q": "My sister ___ play the piano when she was five.",
+        "ja": "私の姉（妹）は5歳のときにピアノが弾けました。",
+        "hint": "「過去にできた」can の過去形は？",
+        "choices": [
+          "can",
+          "could",
+          "cans",
+          "will"
+        ],
+        "answer": 1,
+        "explain": "canの過去形はcouldです。過去の能力を表します。",
+        "level": "中級"
+      },
+      {
+        "q": "___ you cook Japanese food? — No, I ___.",
+        "ja": "日本食を作れますか？－いいえ、作れません。",
+        "hint": "can の疑問文と否定の短答は？",
+        "choices": [
+          "Do / don't",
+          "Can / can't",
+          "Are / aren't",
+          "Will / won't"
+        ],
+        "answer": 1,
+        "explain": "Can you~?の否定の短答はNo, I can'tです。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ ride a bike, but I ___ drive a car.",
+        "ja": "自転車には乗れますが、車は運転できません。",
+        "hint": "「できる」と「できない」の組み合わせは？",
+        "choices": [
+          "can / can",
+          "can't / can",
+          "can't / can't",
+          "can / can't"
+        ],
+        "answer": 3,
+        "explain": "can（できる）but can't（できない）が正しい。",
+        "level": "中級"
+      },
+      {
+        "q": "What ___ you do well?",
+        "ja": "あなたは何が得意ですか？",
+        "hint": "能力を尋ねる What を使った can の疑問文は？",
+        "choices": [
+          "do",
+          "will",
+          "are",
+          "can"
+        ],
+        "answer": 3,
+        "explain": "What can you~?は能力を尋ねる定番表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "She ___ not attend the meeting tomorrow.",
+        "ja": "彼女は明日の会議に出席できません。",
+        "hint": "can の否定文。She に合う形は？",
+        "choices": [
+          "can",
+          "isn't",
+          "doesn't",
+          "cannot"
+        ],
+        "answer": 3,
+        "explain": "cannot（can't）+ 動詞の原形が正しい否定形です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ I ask you a question?",
+        "ja": "質問してもいいですか？",
+        "hint": "許可を求める Can I~? を使った文は？",
+        "choices": [
+          "Will",
+          "Do",
+          "Am",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Can I~?は「～してもいいですか？」の定番表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "He could ___ the piano very well as a child.",
+        "ja": "彼は子どもの頃、ピアノをとても上手に弾けました。",
+        "hint": "could の後の動詞の形は？（canと同じ）",
+        "choices": [
+          "plays",
+          "playing",
+          "played",
+          "play"
+        ],
+        "answer": 3,
+        "explain": "could + 動詞の原形（play）が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ you speak louder, please?",
+        "ja": "もう少し大きな声で話してもらえますか？",
+        "hint": "丁寧な依頼に使う could の疑問文は？",
+        "choices": [
+          "Are",
+          "Do",
+          "Will",
+          "Could"
+        ],
+        "answer": 3,
+        "explain": "Could you~?はCan you~?より丁寧な依頼の表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "She can ___ three languages.",
+        "ja": "彼女は3言語を話せます。",
+        "hint": "can の後の動詞の形。speakの正しい形は？",
+        "choices": [
+          "speaks",
+          "spoke",
+          "speaking",
+          "speak"
+        ],
+        "answer": 3,
+        "explain": "can + 動詞の原形（speak）が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "My cat ___ open the door by herself.",
+        "ja": "私の猫は1匹でドアを開けられます。",
+        "hint": "可能性・能力を表す can の文は？",
+        "choices": [
+          "is",
+          "does",
+          "can",
+          "was"
+        ],
+        "answer": 2,
+        "explain": "My cat + can + 動詞原形（open）が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "Can Ken swim? — Yes, ___ ___.",
+        "ja": "ケンは泳げますか？－はい、泳げます。",
+        "hint": "Canの疑問文に対する短答（肯定）は？",
+        "choices": [
+          "he does",
+          "he is",
+          "Ken can",
+          "he can"
+        ],
+        "answer": 3,
+        "explain": "Yes, he can. が正しい短答（三人称はhe/sheで代用）。",
+        "level": "中級"
+      },
+      {
+        "q": "I ___ believe how fast she ran!",
+        "ja": "彼女がどれほど速く走ったかが信じられません！",
+        "hint": "「信じられない」の表現はcan't + believe？",
+        "choices": [
+          "won't",
+          "don't",
+          "can't",
+          "couldn't"
+        ],
+        "answer": 2,
+        "explain": "I can't believe~! は「信じられない！」の定番表現。",
+        "level": "中級"
+      },
+      {
+        "q": "You ___ use my laptop if you need it.",
+        "ja": "必要なら私のノートパソコンを使っていいよ。",
+        "hint": "許可を与える can の文は？",
+        "choices": [
+          "must",
+          "should",
+          "will",
+          "can"
+        ],
+        "answer": 3,
+        "explain": "You can~は許可を与える表現（「～してもいいよ」）です。",
+        "level": "中級"
+      },
+      {
+        "q": "___ I sit here?",
+        "ja": "ここに座っていいですか？",
+        "hint": "許可を求める Can I~? の文は？",
+        "choices": [
+          "Do",
+          "Should",
+          "Must",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Can I~?は「～してもいいですか？」の表現です。",
+        "level": "中級"
+      },
+      {
+        "q": "She couldn't ___ the problem alone.",
+        "ja": "彼女は1人でその問題を解決できませんでした。",
+        "hint": "couldn't の後の動詞の形は？",
+        "choices": [
+          "solves",
+          "solving",
+          "solved",
+          "solve"
+        ],
+        "answer": 3,
+        "explain": "couldn't + 動詞の原形（solve）が正しい形です。",
+        "level": "中級"
+      },
+      {
+        "q": "Can you ___ me how to get to the station?",
+        "ja": "駅への行き方を教えてもらえますか？",
+        "hint": "依頼表現 Can you tell me~? の tell の形は？",
+        "choices": [
+          "told",
+          "telling",
+          "tells",
+          "tell"
+        ],
+        "answer": 3,
+        "explain": "Can you + 動詞の原形（tell）が正しい形です。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ have forgotten about the meeting.",
+        "ja": "彼女は会議のことを忘れてしまったのかもしれません。",
+        "hint": "「～したかもしれない」推量のcan。過去への推量は？",
+        "choices": [
+          "can't have",
+          "can have",
+          "could have",
+          "could have been"
+        ],
+        "answer": 2,
+        "explain": "could have + 過去分詞が過去への推量の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "It ___ be true — she never lies.",
+        "ja": "本当のはずがありません—彼女は決して嘘をつかないから。",
+        "hint": "「～のはずがない」強い否定の推量は？",
+        "choices": [
+          "won't",
+          "can",
+          "can't",
+          "couldn't"
+        ],
+        "answer": 2,
+        "explain": "can't be~は「～のはずがない」強い否定の推量です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you possibly lend me your notes?",
+        "ja": "ノートを貸してもらえますか？（丁寧な依頼）",
+        "hint": "丁寧な依頼に使うcouldの疑問文は？",
+        "choices": [
+          "Will",
+          "Do",
+          "Are",
+          "Could"
+        ],
+        "answer": 3,
+        "explain": "Could you possibly~?は非常に丁寧な依頼の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ have done better on the test.",
+        "ja": "テストでもっとうまくできたのに。（後悔）",
+        "hint": "「～できたのに（後悔）」の表現は？",
+        "choices": [
+          "can't have",
+          "could have",
+          "couldn't have",
+          "can have"
+        ],
+        "answer": 1,
+        "explain": "could have + 過去分詞が過去への可能性（後悔）を表します。",
+        "level": "上級"
+      },
+      {
+        "q": "She ___ have arrived by now if she took the express.",
+        "ja": "特急に乗ったなら、彼女はもう到着しているはずです。",
+        "hint": "「今頃は～しているはずだ」という推量は？",
+        "choices": [
+          "can",
+          "could",
+          "should",
+          "would"
+        ],
+        "answer": 2,
+        "explain": "should have + 過去分詞が「今頃は～しているはずだ」という推量です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ I have your name, please?",
+        "ja": "お名前を教えていただけますか？（丁寧）",
+        "hint": "非常に丁寧な依頼 Could I~? の形は？",
+        "choices": [
+          "Will",
+          "Do",
+          "Should",
+          "Could"
+        ],
+        "answer": 3,
+        "explain": "Could I~?は非常に丁寧な依頼や質問の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "That ___ be the reason why she was upset.",
+        "ja": "それが彼女が怒っていた理由かもしれません。",
+        "hint": "「～かもしれない」弱い推量に使うcanの形は？",
+        "choices": [
+          "can't",
+          "won't",
+          "could",
+          "must"
+        ],
+        "answer": 2,
+        "explain": "could be~は「～かもしれない」という弱い推量です。",
+        "level": "上級"
+      },
+      {
+        "q": "He ___ not have known about the problem.",
+        "ja": "彼はその問題について知らなかったかもしれません。",
+        "hint": "「知らなかったかもしれない」過去への推量の否定は？",
+        "choices": [
+          "can't have known",
+          "could not have known",
+          "couldn't knowing",
+          "may not know"
+        ],
+        "answer": 1,
+        "explain": "could not have + 過去分詞が過去への推量否定です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you tell me where the nearest station is?",
+        "ja": "一番近い駅はどこか教えていただけますか？",
+        "hint": "丁寧な依頼 Could you~? の文は？",
+        "choices": [
+          "Will",
+          "Do",
+          "Are",
+          "Could"
+        ],
+        "answer": 3,
+        "explain": "Could you~?はCan you~?より丁寧な依頼の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "I can ___ believe how quickly time flies.",
+        "ja": "時間の経つのがこんなに早いとは信じられません。",
+        "hint": "「信じられない」の can't believe の構文は？",
+        "choices": [
+          "barely",
+          "hardly",
+          "scarcely",
+          "not"
+        ],
+        "answer": 0,
+        "explain": "can barely believe~（信じられないほど～）が自然な表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "She could ___ the answer — it was so obvious.",
+        "ja": "彼女は答えを見つけることができたはずだ—とても明白だったのに。",
+        "hint": "「できたはずだ」can の過去形 could have の使い方は？",
+        "choices": [
+          "find",
+          "found",
+          "have found",
+          "finding"
+        ],
+        "answer": 2,
+        "explain": "could have + 過去分詞（could have found）が「できたはずだ」の表現。",
+        "level": "上級"
+      },
+      {
+        "q": "This ___ not be the right way. We must be lost.",
+        "ja": "これは正しい道のはずがありません。私たちは迷子になっているに違いない。",
+        "hint": "「～のはずがない」強い否定の推量は？",
+        "choices": [
+          "could not",
+          "might not",
+          "can't",
+          "won't"
+        ],
+        "answer": 2,
+        "explain": "can't be~は「～のはずがない」という強い否定の推量です。",
+        "level": "上級"
+      },
+      {
+        "q": "___ you imagine living without the internet?",
+        "ja": "インターネットなしでの生活を想像できますか？",
+        "hint": "「想像できるか」Can you~?の文は？",
+        "choices": [
+          "Do",
+          "Are",
+          "Will",
+          "Can"
+        ],
+        "answer": 3,
+        "explain": "Can you imagine~?は「想像できますか？」の表現です。",
+        "level": "上級"
+      },
+      {
+        "q": "I ___ have told her the truth from the beginning.",
+        "ja": "最初から彼女に本当のことを言えばよかった。（後悔）",
+        "hint": "「言えばよかった」後悔を表す表現は？",
+        "choices": [
+          "should not have told",
+          "would have told",
+          "could not have told",
+          "should have told"
+        ],
+        "answer": 3,
+        "explain": "should have + 過去分詞が「～すればよかった」という後悔を表します。",
+        "level": "上級"
+      }
+    ]
+  },
+  "generated_at": "2026-02-28"
+}
