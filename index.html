@@ -196,6 +196,7 @@
   }
 
   /* Unit accent colors by data-unit */
+  [data-unit="単数・複数"]::before    { background: linear-gradient(180deg, #C084CF, #D4B8E0); }
   [data-unit="be動詞"]::before       { background: var(--mint); }
   [data-unit="一般動詞"]::before     { background: var(--pink); }
   [data-unit="現在進行形"]::before   { background: var(--lavender); }
@@ -212,6 +213,7 @@
   [data-unit="There is/are"] .unit-icon { background: rgba(253,217,160,0.2); }
   [data-unit="助動詞can"] .unit-icon    { background: rgba(160,196,255,0.2); }
 
+  [data-unit="単数・複数"] .unit-bar-fill   { background: #C084CF; }
   [data-unit="be動詞"] .unit-bar-fill       { background: var(--mint); }
   [data-unit="一般動詞"] .unit-bar-fill     { background: var(--pink); }
   [data-unit="現在進行形"] .unit-bar-fill   { background: var(--lavender); }
@@ -454,6 +456,21 @@
     color: var(--text-dark);
   }
   .point-rule-text strong { color: #7A4FA0; }
+  .point-rule-text u { text-decoration: underline; text-underline-offset: 3px;
+    text-decoration-color: #C084CF; text-decoration-thickness: 2px; color: #7A4FA0; font-weight: 700; }
+  .point-example-block {
+    margin-top: 8px;
+    background: #FDFAFF;
+    border-left: 3px solid #D4B8E0;
+    border-radius: 0 10px 10px 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text-dark);
+  }
+  .point-example-block .ex-en { font-weight: 700; color: #5A3A80; display: block; }
+  .point-example-block .ex-ja { color: var(--text-mid); display: block; font-style: italic; }
+  .point-example-block .ex-point { color: #C084CF; display: block; font-weight: 700; margin-top: 3px; font-size: 11px; }
   .point-rule-text em {
     display: block;
     font-style: normal;
@@ -682,6 +699,22 @@
     margin-bottom: 2px;
   }
 
+  .hl-be {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #5BBCBF;
+    text-decoration-thickness: 2px;
+    font-weight: 800;
+    color: #1A7A7C;
+  }
+  .hl-do {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #C084CF;
+    text-decoration-thickness: 2px;
+    font-weight: 800;
+    color: #7A2DA0;
+  }
   .feedback-note {
     font-size: 12px;
     color: var(--text-mid);
@@ -956,6 +989,362 @@
   /* Home screen bottom padding for nav */
   .screen { padding-bottom: 88px; }
 
+  /* ===== PROFILE SCREEN ===== */
+  #profile-screen {
+    background: linear-gradient(160deg, #FFF0F8 0%, #F0EEFF 50%, #E8F6FF 100%);
+    padding-bottom: 100px;
+  }
+  .prof-header {
+    padding: 52px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prof-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+  }
+  .prof-title span { font-style: italic; color: #C084CF; }
+  .prof-edit-btn {
+    background: white;
+    border: 1.5px solid #EDE8F5;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-mid);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .prof-edit-btn.saving { color: #5A9E72; border-color: #A8D8B9; }
+
+  /* ── アバターゾーン */
+  .avatar-zone {
+    margin: 18px 20px 0;
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 4px 24px rgba(192,132,207,0.12);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .avatar-canvas-wrap {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #F0E6F8;
+    box-shadow: 0 4px 16px rgba(192,132,207,0.18);
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FFF0F8, #F0EEFF);
+  }
+  .avatar-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .avatar-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+    color: var(--text-light);
+  }
+  .avatar-placeholder-icon { font-size: 28px; line-height: 1; }
+  .avatar-placeholder-text { font-size: 10px; font-weight: 700; font-family: 'Nunito', sans-serif; }
+  .avatar-upload-overlay {
+    position: absolute; inset: 0;
+    background: rgba(192,132,207,0.55);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.2s;
+    font-size: 22px;
+  }
+  .avatar-canvas-wrap:active .avatar-upload-overlay { opacity: 1; }
+  .avatar-upload-input { display: none; }
+
+  .avatar-info { flex: 1; min-width: 0; }
+  .prof-name-display {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+  .prof-name-display span { font-style: italic; color: #C084CF; }
+  .prof-name-input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    border: none;
+    border-bottom: 2px solid #D4B8E0;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 2px 0;
+    margin-bottom: 6px;
+  }
+  .prof-level-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #D4B8E0, #A8DADC);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .prof-motto-display {
+    font-size: 12px;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+  .prof-motto-input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: var(--text-mid);
+    border: none;
+    border-bottom: 1.5px dashed #D4B8E0;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 2px 0;
+    resize: none;
+    height: 38px;
+  }
+  .prof-stats-mini {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .prof-stat-chip {
+    background: #F5F0FF;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-mid);
+    white-space: nowrap;
+  }
+  .prof-stat-chip strong { color: #C084CF; font-size: 13px; }
+
+  /* ── アバターカスタマイズ */
+  .avatar-customize {
+    margin: 14px 20px 0;
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(192,132,207,0.09);
+  }
+  .avatar-customize-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .avatar-customize-title::after { content:''; flex:1; height:1px; background:#F0EBF8; }
+  .avatar-part-row {
+    margin-bottom: 12px;
+  }
+  .avatar-part-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+  }
+  .avatar-part-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .avatar-opt {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    border: 2px solid #EDE8F5;
+    background: #FDFAFF;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .avatar-opt.selected {
+    border-color: #C084CF;
+    background: #F8F0FF;
+    box-shadow: 0 0 0 3px rgba(192,132,207,0.2);
+  }
+  .avatar-opt.locked {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .avatar-opt .lock-badge {
+    position: absolute;
+    bottom: -2px; right: -2px;
+    font-size: 9px;
+    background: white;
+    border-radius: 50%;
+    width: 14px; height: 14px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid #EDE8F5;
+  }
+  .avatar-unlock-hint {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* ── プロフ詳細カード */
+  .prof-card {
+    margin: 14px 20px 0;
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(192,132,207,0.09);
+  }
+  .prof-card-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .prof-card-title::after { content:''; flex:1; height:1px; background:#F0EBF8; }
+  .prof-field-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .prof-field-icon { font-size: 16px; flex-shrink: 0; }
+  .prof-field-label {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 700;
+    width: 64px;
+    flex-shrink: 0;
+  }
+  .prof-field-value {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    flex: 1;
+  }
+  .prof-field-input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    border: none;
+    border-bottom: 1.5px dashed #D4B8E0;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 2px 4px;
+  }
+  .prof-field-select {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    border: 1.5px solid #EDE8F5;
+    border-radius: 10px;
+    background: #FDFAFF;
+    padding: 4px 8px;
+    outline: none;
+  }
+
+  /* ── 目標カード */
+  .goal-card {
+    margin: 14px 20px 0;
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(192,132,207,0.09);
+  }
+  .goal-item {
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .goal-item:last-child { margin-bottom: 0; }
+  .goal-item.small-goal { background: #FFF0F8; border-left: 3px solid #F4C2C2; }
+  .goal-item.mid-goal   { background: #F5F0FF; border-left: 3px solid #D4B8E0; }
+  .goal-item.big-goal   { background: #FFFBF0; border-left: 3px solid #F5C842; }
+  .goal-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .goal-text-display {
+    font-size: 13px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    min-height: 18px;
+  }
+  .goal-text-display.empty { color: var(--text-light); font-style: italic; }
+  .goal-input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    border: none;
+    border-bottom: 1.5px dashed #D4B8E0;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 2px 0;
+    resize: none;
+    min-height: 36px;
+  }
+  .goal-done-check {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 2px solid #EDE8F5;
+    background: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+  }
+  .goal-done-check.done {
+    background: linear-gradient(135deg, #A8DADC, #D4B8E0);
+    border-color: transparent;
+  }
+  .goal-streak-tip {
+    font-size: 11px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
   /* ===== RECORDS SCREEN ===== */
   .rec-header {
     padding: 52px 28px 0;
@@ -1220,13 +1609,30 @@
 
     <div class="units-scroll">
       <div class="unit-card-row">
+        <div class="unit-card" data-unit="単数・複数" onclick="startQuiz('単数・複数', '🔢')">
+          <div class="unit-icon">🔢</div>
+          <div class="unit-info">
+            <div class="unit-name">単数と複数</div>
+            <div class="unit-sub">15問 · 初級</div>
+          </div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
+        </div>
+        <button class="unit-point-btn" onclick="showPointScreen('単数・複数', '🔢')">📌<br><span>Point</span></button>
+      </div>
+      <div class="unit-card-row">
         <div class="unit-card" data-unit="be動詞" onclick="startQuiz('be動詞', '💙')">
           <div class="unit-icon">💙</div>
           <div class="unit-info">
             <div class="unit-name">be動詞 (am/is/are)</div>
             <div class="unit-sub">10問 · 初級</div>
           </div>
-          <div class="unit-done">✓</div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
         <button class="unit-point-btn" onclick="showPointScreen('be動詞', '💙')">📌<br><span>Point</span></button>
       </div>
@@ -1237,7 +1643,10 @@
             <div class="unit-name">一般動詞・現在形</div>
             <div class="unit-sub">10問 · 初級</div>
           </div>
-          <div class="unit-done">✓</div>
+          <div class="unit-progress">
+            <div class="unit-bar-bg"><div class="unit-bar-fill" style="width:0%"></div></div>
+            <div class="unit-pct-text">未挑戦</div>
+          </div>
         </div>
         <button class="unit-point-btn" onclick="showPointScreen('一般動詞', '🌸')">📌<br><span>Point</span></button>
       </div>
@@ -1434,6 +1843,113 @@
     <div id="badge-categories-container"></div>
   </div>
 
+  <!-- ====== PROFILE SCREEN ====== -->
+  <div class="screen" id="profile-screen">
+
+    <div class="prof-header">
+      <div class="prof-title">わたしの<span>プロフ</span></div>
+      <button class="prof-edit-btn" id="prof-edit-btn" onclick="toggleProfEdit()">✏️ 編集</button>
+    </div>
+
+    <!-- アバター + 名前 -->
+    <div class="avatar-zone">
+      <div class="avatar-canvas-wrap" onclick="document.getElementById('avatar-upload-input').click()">
+        <img class="avatar-photo" id="avatar-photo" src="" alt="アバター" style="display:none">
+        <div class="avatar-placeholder" id="avatar-placeholder">
+          <div class="avatar-placeholder-icon">📷</div>
+          <div class="avatar-placeholder-text">タップして<br>写真を登録</div>
+        </div>
+        <div class="avatar-upload-overlay">📷</div>
+        <input type="file" class="avatar-upload-input" id="avatar-upload-input"
+          accept="image/*" onchange="onAvatarImageSelected(event)">
+      </div>
+      <div class="avatar-info">
+        <div class="prof-name-display" id="prof-name-display">ニックネーム<span>✦</span></div>
+        <input class="prof-name-input" id="prof-name-input" type="text" placeholder="ニックネーム" maxlength="12" style="display:none">
+        <div class="prof-level-tag" id="prof-level-tag">🌱 はじめたて</div>
+        <div class="prof-motto-display" id="prof-motto-display">ひとことを入力してね 🌸</div>
+        <textarea class="prof-motto-input" id="prof-motto-input" placeholder="ひとことメッセージ" maxlength="40" style="display:none"></textarea>
+        <div class="prof-stats-mini">
+          <div class="prof-stat-chip">🔥 <strong id="pstat-streak">0</strong>日</div>
+          <div class="prof-stat-chip">✏️ <strong id="pstat-correct">0</strong>問</div>
+          <div class="prof-stat-chip">🏆 <strong id="pstat-badges">0</strong>個</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- プロフ詳細 -->
+    <div class="prof-card">
+      <div class="prof-card-title">💌 きほん情報</div>
+
+      <div class="prof-field-row">
+        <div class="prof-field-icon">🎂</div>
+        <div class="prof-field-label">がくねん</div>
+        <select class="prof-field-select" id="prof-grade" style="display:none" onchange="saveProfField('grade', this.value)">
+          <option>中学1年生</option><option>中学2年生</option><option>中学3年生</option>
+          <option>高校1年生</option><option>高校2年生</option><option>高校3年生</option><option>その他</option>
+        </select>
+        <div class="prof-field-value" id="prof-grade-display">中学1年生</div>
+      </div>
+
+      <div class="prof-field-row">
+        <div class="prof-field-icon">💝</div>
+        <div class="prof-field-label">すきなこと</div>
+        <input class="prof-field-input" id="prof-hobby" type="text" placeholder="音楽・マンガ・スポーツなど" maxlength="20" style="display:none" onchange="saveProfField('hobby', this.value)">
+        <div class="prof-field-value" id="prof-hobby-display">-</div>
+      </div>
+
+      <div class="prof-field-row">
+        <div class="prof-field-icon">🌟</div>
+        <div class="prof-field-label">すきな教科</div>
+        <input class="prof-field-input" id="prof-subject" type="text" placeholder="数学・国語・体育など" maxlength="20" style="display:none" onchange="saveProfField('subject', this.value)">
+        <div class="prof-field-value" id="prof-subject-display">-</div>
+      </div>
+
+      <div class="prof-field-row">
+        <div class="prof-field-icon">🎵</div>
+        <div class="prof-field-label">いまのBGM</div>
+        <input class="prof-field-input" id="prof-bgm" type="text" placeholder="お気に入りの曲は？" maxlength="24" style="display:none" onchange="saveProfField('bgm', this.value)">
+        <div class="prof-field-value" id="prof-bgm-display">-</div>
+      </div>
+
+      <div class="prof-field-row">
+        <div class="prof-field-icon">🌈</div>
+        <div class="prof-field-label">すきな色</div>
+        <input class="prof-field-input" id="prof-color" type="text" placeholder="ラベンダー・ミントなど" maxlength="16" style="display:none" onchange="saveProfField('color', this.value)">
+        <div class="prof-field-value" id="prof-color-display">-</div>
+      </div>
+    </div>
+
+    <!-- 目標カード -->
+    <div class="goal-card" id="goal-card">
+      <div class="prof-card-title">🎯 目標ノート</div>
+
+      <div class="goal-item small-goal">
+        <div class="goal-label">📅 今週の目標（スモールステップ）</div>
+        <div class="goal-text-display empty" id="goal-week-display">今週やることを書こう！</div>
+        <textarea class="goal-input" id="goal-week-input" placeholder="例：be動詞を毎日1回解く" maxlength="60" style="display:none"></textarea>
+        <div class="goal-done-check" id="goal-week-check" onclick="toggleGoalDone('week')">○</div>
+      </div>
+
+      <div class="goal-item mid-goal">
+        <div class="goal-label">🗓️ 今月の目標</div>
+        <div class="goal-text-display empty" id="goal-month-display">今月の目標を書こう！</div>
+        <textarea class="goal-input" id="goal-month-input" placeholder="例：初級を全部クリアする" maxlength="60" style="display:none"></textarea>
+        <div class="goal-done-check" id="goal-month-check" onclick="toggleGoalDone('month')">○</div>
+      </div>
+
+      <div class="goal-item big-goal">
+        <div class="goal-label">⭐ 大きな目標（このアプリで達成したいこと）</div>
+        <div class="goal-text-display empty" id="goal-big-display">英語でどうなりたい？夢を書こう！</div>
+        <textarea class="goal-input" id="goal-big-input" placeholder="例：英検3級に合格する！" maxlength="80" style="display:none"></textarea>
+        <div class="goal-done-check" id="goal-big-check" onclick="toggleGoalDone('big')">○</div>
+        <div class="goal-streak-tip" id="goal-streak-tip"></div>
+      </div>
+    </div>
+
+  </div><!-- /#profile-screen -->
+
+  <!-- ====== RECORDS SCREEN ====== -->
   <div class="screen" id="records-screen">
     <div class="rec-header">
       <div class="rec-title">きろく <span>📊</span></div>
@@ -1489,7 +2005,7 @@
     <div class="nav-icon">📊</div>
     <span>きろく</span>
   </div>
-  <div class="nav-item" id="nav-profile" onclick="navTo('home-screen', this)">
+  <div class="nav-item" id="nav-profile" onclick="navTo('profile-screen', this)">
     <div class="nav-icon">👤</div>
     <span>プロフ</span>
   </div>
@@ -1564,6 +2080,39 @@ function updateStreak(data) {
 
 // ===== Quiz data =====
 const quizData = {
+  '単数・複数': [
+    { q: 'daughters', ja: '娘たち', level: '初級', hint: '語尾の -s に注目！', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。\n\n【例文1】Their daughters are still in elementary school.\n（彼らの娘たちはまだ小学生です。）\n→ 複数なので be動詞は are を使います。\n\n【例文2】Do your daughters go to the same school?\n（あなたの娘さんたちは同じ学校に行っていますか？）\n→ 主語が複数形なので Do を使います。daughter だったら三人称・単数なので Does になります。' },
+    { q: 'a cat', ja: 'ねこ（1匹）', level: '初級', hint: '「a」がついていたら？', choices: ['単数', '複数'], answer: 0,
+      explain: '単数形です。「a / an」がついている名詞は必ず単数！\n\n【例文】A cat is sleeping on the sofa.（ねこがソファで寝ています。）\n→ 単数なので is を使います。' },
+    { q: 'children', ja: 'こどもたち', level: '初級', hint: 'これは不規則な複数形だよ！', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。child（子ども）の複数形は children（不規則変化）。\n\n【例文1】The children are playing in the park.（子どもたちが公園で遊んでいます。）\n→ 複数なので are を使います。\n\n【例文2】Do the children walk to school?（子どもたちは歩いて学校に行きますか？）\n→ 複数なので Do を使います。' },
+    { q: 'a box', ja: '箱（1つ）', level: '初級', hint: '「a」がついているね！', choices: ['単数', '複数'], answer: 0,
+      explain: '単数形です。\n\n【例文】A box is on the desk.（箱が机の上にあります。）\n→ 単数なので is。Does this box belong to you?（この箱はあなたのものですか？）' },
+    { q: 'men', ja: '男の人たち', level: '初級', hint: 'man の複数形は特別！', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。man → men（不規則変化）。\n\n【例文1】The men are waiting outside.（男の人たちが外で待っています。）\n→ 複数なので are。\n\n【例文2】Do those men work here?（あの人たちはここで働いていますか？）\n→ 複数なので Do。' },
+    { q: 'watches', ja: '時計（複数）', level: '初級', hint: '語尾が -es になっているよ', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。watch は語尾が -ch なので +es（watches）。\n\n【例文】These watches are very popular.（これらの時計はとても人気があります。）\n→ 複数なので are。Do these watches cost a lot?（これらの時計は高いですか？）→ 複数なので Do。' },
+    { q: 'an apple', ja: 'りんご（1個）', level: '初級', hint: '「an」がついているね！', choices: ['単数', '複数'], answer: 0,
+      explain: '単数形です。「an」は母音（a/i/u/e/o）で始まる単語の前につく「a」のこと。\n\n【例文】An apple is on the table.（りんごがテーブルの上にあります。）→ is。Does an apple a day keep the doctor away?（1日1個のりんごは医者いらず？）→ Does。' },
+    { q: 'babies', ja: 'あかちゃんたち', level: '中級', hint: '語尾が -ies になっているよ！', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。baby は「子音+y」なので y→ies（babies）。\n\n【例文1】The babies are sleeping now.（赤ちゃんたちは今眠っています。）→ 複数なので are。\n\n【例文2】Do the babies cry at night?（赤ちゃんたちは夜に泣きますか？）→ 複数なので Do。' },
+    { q: 'my sister', ja: 'わたしの姉（妹）', level: '中級', hint: '1人だよ。どっち？', choices: ['単数', '複数'], answer: 0,
+      explain: '単数形です。my sister は「1人の人」を指すので単数。\n\n【例文1】My sister is good at cooking.（私の姉は料理が上手です。）→ is。\n\n【例文2】Does your sister like music?（あなたの姉は音楽が好きですか？）→ 三人称・単数なので Does。' },
+    { q: 'tooth / teeth — どちらが複数？', ja: '歯 / 歯たち', level: '中級', hint: '不規則複数形！', choices: ['tooth', 'teeth'], answer: 1,
+      explain: 'teeth が複数形です。tooth（歯1本）→ teeth（複数）。\n\n【例文1】My teeth are white.（私の歯は白いです。）→ 複数なので are。\n\n【例文2】Do your teeth hurt?（歯が痛みますか？）→ 複数なので Do。\nMy tooth hurts.（歯が1本痛い）→ 単数なので hurts（三単現）。' },
+    { q: 'the students in my class', ja: 'クラスの生徒たち', level: '中級', hint: '「たち」がついているヒント！', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。students と複数形になっています。\n\n【例文1】The students in my class are very kind.（クラスの生徒たちはとても親切です。）→ are。\n\n【例文2】Do the students in your class study hard?（クラスの生徒たちは一生懸命勉強しますか？）→ Do。' },
+    { q: 'this bus', ja: 'このバス', level: '中級', hint: '「this」は何かに関係している？', choices: ['単数', '複数'], answer: 0,
+      explain: '単数形です。this（これ・この）は常に単数のものを指します。複数なら these になります。\n\n【例文】This bus is always late.（このバスはいつも遅れます。）→ is。Does this bus go to the station?（このバスは駅に行きますか？）→ Does。' },
+    { q: 'these boxes', ja: 'これらの箱', level: '上級', hint: '「these」のヒントは？', choices: ['単数', '複数'], answer: 1,
+      explain: '複数形です。these（これら）は常に複数のものを指します。単数なら this になります。\n\n【例文1】These boxes are too heavy.（これらの箱は重すぎます。）→ are。\n\n【例文2】Do these boxes need to be opened?（これらの箱は開けるべきですか？）→ Do。' },
+    { q: 'my sister and her friend', ja: 'わたしの姉と彼女の友だち', level: '上級', hint: '「and」でつながれているとどうなる？', choices: ['単数', '複数'], answer: 1,
+      explain: '複数です！A and B でつながれた主語は2人以上なので複数扱いになります。\n\n【例文1】My sister and her friend are at the library.（私の姉と彼女の友だちは図書館にいます。）→ are。\n\n【例文2】Do my sister and her friend study together?（私の姉と彼女の友だちは一緒に勉強しますか？）→ Do。' },
+    { q: 'fish（魚）の複数形は？', ja: '「魚が3匹います」と言いたいとき', level: '上級', hint: 'fish の複数形は特別！', choices: ['fishs', 'fishes', 'fish', 'fishies'], answer: 2,
+      explain: 'fish の複数形は fish（変化なし）です！\nfishes とも言えますが、日常会話では fish が一般的。\n\n【例文1】There are three fish in the tank.（水槽に魚が3匹います。）→ 複数なので are。\n\n【例文2】Do these fish eat every day?（これらの魚は毎日食べますか？）→ Do。' },
+  ],
+
   'be動詞': [
     { q: 'I ___ a student.', ja: '私は学生です。', level: '初級', hint: '主語 I に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 0, explain: 'I の現在形は常に am を使います。' },
     { q: 'She ___ very tall.', ja: '彼女はとても背が高いです。', level: '初級', hint: '主語 She に合う be動詞は？', choices: ['am', 'is', 'are', 'be'], answer: 1, explain: 'She は三人称単数なので is を使います。' },
@@ -1657,6 +2206,7 @@ const quizData = {
 };
 
 const unitMeta = {
+  '単数・複数': { emoji: '🔢' },
   'be動詞':    { emoji: '💙' },
   '一般動詞':  { emoji: '🌸' },
   '現在進行形':{ emoji: '🪄' },
@@ -1681,6 +2231,7 @@ function navTo(screenId, navEl) {
   if (screenId === 'records-screen') renderRecords();
   if (screenId === 'badge-screen') renderBadges();
   if (screenId === 'home-screen') updateHomeProgress();
+  if (screenId === 'profile-screen') renderProfile();
 }
 
 function showScreen(id) {
@@ -1938,7 +2489,19 @@ function showFeedback(correct, note) {
   bar.className = 'feedback-bar show ' + (correct ? 'correct-fb' : 'wrong-fb');
   document.getElementById('feedback-icon').textContent = correct ? '✨' : '💭';
   document.getElementById('feedback-title').textContent = correct ? '正解！やったね！' : 'おしかった…';
-  document.getElementById('feedback-note').textContent = note;
+  // 改行タグに変換して視認性UP
+  let noteHtml = note
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\n/g,'<br>');
+  // 単数・複数単元：be動詞（is/are）とDo/Doesに色付き下線
+  if (currentUnit === '単数・複数') {
+    noteHtml = noteHtml
+      .replace(/\b(is|are|was|were)\b/g,
+        '<u class="hl-be">$1</u>')
+      .replace(/\b(Do|Does|do|does)\b/g,
+        '<u class="hl-do">$1</u>');
+  }
+  document.getElementById('feedback-note').innerHTML = noteHtml;
 }
 
 function nextQuestion() {
@@ -2042,13 +2605,31 @@ function showResult() {
 
 
 function updateMasteryBadge() {
-  // Unit cards: update badge row for Clear/Master
   const appData = loadData();
   document.querySelectorAll('.unit-card[data-unit]').forEach(card => {
     const unit = card.dataset.unit;
     const mastery = appData.levelMastery?.[unit] || {};
-    // Remove old badge row if present
-    const oldRow = card.querySelector('.unit-badge-row');
+    const stats   = appData.unitStats?.[unit] || {};
+
+    // ── 進捗バーを更新
+    const barFill = card.querySelector('.unit-bar-fill');
+    const pctEl   = card.querySelector('.unit-pct-text');
+    if (barFill && pctEl) {
+      const total   = (quizData[unit] || []).length || 1;
+      const correct = stats.correct || 0;
+      const tried   = (stats.total  || 0) > 0;
+      if (!tried) {
+        barFill.style.width = '0%';
+        pctEl.textContent = '未挑戦';
+      } else {
+        const pct = Math.min(100, Math.round(correct / total * 100));
+        barFill.style.width = pct + '%';
+        pctEl.textContent = pct + '%';
+      }
+    }
+
+    // ── バッジ行を更新（Clear / Master / 進捗バー）
+    const oldRow  = card.querySelector('.unit-badge-row');
     if (oldRow) oldRow.remove();
     const oldDone = card.querySelector('.unit-done');
 
@@ -2059,13 +2640,19 @@ function updateMasteryBadge() {
       row.innerHTML = '<span class="unit-badge-pill unit-badge-master">👑 Master</span><span class="unit-badge-pill unit-badge-clear">✓ Clear</span>';
       card.appendChild(row);
     } else if (mastery.unitClear) {
+      // グラデチェックアイコンを表示
+      if (oldDone) {
+        oldDone.textContent = '✓';
+      } else {
+        const done = document.createElement('div');
+        done.className = 'unit-done';
+        done.textContent = '✓';
+        card.appendChild(done);
+      }
+    } else {
+      // 未挑戦・挑戦中：unit-done を非表示
       if (oldDone) oldDone.remove();
-      const row = document.createElement('div');
-      row.className = 'unit-badge-row';
-      row.innerHTML = '<span class="unit-badge-pill unit-badge-clear">✓ Clear</span>';
-      card.appendChild(row);
     }
-    // If neither, keep the original .unit-done or .unit-progress as-is
   });
 }
 
@@ -2180,6 +2767,39 @@ function renderRecords() {
 
 // ===== UNIT SUMMARY DATA =====
 const UNIT_SUMMARIES = {
+  '単数・複数': {
+    rules: [
+      { icon: '📌', text: '<strong>単数</strong>＝1つ・1人　<strong>複数</strong>＝2つ以上<br>名詞の末尾に <strong>-s</strong> や <strong>-es</strong> がついていたら複数形のサイン！' },
+      { icon: '🔑', text: '<strong>be動詞との関係</strong><br>単数名詞 → <u>is</u>　　複数名詞 → <u>are</u><div class="point-example-block"><span class="ex-en">My cat <u>is</u> cute.</span><span class="ex-ja">私の猫はかわいいです。</span><span class="ex-en">My cats <u>are</u> cute.</span><span class="ex-ja">私の猫たちはかわいいです。</span></div>' },
+      { icon: '🔑', text: '<strong>Do / Does との関係</strong><br>単数（三単現・He/She/It） → <u>Does</u>　　複数・I・You → <u>Do</u><div class="point-example-block"><span class="ex-en"><u>Does</u> your sister walk to school?</span><span class="ex-ja">あなたの姉は歩いて学校に行きますか？</span><span class="ex-point">✦ sister = 三人称・単数 → Does</span><span class="ex-en"><u>Do</u> your sisters walk to school?</span><span class="ex-ja">あなたの姉たちは歩いて学校に行きますか？</span><span class="ex-point">✦ sisters = 複数 → Do</span></div>' },
+      { icon: '⚠️', text: '<strong>不規則複数形に注意！</strong><br>child → <strong>children</strong>　/ man → <strong>men</strong>　/ woman → <strong>women</strong>　/ tooth → <strong>teeth</strong>　/ foot → <strong>feet</strong><div class="point-example-block"><span class="ex-en">The <u>children</u> <u>are</u> playing outside.</span><span class="ex-ja">子どもたちは外で遊んでいます。</span><span class="ex-point">✦ children = 複数 → are / Do</span></div>' },
+      { icon: '💡', text: '<strong>-s のつけ方ルール</strong><br>・ふつうの名詞 → <strong>+s</strong>（cats, dogs）<br>・語尾が s/x/ch/sh → <strong>+es</strong>（boxes, watches）<br>・子音+y → <strong>y→ies</strong>（babies, cities）' },
+    ],
+    tables: [
+      {
+        title: '単数 vs 複数 まとめ',
+        headers: ['単数（1つ）', '複数（2つ以上）', 'be動詞', 'Do/Does'],
+        rows: [
+          ['a cat', 'cats', 'is / was', 'does / did'],
+          ['a dog', 'dogs', 'is / was', 'does / did'],
+          ['a box', 'boxes', 'is / was', 'does / did'],
+          ['a baby', 'babies', 'is / was', 'does / did'],
+          ['a child', 'children（不規則）', 'is / was', 'does / did'],
+          ['a man', 'men（不規則）', 'is / was', 'does / did'],
+        ]
+      },
+      {
+        title: 'I / You / 複数は同じグループ',
+        headers: ['主語', '種類', 'be動詞', 'Do/Does'],
+        rows: [
+          ['I', '特別', 'am', 'Do'],
+          ['You', '特別', 'are', 'Do'],
+          ['We / They / 複数名詞', '複数', 'are', 'Do'],
+          ['He / She / It / 単数名詞', '三単現', 'is', 'Does'],
+        ]
+      }
+    ]
+  },
   'be動詞': {
     rules: [
       { icon: '📌', text: '<strong>I</strong> → <strong>am</strong>　/ 　<strong>He / She / It</strong> → <strong>is</strong>　/ 　<strong>You / We / They</strong> → <strong>are</strong>' },
@@ -2422,7 +3042,215 @@ function buildPointHTML(unit) {
 }
 
 
+// ═══════════════════════════════════════════════════════════════
+// PROFILE & AVATAR SYSTEM
+// ═══════════════════════════════════════════════════════════════
+
+// ── アバターパーツ定義 ────────────────────────────────────────
+// unlockAt: クリア単元数（0=最初から使える）
+// ── 画像アップロード方式のアバター ──────────────────────────────
+function onAvatarImageSelected(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  // 5MB上限チェック
+  if (file.size > 5 * 1024 * 1024) {
+    alert('画像が大きすぎます。5MB以下の画像を選んでね！');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    const dataUrl = e.target.result;
+    // サイズを圧縮してからlocalStorageに保存
+    compressImage(dataUrl, 400, compressed => {
+      profData.avatarImage = compressed;
+      saveProfData();
+      renderAvatarImage();
+    });
+  };
+  reader.readAsDataURL(file);
+  // 同じファイルを再選択できるようにリセット
+  event.target.value = '';
+}
+
+// Canvas で圧縮（maxSize px 以内に収める）
+function compressImage(dataUrl, maxSize, callback) {
+  const img = new Image();
+  img.onload = () => {
+    const canvas = document.createElement('canvas');
+    const scale = Math.min(maxSize / img.width, maxSize / img.height, 1);
+    canvas.width  = Math.round(img.width  * scale);
+    canvas.height = Math.round(img.height * scale);
+    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    callback(canvas.toDataURL('image/jpeg', 0.82));
+  };
+  img.src = dataUrl;
+}
+
+function renderAvatarImage() {
+  const photo = document.getElementById('avatar-photo');
+  const placeholder = document.getElementById('avatar-placeholder');
+  if (!photo || !placeholder) return;
+
+  if (profData.avatarImage) {
+    photo.src = profData.avatarImage;
+    photo.style.display = 'block';
+    placeholder.style.display = 'none';
+  } else {
+    photo.style.display = 'none';
+    placeholder.style.display = 'flex';
+  }
+}
+
+// ── プロフ編集モード切替 ──────────────────────────────────────
+function toggleProfEdit() {
+  profEditMode = !profEditMode;
+  const btn = document.getElementById('prof-edit-btn');
+
+  if (profEditMode) {
+    btn.textContent = '💾 保存';
+    btn.classList.add('saving');
+    // 表示→入力
+    document.getElementById('prof-name-display').style.display = 'none';
+    document.getElementById('prof-name-input').style.display = 'block';
+    document.getElementById('prof-name-input').value = profData.name;
+    document.getElementById('prof-motto-display').style.display = 'none';
+    document.getElementById('prof-motto-input').style.display = 'block';
+    document.getElementById('prof-motto-input').value = profData.motto;
+
+    ['grade','hobby','subject','bgm','color'].forEach(key => {
+      document.getElementById(`prof-${key}-display`).style.display = 'none';
+      const el = document.getElementById(`prof-${key}`);
+      el.style.display = 'block';
+      el.value = profData[key] || '';
+    });
+
+    ['week','month','big'].forEach(key => {
+      document.getElementById(`goal-${key}-display`).style.display = 'none';
+      const el = document.getElementById(`goal-${key}-input`);
+      el.style.display = 'block';
+      el.value = profData.goals[key] || '';
+    });
+  } else {
+    // 入力→保存→表示
+    profData.name   = document.getElementById('prof-name-input').value.trim();
+    profData.motto  = document.getElementById('prof-motto-input').value.trim();
+    ['grade','hobby','subject','bgm','color'].forEach(key => {
+      profData[key] = document.getElementById(`prof-${key}`)?.value || profData[key];
+    });
+    ['week','month','big'].forEach(key => {
+      profData.goals[key] = document.getElementById(`goal-${key}-input`).value.trim();
+    });
+    saveProfData();
+
+    btn.textContent = '✏️ 編集';
+    btn.classList.remove('saving');
+    document.getElementById('prof-name-input').style.display = 'none';
+    document.getElementById('prof-name-display').style.display = 'block';
+    document.getElementById('prof-motto-input').style.display = 'none';
+    document.getElementById('prof-motto-display').style.display = 'block';
+
+    ['grade','hobby','subject','bgm','color'].forEach(key => {
+      document.getElementById(`prof-${key}`).style.display = 'none';
+      document.getElementById(`prof-${key}-display`).style.display = 'block';
+    });
+    ['week','month','big'].forEach(key => {
+      document.getElementById(`goal-${key}-input`).style.display = 'none';
+      document.getElementById(`goal-${key}-display`).style.display = 'block';
+    });
+    renderProfileDisplay();
+  }
+}
+
+function saveProfField(key, value) {
+  profData[key] = value;
+  saveProfData();
+}
+
+function toggleGoalDone(key) {
+  profData.goals[key + 'Done'] = !profData.goals[key + 'Done'];
+  saveProfData();
+  updateGoalDoneUI(key);
+}
+function updateGoalDoneUI(key) {
+  const done = profData.goals[key + 'Done'];
+  const btn = document.getElementById(`goal-${key}-check`);
+  if (!btn) return;
+  btn.textContent = done ? '✓' : '○';
+  btn.classList.toggle('done', done);
+  const display = document.getElementById(`goal-${key}-display`);
+  if (display) display.style.textDecoration = done ? 'line-through' : 'none';
+}
+
+function renderProfileDisplay() {
+  const d = profData;
+  const n = d.name || 'ニックネーム';
+  const nameDisp = document.getElementById('prof-name-display');
+  if (nameDisp) nameDisp.innerHTML = n + '<span>✦</span>';
+  const mottoDisp = document.getElementById('prof-motto-display');
+  if (mottoDisp) mottoDisp.textContent = d.motto || 'ひとことを入力してね 🌸';
+
+  ['hobby','subject','bgm','color'].forEach(key => {
+    const el = document.getElementById(`prof-${key}-display`);
+    if (el) el.textContent = d[key] || '-';
+  });
+  const gradeDisp = document.getElementById('prof-grade-display');
+  if (gradeDisp) gradeDisp.textContent = d.grade || '中学1年生';
+
+  // 目標
+  ['week','month','big'].forEach(key => {
+    const disp = document.getElementById(`goal-${key}-display`);
+    const val = profData.goals[key];
+    if (disp) {
+      disp.textContent = val || {week:'今週やることを書こう！', month:'今月の目標を書こう！', big:'英語でどうなりたい？夢を書こう！'}[key];
+      disp.classList.toggle('empty', !val);
+    }
+    updateGoalDoneUI(key);
+  });
+
+  // 達成日数ヒント
+  const tipEl = document.getElementById('goal-streak-tip');
+  if (tipEl) {
+    try {
+      const d2 = JSON.parse(localStorage.getItem('grammly_data') || '{}');
+      const streak = d2.streakDays || 0;
+      if (streak > 0) tipEl.textContent = `🔥 ${streak}日連続学習中！この調子で目標に近づこう`;
+    } catch(e) {}
+  }
+}
+
+// ── メインrenderProfile ───────────────────────────────────────
+function renderProfile() {
+  loadProfData();
+  const unlocked = getUnlockedUnitCount();
+
+  // ステータス取得
+  let streakDays = 0, totalCorrect = 0, badgeCount = 0;
+  try {
+    const gd = JSON.parse(localStorage.getItem('grammly_data') || '{}');
+    streakDays   = gd.streakDays || 0;
+    totalCorrect = gd.totalCorrect || 0;
+    const ub = gd.unlockedBadges || {};
+    badgeCount = Object.keys(ub).length;
+  } catch(e) {}
+
+  document.getElementById('pstat-streak').textContent  = streakDays;
+  document.getElementById('pstat-correct').textContent = totalCorrect;
+  document.getElementById('pstat-badges').textContent  = badgeCount;
+  document.getElementById('prof-level-tag').textContent = getProfLevelLabel(unlocked);
+
+  // アバター画像表示
+  renderAvatarImage();
+  renderProfileDisplay();
+
+  // 編集モードをリセット
+  if (profEditMode) toggleProfEdit();
+}
+
+// ═══════════════════════════════════════════════════════════════
 // バッジ定義
+// ═══════════════════════════════════════════════════════════════
 const BADGE_DEFS = {
   // ── セッション系 ──
   session: {
@@ -2923,6 +3751,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const data = loadData();
   if (data.streak > 0) updateStreakPill(data.streak);
   updateHomeProgress();
+  loadProfData();
   // Notionから最新問題を取得
   fetchQuestionsFromNotion().then(() => {
     updateHomeProgress();
@@ -2969,6 +3798,8 @@ function updateHomeProgress() {
   const data = loadData();
   const units = Object.keys(unitMeta);
   const mastery = data.levelMastery || {};
+  // 単元カードの進捗バーとチェックアイコンを更新
+  updateMasteryBadge();
 
   // 各単元の初級/中級/上級クリア数を集計
   let beginnerCleared = 0;
